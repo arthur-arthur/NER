@@ -1,18 +1,18 @@
 #########################
 # Experiment Config
 #########################
-DATA = 'conll2002'
-LANG = 'nl'                 # !important: determines the correct transformer and bytepair embedding
-EMB = ['flair', 'ft', 'bpe', 'char', 'ohe']
+DATA = "conll2003"
+LANG = "en"  # !important: determines the correct transformer and bytepair embedding
+EMB = ["flair", "bpe"]
 MAX_EPOCHS = 100
-STORAGE = 'gpu'
+STORAGE = "cpu"
 #########################
 
 import json
 from kaggle.api.kaggle_api_extended import KaggleApi
 
 # change config lines in NER experiment script
-with open("kaggle_pusher.py", 'r') as f:
+with open("kaggle_pusher.py", "r") as f:
     config = f.readlines()[:8]
 source = []
 
@@ -29,7 +29,7 @@ dataset_name = f"{DATA}_{LANG}_{'_'.join(EMB)}"
 
 # script will be run on gpu if the storage_mode is set to gpu
 # adjust manually when the embeddings don't fit in memory
-enable_gpu = "true" if STORAGE == 'gpu' else "false"
+enable_gpu = "true" if STORAGE == "gpu" else "false"
 
 metadata = {
     "id": f"achtuur/{dataset_name}",
@@ -42,7 +42,7 @@ metadata = {
     "enable_internet": "true",
     "dataset_sources": [f"achtuur/{DATA}"],
     "competition_sources": [],
-    "kernel_sources": []
+    "kernel_sources": [],
 }
 
 with open("kernel-metadata.json", "w") as f:
@@ -51,4 +51,4 @@ with open("kernel-metadata.json", "w") as f:
 # push to Kaggle
 api = KaggleApi()
 api.authenticate()
-api.kernels_push('./')
+api.kernels_push("./")
