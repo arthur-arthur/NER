@@ -1,0 +1,1 @@
+{"id": "achtuur/wikiner_fr_bert_ft_bpe_ohe_char", "title": "wikiner_fr_bert_ft_bpe_ohe_char", "code_file": "NER_experiment_runner.py", "language": "python", "kernel_type": "script", "is_private": "true", "enable_gpu": "true", "enable_internet": "true", "dataset_sources": ["achtuur/wikiner"], "competition_sources": [], "kernel_sources": []}
