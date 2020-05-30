@@ -1,9 +1,9 @@
 #########################
-# Exp Conf
+# Experiment Config
 #########################
-DATA = 'wikiner'
-LANG = 'fr'
-EMB = ['bert', 'ft', 'bpe', 'ohe', 'char']
+DATA = 'conll2002'
+LANG = 'nl'                 # !important: determines the correct transformer and bytepair embedding
+EMB = ['flair', 'ft', 'bpe', 'char', 'ohe']
 MAX_EPOCHS = 100
 STORAGE = 'gpu'
 #########################
@@ -11,11 +11,11 @@ STORAGE = 'gpu'
 import json
 from kaggle.api.kaggle_api_extended import KaggleApi
 
-# paste config lines in NER experiment runner
+# change config lines in NER experiment script
 with open("kaggle_pusher.py", 'r') as f:
     config = f.readlines()[:8]
-
 source = []
+
 with open("NER_experiment_runner.py", "r") as f:
     source = [line for line in f]
 
@@ -27,6 +27,8 @@ with open("NER_experiment_runner.py", "w") as f:
 # create metadata file
 dataset_name = f"{DATA}_{LANG}_{'_'.join(EMB)}"
 
+# script will be run on gpu if the storage_mode is set to gpu
+# adjust manually when the embeddings don't fit in memory
 enable_gpu = "true" if STORAGE == 'gpu' else "false"
 
 metadata = {
