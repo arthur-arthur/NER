@@ -17,7 +17,7 @@ from utils import KagglePusher, build_script_from_options
     type=str,
     default="cpu",
     show_default=True,
-    help="Embedding storage mode. When set to gpu, the script will also be run on a gpu",
+    help="Embedding storage mode. When storage_mode is 'gpu', GPU will be automatically enabled.",
 )
 @click.argument("emb", nargs=-1)  # multiple arguments for emb --> tuple
 def push_to_kaggle(data, lang, emb, epochs, storage):

@@ -49,8 +49,7 @@ Options:
   --data TEXT       Dataset: [conll2002, conll2003, wikiner, trilingual]
   --lang TEXT       Language of embedding class: [en, nl, fr, multi]
   --epochs INTEGER  Max number of epochs  [default: 100]
-  --storage TEXT    Embedding storage mode. When set to gpu, the script will
-                    also be run on a gpu  [default: cpu]
+  --storage TEXT    Embedding storage mode. When set to gpu, gpu will be automatically enabled on Kaggle [default: cpu]
   --help            Show this message and exit.
 ```
 
