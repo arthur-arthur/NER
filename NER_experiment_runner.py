@@ -1,12 +1,14 @@
-#########################
-# Experiment Config
-#########################
-DATA = "conll2003"
-LANG = "en"  # !important: determines the correct transformer and bytepair embedding
-EMB = ["flair", "ft"]
-MAX_EPOCHS = 100
-STORAGE = "cpu"
-#########################
+
+############################
+# Experiment configuration #
+############################
+DATA = 'conll2003'
+LANG = 'multi'
+EMB = ('flair', 'bpe')
+MAX_EPOCH = 100
+STORAGE = 'cpu'
+############################
+                                    
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,9 +19,7 @@ import os
 import subprocess
 
 subprocess.run("pip install flair", shell=True, check=True)
-subprocess.run("pip install yagmail", shell=True, check=True)
 
-import yagmail
 from flair.datasets import ColumnCorpus
 from flair.models import SequenceTagger
 from flair.embeddings import (
@@ -38,17 +38,18 @@ from typing import Dict, List
 
 
 class NER_experiment:
-    def __init__(self, input_path, output_path="/kaggle/working"):
+    def __init__(self, dataset_name, output_path="/kaggle/working"):
+
+        input_path = f"/kaggle/input/{dataset_name}"
 
         self.tag_type = "ner"
-
         self.corpus = ColumnCorpus(
             data_folder=input_path, column_format={0: "text", 1: "pos", 2: "ner"}
         )
 
         self.tag_dictionary = self.corpus.make_tag_dictionary(tag_type=self.tag_type)
 
-        *_, self.dataset_name = input_path.split("/")
+        self.dataset_name = dataset_name
         self.output_path = output_path
 
     def build_embedding(self, lang, embedding_codes: List[str]) -> None:
@@ -148,8 +149,7 @@ class NER_experiment:
         out.extend([round(x, 4) for x in self._extract_from_log().values()])
         out = [str(x) for x in out]
 
-        self.out = out  # TODO: check if required for report in e-mail body
-        self.out_names = [
+        out_names = [
             "dataset",
             "embedding",
             "lang",
@@ -164,7 +164,7 @@ class NER_experiment:
         # write header to file
         if not os.path.exists(dest):
             with open(dest, "w") as f:
-                print(",".join(self.out_names), file=f)
+                print(",".join(out_names), file=f)
         # write results to file
         with open(dest, "a") as f:
             print(",".join(out), file=f)
@@ -202,6 +202,13 @@ class NER_experiment:
         )
         fig.savefig(f"{self.output_path}/{self.dataset_name}_{self.embedding_name}.png")
 
+    # wrapper
+    def run(self, lang, emb, max_epochs, storage):
+
+        self.build_embedding(lang, emb)
+        self.train(max_epochs, storage)
+        self.output_results()
+
     # https://huggingface.co/models references
     huggingface_ref = {
         "fr": "camembert-base",
@@ -211,23 +218,6 @@ class NER_experiment:
     }
 
 
-# run experiment
-experiment = NER_experiment(input_path=f"/kaggle/input/{DATA}")
-experiment.build_embedding(lang=LANG, embedding_codes=EMB)
-experiment.train(max_epochs=MAX_EPOCHS, storage_mode=STORAGE)
-experiment.output_results()
-
-# send report via e-mail
-kernel_name = f"{DATA}_{LANG}_{'_'.join(EMB)}"
-yag = yagmail.SMTP("vrachtstuur", "eentweedrie123")
-
-yag.send(
-    to="arthurleloup@gmail.com",
-    subject=kernel_name + "finished" + 3 * "\U0001F389",
-    contents=[
-        "-".join(x.ljust(15) for x in exp.out_names),
-        "-".join(x.ljust(15) for x in exp.out),
-        {"/kaggle/working/history.png": "training history plot"},
-        {"/kaggle/working/results.csv": "results"},
-    ],
-)
+# Run experiment given conditions in script header
+exp = NER_experiment(dataset_name=DATA)
+exp.run(LANG, EMB, MAX_EPOCH, STORAGE)
