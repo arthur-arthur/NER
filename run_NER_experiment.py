@@ -2,13 +2,13 @@
 ############################
 # Experiment configuration #
 ############################
-DATA = 'conll2003'
-LANG = 'multi'
-EMB = ('flair', 'bpe')
+DATA = 'conll2002'
+LANG = 'en'
+EMB = ('bert', 'flair', 'bert')
 MAX_EPOCH = 100
 STORAGE = 'cpu'
 ############################
-                                    
+                                                                                                                                                
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -172,7 +172,7 @@ class NER_experiment:
     def _extract_from_log(self) -> Dict[str, int]:
 
         # TODO: compute from test set
-        log: str = open(self.output_path + "/training.log", "r").readlines()[-5:-1]
+        log: List[str] = open(self.output_path + "/training.log", "r").readlines()[-5:-1]
         out = {m: [] for m in ["precision", "recall", "accuracy", "f1"]}
         weights = []
 

@@ -10,11 +10,11 @@ def build_script_from_options(data, lang, emb, max_epoch, storage) -> None:
     """
     source = []
 
-    with open("NER_experiment_runner.py", "r") as f:
+    with open("run_NER_experiment.py", "r") as f:
         source = [line for line in f]
 
     # TODO: options -> txt file -> build_from_file
-    with open("NER_experiment_runner.py", "w") as f:
+    with open("run_NER_experiment.py", "w") as f:
 
         source[
             :10
@@ -53,7 +53,7 @@ class KagglePusher:
         metadata = {
             "id": f"achtuur/{self.kernel_name}",
             "title": self.kernel_name,
-            "code_file": "NER_experiment_runner.py",
+            "code_file": "run_NER_experiment.py",
             "language": "python",
             "kernel_type": "script",
             "is_private": "true",

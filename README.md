@@ -1,6 +1,6 @@
 # NER benchmarking: monolingual vs. multilingual embeddings
 
-This repository bundles different NER benchmark experiments to compare the performance of monolingual and multilingual embeddings for both monolingual (Dutch, French and English) and multilingual datasets. For all experiments, the excellent [Flair library](https://github.com/flairNLP/flair) was used.  The experiments were run using Kaggle scripts. A simple CLI was used to generate a script and metadata file to push the scripts to Kaggle using the [Kaggle API](https://github.com/Kaggle/kaggle-api).
+This repository bundles different NER benchmark experiments to compare the performance of monolingual and multilingual embeddings for both monolingual (Dutch, French and English) and multilingual datasets. All experiments made use of the [Flair library](https://github.com/flairNLP/flair). The experiments were run using in individual scripts on Kaggle. A simple CLI was used to generate the script and metadata file to push the scripts to Kaggle using the [Kaggle API](https://github.com/Kaggle/kaggle-api).
 
 ## Datasets
 
@@ -12,6 +12,31 @@ This repository bundles different NER benchmark experiments to compare the perfo
 | Multilingual 	| All       	| No          	|                	|              	|               	|
 
 Note: all datasets were converted to standard CoNLL (BIO)-format. Sentences containing more than 250 tokens (i.e. a total of 3 sentences in the CoNLL2002 dataset) were removed to allow the use of BERT embeddings (limited input sequence length). All three datasets were combined to obtain a multilingual dataset.
+
+## Embeddings
+
+Different monolingual and multilingual embeddings were tested. This included 2 contextualized embeddings (language-specific or multilingual BERT and Flair) stacked with trainable embeddings (`OneHotEmbeddings` and `CharacterEmbeddings` Lample et al. (2016)) and fixed non-contextualized embeddings (fastText, BytePair embeddings). In addition, stackings of the contextualized embeddings (BERT and Flair) were tested. A full overview of the embeddings that were used is given below:
+
+| Name                  	| Language     	| Type                           	| Ref                                                                                         	|
+|-----------------------	|--------------	|--------------------------------	|---------------------------------------------------------------------------------------------	|
+|  BERT                 	| English      	| bert-base-cased                	|                                                                                             	|
+| BERTje                	| Dutch        	| bert-dutch-base-cased          	| https://github.com/wietsedv/bertje                                                          	|
+| CamemBERT             	| French       	| camembert-base                 	| https://camembert-model.fr/                                                                 	|
+| multilingual BERT     	| multilingual 	| bert-base-multilingual-cased   	|                                                                                             	|
+| Flair                 	| English      	| en-forward + en-backward       	| https://github.com/flairNLP/flair/blob/master/resources/docs/embeddings/FLAIR_EMBEDDINGS.md 	|
+| Flair NL              	| Dutch        	| nl-forward + nl-backward       	| https://github.com/flairNLP/flair/blob/master/resources/docs/embeddings/FLAIR_EMBEDDINGS.md 	|
+| Flair FR              	| French       	| fr-forward + fr-backward       	| https://github.com/flairNLP/flair/blob/master/resources/docs/embeddings/FLAIR_EMBEDDINGS.md 	|
+| multilingual Flair    	| multilingual 	| multi-forward + multi-backward 	|                                                                                             	|
+| fastText            	| English      	|                                	|                                                                                             	|
+| fastText            	| Dutch        	|                                	|                                                                                             	|
+| fastText            	| French       	|                                	|                                                                                             	|
+| BytePair            	| English     	|                                	|                                                                                             	|
+| BytePair            	| Dutch        	|                                	|                                                                                             	|
+| BytePair            	|              	|                                	|                                                                                             	|
+| multilingual BytePair 	|              	|                                	|                                                                                             	|
+| Character embeddings  	| NA           	|                                	|                                                                                             	|
+| OneHotEmbeddings      	| NA           	|                                	|                                                                                             	|
+
 
 ## Command line interface
 
