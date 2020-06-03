@@ -4,9 +4,11 @@ import random
 
 def combine(directories, path_out, reduce):
 
-    combined = []
 
     for partition in ["train.txt", "dev.txt", "test.txt"]:
+
+        combined = []
+
 
         for d in directories:
 
