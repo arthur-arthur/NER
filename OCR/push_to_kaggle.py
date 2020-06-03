@@ -17,9 +17,11 @@ from utils import KagglePusher, build_script_from_options
     type=str,
     default="cpu",
     show_default=True,
-    help="Embedding storage mode. When storage_mode is 'gpu', GPU will be automatically enabled.",
+    help="Embedding storage mode. When storage_mode is 'gpu', GPU will be automatically enabled in the Kaggle environment.",
 )
 @click.argument("emb", nargs=-1)  # multiple arguments for emb --> tuple
+@click.argument("seeds", nargs=-1)  # TODO: nargs=-1 for emb argument eats all following arguments.
+                                    # TODO: fix w/ config file
 def push_to_kaggle(data, lang, emb, epochs, storage):
 
     """
@@ -46,10 +48,9 @@ def push_to_kaggle(data, lang, emb, epochs, storage):
 
     """
 
-    build_script_from_options(data, lang, emb, epochs, storage)
-    pusher = KagglePusher(data, lang, emb, storage)
+    build_script_from_options(data, lang, emb1, epochs, storage)
+    pusher = KagglePusher(data, lang, emb1, storage)
     pusher.init_metadata()
     pusher.push()
-
 
 push_to_kaggle()
