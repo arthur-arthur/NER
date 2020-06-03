@@ -44,7 +44,7 @@ class NER_experiment:
 
         self.tag_type = "ner"
         self.corpus = ColumnCorpus(
-            data_folder=input_path, column_format={0: "text", 1: "pos", 2: "ner"}
+            data_folder=input_path, column_format={0: "text", 1: "ner"}
         )
 
         self.tag_dictionary = self.corpus.make_tag_dictionary(tag_type=self.tag_type)
