@@ -42,6 +42,8 @@ def push_to_kaggle(data, lang, embedding_codes, epochs, storage):
 
         "flair":    flair fw + bw (fr, nl, en, multi)
 
+        "elmo:      ELMo embeddings (all 3 layers of ELMo large) (en)
+
     =====================================================================
 
     """
