@@ -3,8 +3,8 @@
 # Experiment configuration #
 ############################
 DATA = 'conll2003'
-LANG = 'multi'
-EMB = ['bert', 'flair', 'ft', 'bpe', 'char', 'ohe']
+LANG = 'en'
+EMB = ['elmo', 'ft']
 MAX_EPOCH = 100
 STORAGE = 'gpu'
 ############################
@@ -19,6 +19,9 @@ import os
 import subprocess
 
 subprocess.run("pip install flair", shell=True, check=True)
+
+if "elmo" in EMB:
+    subprocess.run("pip install allennlp", shell=True, check=True)
 
 from flair.datasets import ColumnCorpus
 from flair.models import SequenceTagger
@@ -65,6 +68,7 @@ class NER_experiment:
             "char": CharacterEmbeddings
             "ft": fastText nl/fr/en (WordEmbeddings)
             "flair": flair (nl/fr/en/multi) -> fw + bw for all
+            "elmo": elmo large
         """
 
         self.tic = time.time()
@@ -83,6 +87,7 @@ class NER_experiment:
                 "ft",
                 "char",
                 "ohe",
+                "elmo"
             ], f"{code} - Invalid embedding code"
 
             if code == "ohe":
@@ -105,6 +110,8 @@ class NER_experiment:
             elif code == "flair":
                 embedding_types.append(FlairEmbeddings(f"{self.lang}-forward"))
                 embedding_types.append(FlairEmbeddings(f"{self.lang}-backward"))
+            elif code == "elmo":
+                embedding_types.append(ELMoEmbeddings(model="large", embedding_mode="all"))
 
         self.embedding: StackedEmbeddings = StackedEmbeddings(
             embeddings=embedding_types
