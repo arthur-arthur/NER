@@ -2,13 +2,13 @@
 ############################
 # Experiment configuration #
 ############################
-DATA = 'conll2002'
-LANG = 'en'
-EMB = ('bert', 'flair', 'bert')
+DATA = 'conll2003'
+LANG = 'multi'
+EMB = ['bert', 'flair', 'ft', 'bpe', 'char', 'ohe']
 MAX_EPOCH = 100
-STORAGE = 'cpu'
+STORAGE = 'gpu'
 ############################
-                                                                                                                                                
+                                                                                                                                                                                                                                                
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -212,7 +212,7 @@ class NER_experiment:
     # https://huggingface.co/models references
     huggingface_ref = {
         "fr": "camembert-base",
-        "nl": "bert-base-dutch-cased",
+        "nl": "wietsedv/bert-base-dutch-cased",
         "en": "bert-base-cased",
         "multi": "bert-base-multilingual-cased",
     }
