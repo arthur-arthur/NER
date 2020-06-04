@@ -26,21 +26,21 @@ def push_to_kaggle(data, lang, embedding_codes, epochs, storage):
     Embedding codes can be passed as arguments, the appropriate classes are initiated
     according to the --lang option. Multiple embeddings are concatenated (StackedEmbeddings)
 
-    Abbreviations (not case-sensitive):
+    Abbreviations:
 
     =====================================================================
 
         "bert":     BERTje (nl), CamemBERT (fr), BERT (en), mBERT (multi)
 
-        "bpe":      BytePairEmbeddings (fr, nl, en or multi)
+        "bpe":      BytePairEmbeddings (fr, nl, en, multi)
 
         "ohe":      OneHotEmbeddings
 
         "char":     CharacterEmbeddings
 
-        "ft":       fastText nl/fr/en (WordEmbeddings)
+        "ft":       fastText WordEmbeddings (fr, nl, en)
 
-        "flair":    flair nl/fr/en, both fw and bw
+        "flair":    flair fw + bw (fr, nl, en, multi)
 
     =====================================================================
 

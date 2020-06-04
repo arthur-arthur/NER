@@ -55,16 +55,16 @@ class NER_experiment:
     def build_embedding(self, lang, embedding_codes: List[str]) -> None:
 
         """
-        pass a list of abbreviated embedding codes as the embedding_codes argument.
-        If appropriate, the different embedding classes are instantiated according to the lang argument
+        pass a list of abbreviated embedding codes as the embedding_codes argument (CLI: emb arg)
+        instantiation of the correct class depends on the lang argument (CLI: --lang option)
         Abbr:
             "bert": BERTje (nl), CamemBERT (fr), BERT (en), mBERT (multi) (base cased)
                     (always last layer, first subtoken embedding, ie no scalar mix)
-            "bpe": BytePairEmbeddings (fr, nl, en or multi)
+            "bpe": BytePairEmbeddings (fr/nl/en/multi)
             "ohe": OneHotEmbeddings
             "char": CharacterEmbeddings
             "ft": fastText nl/fr/en (WordEmbeddings)
-            "flair": flair nl/fr/en, both fw and bw
+            "flair": flair (nl/fr/en/multi) -> fw + bw for all
         """
 
         self.tic = time.time()
