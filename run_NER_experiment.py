@@ -2,9 +2,9 @@
 ############################
 # Experiment configuration #
 ############################
-DATA = 'conll2003'
-LANG = 'en'
-EMB = ['elmo', 'ft']
+DATA = 'conll2002'
+LANG = 'multi'
+EMB = ['bert', 'ohe']
 MAX_EPOCH = 100
 STORAGE = 'gpu'
 ############################
@@ -34,6 +34,7 @@ from flair.embeddings import (
     CharacterEmbeddings,
     TransformerWordEmbeddings,
     OneHotEmbeddings,
+    ELMoEmbeddings
 )
 from flair.trainers import ModelTrainer
 
