@@ -40,7 +40,7 @@ Different monolingual and multilingual embeddings were tested. This included 2 c
 
 ## Command line interface
 
-The following command creates a python script to run the experiment with the given configuration, creates a `kernel-metadata.json` file (kernel name is the concatenation of dataset, language and the different embeddings) and pushes the script to Kaggle. By default, the embedding storage mode of the ModelTrainer instance is set to 'cpu'. When `--storage` option is set to `gpu`, the GPU is automatically enabled on Kaggle.
+Since the Kaggle API does not allow to import utility scripts directly from the command line, every experiment was executed from a self-contained script containing all the code to load the dataset, initialize the embeddings, train and evaluate the model. This script was automatically generated and pushed to Kaggle using a simple command line interface. The following command creates the python script, the `kernel-metadata.json` file (kernel name is the concatenation of dataset, language and the different embeddings) and pushes the script to Kaggle. By default, the embedding storage mode of the ModelTrainer instance is set to 'cpu'. When `--storage` option is set to `gpu`, the GPU is automatically enabled on Kaggle.
 
 Important: the `--data` option requires a valid name of the dataset on Kaggle (path: `/kaggle/input/<data>`)
 
