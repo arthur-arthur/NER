@@ -1,26 +1,19 @@
-# Combine datasets (full and random sample of 1//n_sentences per partition
 import random
 
-
+# Combine benchmark DSs into trilingual DS
 def combine(directories, path_out, reduce):
-
 
     for partition in ["train.txt", "dev.txt", "test.txt"]:
 
         combined = []
 
-
         for d in directories:
-
             path = f"{d}/{partition}"
-
             out = []
             sentence = ""
 
             with open(path, "r") as read:
-
                 for line in read:
-
                     if line != "\n":
                         sentence += line
                     else:
@@ -28,6 +21,7 @@ def combine(directories, path_out, reduce):
                             out.append(sentence)
                             sentence = ""
 
+            # random sample of 1//n_sentences per partition
             if reduce:
                 out = random.sample(out, len(out) // len(directories))
 

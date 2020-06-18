@@ -1,7 +1,8 @@
-# WikiNER - downsample and convert to BIO
 import flair.datasets
 import os
+from urllib.request import urlopen
 
+# WikiNER
 corpus = flair.datasets.WIKINER_FRENCH().downsample(0.10)
 
 
@@ -15,7 +16,6 @@ def wikiNER_to_CoNLL(partition, file_out):
 
                 word = token.text
                 tag = token.get_tag("ner").value
-
                 # to CoNLL format (BIO2)
                 if tag.startswith("S-"):
                     tag = tag.replace("S-", "B-")
@@ -35,27 +35,19 @@ for f, part in zip(
 ):
     wikiNER_to_CoNLL(part, f)
 
-
-
 # CoNLL 2002
-from urllib.request import urlopen
-
-
 def pp_conll2002(split, max_sentence_length=None):
 
     partitions = {"train": "train", "testa": "dev", "testb": "test"}
-
     url = f"https://www.clips.uantwerpen.be/conll2002/ner/data/ned.{split}"
     file = open(f"conll2002/{partitions[split]}.txt", "w")
 
     sentence = []
-
     c, remove = 0, 0
 
     with file as f:
 
         for line in urlopen(url):
-
             line = line.decode("latin-1").strip("\n")
 
             if line.startswith("-DOCSTART-"):
@@ -67,7 +59,6 @@ def pp_conll2002(split, max_sentence_length=None):
 
             else:
                 if sentence:
-
                     if max_sentence_length is None:
                         print("\n".join(sentence), file=f)
                         c += 1
@@ -91,11 +82,10 @@ for split in ["train", "testa", "testb"]:
     print(f"{split.ljust(10, '-')}>Removed {remove}/{retain} sentences")
 
 
-# CoNLL2003 DS
+# CoNLL2003
 def pp_conll2003(path_in, path_out):
 
     sentence = []
-
     in_entity = (
         False  # track if currently in multi-token entity (BIO -> BIO2 conversion)
     )
@@ -105,8 +95,8 @@ def pp_conll2003(path_in, path_out):
         with open(path_in, "r") as i:
 
             for line in i:
-
                 line = line.strip("\n")
+
                 if line.startswith("-DOCSTART-"):
                     continue
 
@@ -131,8 +121,7 @@ def pp_conll2003(path_in, path_out):
 
 
 for file_in, file_out in zip(
-        ["eng.train", "eng.testa", "eng.testb"],
-        ["train.txt", "dev.txt", "test.txt"]
+    ["eng.train", "eng.testa", "eng.testb"], ["train.txt", "dev.txt", "test.txt"]
 ):
     path_in = f"conll2003/raw/{file_in}"
     path_out = f"conll2003/{file_out}"
