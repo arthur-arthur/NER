@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Summary | Multilingual Deep Learning models for Entity Extraction in NLP</title>
+  <meta name="description" content="MASTAT thesis" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Summary | Multilingual Deep Learning models for Entity Extraction in NLP" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="MASTAT thesis" />
+  <meta name="github-repo" content="arthur-arthur/MASTAT_thesis" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Summary | Multilingual Deep Learning models for Entity Extraction in NLP" />
+  
+  <meta name="twitter:description" content="MASTAT thesis" />
+  
+
+<meta name="author" content="Arthur Leloup" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="discussion.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Multilingual Deep Learning Models for Entity Extraction in NLP</a></li>
+<li><a href="./">Arthur Leloup</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Abstract</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#natural-language-processing"><i class="fa fa-check"></i><b>2.1</b> Natural Language Processing</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction.html"><a href="introduction.html#named-entity-recognition"><i class="fa fa-check"></i><b>2.2</b> Named Entity Recognition</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction.html"><a href="introduction.html#word-embeddings"><i class="fa fa-check"></i><b>2.3</b> Word embeddings</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="introduction.html"><a href="introduction.html#language-models"><i class="fa fa-check"></i><b>2.3.1</b> Language models</a></li>
+<li class="chapter" data-level="2.3.2" data-path="introduction.html"><a href="introduction.html#learning-word-embeddings"><i class="fa fa-check"></i><b>2.3.2</b> Learning word embeddings</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="introduction.html"><a href="introduction.html#contextual-embeddings"><i class="fa fa-check"></i><b>2.4</b> Contextual embeddings</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="introduction.html"><a href="introduction.html#neural-lms"><i class="fa fa-check"></i><b>2.4.1</b> Neural LMs</a></li>
+<li class="chapter" data-level="2.4.2" data-path="introduction.html"><a href="introduction.html#taglm"><i class="fa fa-check"></i><b>2.4.2</b> TagLM</a></li>
+<li class="chapter" data-level="2.4.3" data-path="introduction.html"><a href="introduction.html#elmo"><i class="fa fa-check"></i><b>2.4.3</b> ELMo</a></li>
+<li class="chapter" data-level="2.4.4" data-path="introduction.html"><a href="introduction.html#flair"><i class="fa fa-check"></i><b>2.4.4</b> Flair</a></li>
+<li class="chapter" data-level="2.4.5" data-path="introduction.html"><a href="introduction.html#transformers"><i class="fa fa-check"></i><b>2.4.5</b> Transformers</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="introduction.html"><a href="introduction.html#multilingual-embeddings"><i class="fa fa-check"></i><b>2.5</b> Multilingual embeddings</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction.html"><a href="introduction.html#summary"><i class="fa fa-check"></i><b>2.6</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a><ul>
+<li class="chapter" data-level="3.1" data-path="methods.html"><a href="methods.html#data"><i class="fa fa-check"></i><b>3.1</b> Data</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="methods.html"><a href="methods.html#english-conll2003"><i class="fa fa-check"></i><b>3.1.1</b> English: CoNLL2003</a></li>
+<li class="chapter" data-level="3.1.2" data-path="methods.html"><a href="methods.html#dutch-conll-2002"><i class="fa fa-check"></i><b>3.1.2</b> Dutch: CoNLL 2002</a></li>
+<li class="chapter" data-level="3.1.3" data-path="methods.html"><a href="methods.html#french-wikiner"><i class="fa fa-check"></i><b>3.1.3</b> French: WikiNER</a></li>
+<li class="chapter" data-level="3.1.4" data-path="methods.html"><a href="methods.html#faktion-data"><i class="fa fa-check"></i><b>3.1.4</b> Faktion data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="methods.html"><a href="methods.html#model-architectures"><i class="fa fa-check"></i><b>3.2</b> Model architectures</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="methods.html"><a href="methods.html#deep-neural-language-models"><i class="fa fa-check"></i><b>3.2.1</b> Deep neural language models</a></li>
+<li class="chapter" data-level="3.2.2" data-path="methods.html"><a href="methods.html#ner-classifier-architecture"><i class="fa fa-check"></i><b>3.2.2</b> NER classifier architecture</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="methods.html"><a href="methods.html#evaluation-metrics"><i class="fa fa-check"></i><b>3.3</b> Evaluation metrics</a></li>
+<li class="chapter" data-level="3.4" data-path="methods.html"><a href="methods.html#ner-classification-task"><i class="fa fa-check"></i><b>3.4</b> NER classification task</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a><ul>
+<li class="chapter" data-level="4.1" data-path="results.html"><a href="results.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
+<li class="chapter" data-level="4.2" data-path="results.html"><a href="results.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>5</b> Discussion</a><ul>
+<li class="chapter" data-level="5.1" data-path="discussion.html"><a href="discussion.html#future-perspectives"><i class="fa fa-check"></i><b>5.1</b> Future perspectives</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="summ.html"><a href="summ.html"><i class="fa fa-check"></i><b>6</b> Summary</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Multilingual Deep Learning models for Entity Extraction in NLP</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="summ" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Summary</h1>
+<p>The main goal of this thesis is to compare how the use of mono-lingual or multi-lingual contextualized word embeddings affect performance of a specific Named Entity Recognition (NER) task when applied on mono-lingual data (English, Dutch and French) and multilingual data.</p>
+<p>Current state of art performance for NER tasks is achieved using a BiLSTM-CRF classifier (Bidirectional LSTMS with a Conditional Random Fields decoding layer). This architecture will be used for the NER pipelines in this thesis. The BiLSTM-CRF input (i.e. the word representations) was generated using different pre-trained language models that output monolingual or multilingual contextualized embeddings. It has been shown that NER performance based on state of the art contextualized word embeddings can often be improved when the BiLSTM-CRF input is a concatenation of the contextualized embedding vectors together with pre-computed fixed word embeddings like GloVe or fastText. These so-called “stacked” embeddings have shown to result in state of the art performance on NER tasks, and will be tested as well.</p>
+<p>A brief summary of the different embeddings used in this thesis is given below</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">  <span class="dt">embedding =</span> <span class="kw">c</span>(<span class="st">&quot;GloVe&quot;</span>, <span class="st">&quot;BytePair monolingual&quot;</span>, <span class="st">&quot;fastText&quot;</span>, </a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">                <span class="st">&quot;ELMo&quot;</span>, <span class="st">&quot;Flair&quot;</span>, <span class="st">&quot;BERT&quot;</span>, <span class="st">&quot;CamemBERT&quot;</span>, <span class="st">&quot;BytePair multi&quot;</span>, <span class="st">&quot;mBERT&quot;</span>, <span class="st">&quot;mFlair&quot;</span>),</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">  <span class="dt">language =</span> <span class="kw">c</span>(<span class="st">&quot;En&quot;</span>, <span class="kw">rep</span>(<span class="st">&quot;En/Fr/Nl&quot;</span>, <span class="dv">2</span>), <span class="st">&quot;En&quot;</span>, <span class="st">&quot;En/Nl&quot;</span>, <span class="st">&quot;En&quot;</span>, <span class="st">&quot;Fr&quot;</span>, <span class="kw">rep</span>(<span class="st">&quot;multilingual&quot;</span>, <span class="dv">3</span>)),</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">  <span class="dt">type =</span> <span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;monolingual&quot;</span>, <span class="dv">7</span>), <span class="kw">rep</span>(<span class="st">&quot;multilingual&quot;</span>, <span class="dv">3</span>)),</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">  <span class="dt">contextualized =</span> <span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;No&quot;</span>, <span class="dv">3</span>), <span class="kw">rep</span>(<span class="st">&quot;Yes&quot;</span>, <span class="dv">4</span>), <span class="st">&quot;No&quot;</span>, <span class="kw">rep</span>(<span class="st">&quot;Yes&quot;</span>, <span class="dv">2</span>)) </a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">)</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">knitr<span class="op">::</span><span class="kw">kable</span>(df, <span class="dt">booktabs=</span>T, <span class="dt">caption=</span><span class="st">&quot;Overview of the primary embedding types used in this thesis. In addition, different combinations of these embeddings were constructed by concatenating different embeddings into a single embedding vector. Also, some pipelines included character embeddings (i.e. representations as trainable parameters of the BiLSTM-CRF model.&quot;</span>)</a></code></pre></div>
+<table>
+<caption>(#tab:embeddings_overview)Overview of the primary embedding types used in this thesis. In addition, different combinations of these embeddings were constructed by concatenating different embeddings into a single embedding vector. Also, some pipelines included character embeddings (i.e. representations as trainable parameters of the BiLSTM-CRF model.</caption>
+<thead>
+<tr class="header">
+<th align="left">embedding</th>
+<th align="left">language</th>
+<th align="left">type</th>
+<th align="left">contextualized</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">GloVe</td>
+<td align="left">En</td>
+<td align="left">monolingual</td>
+<td align="left">No</td>
+</tr>
+<tr class="even">
+<td align="left">BytePair monolingual</td>
+<td align="left">En/Fr/Nl</td>
+<td align="left">monolingual</td>
+<td align="left">No</td>
+</tr>
+<tr class="odd">
+<td align="left">fastText</td>
+<td align="left">En/Fr/Nl</td>
+<td align="left">monolingual</td>
+<td align="left">No</td>
+</tr>
+<tr class="even">
+<td align="left">ELMo</td>
+<td align="left">En</td>
+<td align="left">monolingual</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">Flair</td>
+<td align="left">En/Nl</td>
+<td align="left">monolingual</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">BERT</td>
+<td align="left">En</td>
+<td align="left">monolingual</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">CamemBERT</td>
+<td align="left">Fr</td>
+<td align="left">monolingual</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">BytePair multi</td>
+<td align="left">multilingual</td>
+<td align="left">multilingual</td>
+<td align="left">No</td>
+</tr>
+<tr class="odd">
+<td align="left">mBERT</td>
+<td align="left">multilingual</td>
+<td align="left">multilingual</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">mFlair</td>
+<td align="left">multilingual</td>
+<td align="left">multilingual</td>
+<td align="left">Yes</td>
+</tr>
+</tbody>
+</table>
+<p>First, the different embeddings were evaluated on well-known human-annotated benchmark datasets for NER tasks.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">  <span class="dt">language =</span> <span class="kw">c</span>(<span class="st">&quot;En&quot;</span>, <span class="st">&quot;Nl&quot;</span>, <span class="st">&quot;Fr&quot;</span>),</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">  <span class="dt">dataset =</span> <span class="kw">c</span>(<span class="st">&quot;CoNLL-2003&quot;</span>, <span class="st">&quot;CoNLL-2002&quot;</span>, <span class="st">&quot;WikiNER&quot;</span>),</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">  <span class="dt">corpus =</span> <span class="kw">c</span>(<span class="st">&quot;News articles (Reuters)&quot;</span>, <span class="st">&quot;News articles (De Morgen)&quot;</span>, <span class="st">&quot;Wikipedia 2008&quot;</span>),</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">  <span class="dt">sentences =</span> <span class="kw">c</span>(<span class="dv">14041</span><span class="op">+</span><span class="dv">3250</span><span class="op">+</span><span class="dv">3453</span>, <span class="dv">15802</span><span class="op">+</span><span class="dv">2895</span><span class="op">+</span><span class="dv">5194</span>, <span class="dv">10713</span><span class="op">+</span><span class="dv">1190</span><span class="op">+</span><span class="dv">1323</span>),</a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">  <span class="dt">tokens=</span><span class="kw">c</span>(<span class="dv">203621</span><span class="op">+</span><span class="dv">51362</span><span class="op">+</span><span class="dv">46435</span>, <span class="dv">199969</span><span class="op">+</span><span class="dv">37687</span><span class="op">+</span><span class="dv">68466</span>, <span class="dv">279729</span><span class="op">+</span><span class="dv">34824</span><span class="op">+</span><span class="dv">30991</span>)</a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">)</a>
+<a class="sourceLine" id="cb2-8" data-line-number="8">knitr<span class="op">::</span><span class="kw">kable</span>(df, <span class="dt">booktabs=</span>T)</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">language</th>
+<th align="left">dataset</th>
+<th align="left">corpus</th>
+<th align="right">sentences</th>
+<th align="right">tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">En</td>
+<td align="left">CoNLL-2003</td>
+<td align="left">News articles (Reuters)</td>
+<td align="right">20744</td>
+<td align="right">301418</td>
+</tr>
+<tr class="even">
+<td align="left">Nl</td>
+<td align="left">CoNLL-2002</td>
+<td align="left">News articles (De Morgen)</td>
+<td align="right">23891</td>
+<td align="right">306122</td>
+</tr>
+<tr class="odd">
+<td align="left">Fr</td>
+<td align="left">WikiNER</td>
+<td align="left">Wikipedia 2008</td>
+<td align="right">13226</td>
+<td align="right">345544</td>
+</tr>
+</tbody>
+</table>
+<p>The CoNLL datasets contain roughly 20.000 sentences (~300.000 tokens), state of the art F1-score for the English and Dutch dataset is ~93% and 90%, respectively. The state of the art for the French WikiNER is ~95%, but this dataset is much larger as compared to the CoNLL datasets. For practical reasons, this dataset was randomly downsampled (by a factor 0.10) to roughly the same size as the English and Dutch datasets. The CoNLL datasets are available as separate train, validation and test sets (~70/15/15), random splitting was used for the downsampled WikiNER dataset.</p>
+<p>For the implementations of the different models, the <a href="https://github.com/flairNLP/flair">Flair library</a><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> was used. The NER classifier model and hyperparameters were the same for all embedding types and based on the <a href="https://github.com/flairNLP/flair/blob/master/resources/docs/EXPERIMENTS.md">best known configuration</a><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> for the CoNLL tasks as reported by the authors of the Flair library, i.e. a BiLSTM classifier with 256 hidden states and a CRF decoding layer. Weights were initialized using Xavier normal initialization<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>, training was done using SGD with a mini-batch size of 32. The initial learning rate was 0.1, when the validation set F1-score did not improve for 3 consecutive epochs, the learning rate was annealed by a factor 0.5. Training was stopped when the learning rate dropped below 0.0001 or after 100 epochs. The final model was refitted on the training and validation set and extra-sample performance was estimated using the held-out test set. To allow easy comparison with the results reported in literature, the micro-average F1-score was obtained by computing the average of the F1 score for every entity class, weighted by the number of instances per entity class.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw">getwd</span>()</a></code></pre></div>
+<pre><code>## [1] &quot;/Users/arthur/Documents/MASTAT/Thesis/THESIS/MASTAT_thesis&quot;</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">lang &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;en&#39;</span>, <span class="st">&#39;nl&#39;</span>, <span class="st">&#39;fr&#39;</span>)</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">files &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;Model_overview - &quot;</span>, lang, <span class="st">&quot;.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">DIR &lt;-<span class="st"> &quot;data/raw/benchmark&quot;</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5">df &lt;-<span class="st"> </span><span class="kw">c</span>()</a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="cf">for</span> (f <span class="cf">in</span> files) {</a>
+<a class="sourceLine" id="cb5-7" data-line-number="7">  df &lt;-<span class="st"> </span><span class="kw">rbind</span>(</a>
+<a class="sourceLine" id="cb5-8" data-line-number="8">    df, </a>
+<a class="sourceLine" id="cb5-9" data-line-number="9">    <span class="kw">read_csv</span>(<span class="kw">file.path</span>(DIR, f), <span class="dt">col_types =</span> <span class="kw">cols</span>(<span class="dt">date =</span> <span class="kw">col_datetime</span>(<span class="dt">format =</span> <span class="st">&quot;%d-%m-%Y&quot;</span>)))</a>
+<a class="sourceLine" id="cb5-10" data-line-number="10">  )</a>
+<a class="sourceLine" id="cb5-11" data-line-number="11">}</a>
+<a class="sourceLine" id="cb5-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb5-13" data-line-number="13">df &lt;-<span class="st"> </span>df <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(f1))</a>
+<a class="sourceLine" id="cb5-15" data-line-number="15"></a>
+<a class="sourceLine" id="cb5-16" data-line-number="16">summ &lt;-<span class="st"> </span>df <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb5-17" data-line-number="17"><span class="st">  </span><span class="kw">group_by</span>(embedding_type, embedding_lang, dataset_lang, downsample_factor) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb5-18" data-line-number="18"><span class="st">  </span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb5-19" data-line-number="19">    <span class="dt">mean_f1 =</span> <span class="kw">mean</span>(f1),</a>
+<a class="sourceLine" id="cb5-20" data-line-number="20">    <span class="dt">n =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb5-21" data-line-number="21">    <span class="dt">n_str =</span> <span class="kw">paste0</span>(<span class="st">&quot; (n=&quot;</span>, <span class="kw">n</span>(), <span class="st">&quot;)&quot;</span>),</a>
+<a class="sourceLine" id="cb5-22" data-line-number="22">    <span class="dt">lab =</span> <span class="kw">paste0</span>(</a>
+<a class="sourceLine" id="cb5-23" data-line-number="23">      <span class="kw">round</span>(mean_f1, <span class="dv">2</span>),</a>
+<a class="sourceLine" id="cb5-24" data-line-number="24">      <span class="kw">ifelse</span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>, n_str, <span class="st">&quot;&quot;</span>)),</a>
+<a class="sourceLine" id="cb5-25" data-line-number="25">    <span class="dt">sd =</span> <span class="kw">sd</span>(f1)</a>
+<a class="sourceLine" id="cb5-26" data-line-number="26">  )</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">en &lt;-<span class="st"> </span>summ <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(dataset_lang <span class="op">==</span><span class="st"> &quot;en&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(mean_f1)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="st">  </span><span class="kw">arrange</span>(embedding_lang, <span class="kw">desc</span>(mean_f1))</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="kw">ggplot</span>(en, <span class="kw">aes</span>(<span class="kw">reorder</span>(embedding_type, mean_f1), mean_f1, <span class="dt">color=</span>embedding_lang)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size=</span><span class="dv">3</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="st">  </span><span class="kw">geom_errorbar</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> mean_f1 <span class="op">-</span><span class="st"> </span>sd, <span class="dt">ymax=</span>mean_f1 <span class="op">+</span><span class="st"> </span>sd), <span class="dt">width=</span><span class="fl">0.2</span>, <span class="dt">alpha=</span><span class="fl">0.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="st">  </span><span class="kw">facet_grid</span>(<span class="dt">rows=</span><span class="kw">vars</span>(embedding_lang), <span class="dt">space =</span> <span class="st">&quot;free&quot;</span>, <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;CoNLL 2003 - English&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;skyblue&quot;</span>, <span class="st">&quot;orange&quot;</span>))  <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Micro-avg F1&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">limits =</span> <span class="kw">c</span>(<span class="dv">50</span>, <span class="dv">100</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>)</a></code></pre></div>
+<p><img src="Thesis_Arthur_Leloup_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">en_table &lt;-<span class="st"> </span>en <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">multi =</span> <span class="kw">ifelse</span>(embedding_lang <span class="op">==</span><span class="st"> &quot;monolingual&quot;</span>, <span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean_f1 =</span> <span class="kw">round</span>(mean_f1, <span class="dv">1</span>),</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5">         <span class="dt">sd =</span> <span class="kw">ifelse</span>(<span class="kw">is.na</span>(sd), <span class="st">&quot;&quot;</span>, <span class="kw">round</span>(sd, <span class="dv">1</span>))) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="st">  </span><span class="kw">select</span>(embedding_type, multi, mean_f1, n, sd)</a>
+<a class="sourceLine" id="cb7-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb7-8" data-line-number="8">knitr<span class="op">::</span><span class="kw">kable</span>(en_table, <span class="dt">booktabs=</span>T, </a>
+<a class="sourceLine" id="cb7-9" data-line-number="9">             <span class="dt">col.names =</span> <span class="kw">c</span>(<span class="st">&quot;Embedding&quot;</span>, <span class="st">&quot;Monolingual&quot;</span>, <span class="st">&quot;F1&quot;</span>, <span class="st">&quot;n&quot;</span>, <span class="st">&quot;sd&quot;</span>),</a>
+<a class="sourceLine" id="cb7-10" data-line-number="10">             <span class="dt">caption =</span> <span class="st">&quot;Estimated extra-sample performances (micro-average F1-score) of different monolingual and multilingual embeddings on the English CoNLL 2003 NER task (BiLSTM-CRF classifier)&quot;</span>)</a></code></pre></div>
+<table>
+<caption><span id="tab:unnamed-chunk-4">Table 6.1: </span>Estimated extra-sample performances (micro-average F1-score) of different monolingual and multilingual embeddings on the English CoNLL 2003 NER task (BiLSTM-CRF classifier)</caption>
+<thead>
+<tr class="header">
+<th align="left">Embedding</th>
+<th align="left">Monolingual</th>
+<th align="right">F1</th>
+<th align="right">n</th>
+<th align="left">sd</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ELMo + GloVe + Flair</td>
+<td align="left">No</td>
+<td align="right">92.5</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">ELMo + GloVe</td>
+<td align="left">No</td>
+<td align="right">92.4</td>
+<td align="right">3</td>
+<td align="left">0.1</td>
+</tr>
+<tr class="odd">
+<td align="left">Flair + Glove + Character</td>
+<td align="left">No</td>
+<td align="right">92.2</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">ELMo</td>
+<td align="left">No</td>
+<td align="right">92.1</td>
+<td align="right">3</td>
+<td align="left">0.1</td>
+</tr>
+<tr class="odd">
+<td align="left">ELMo + GloVe + Character</td>
+<td align="left">No</td>
+<td align="right">92.1</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Flair + GloVe</td>
+<td align="left">No</td>
+<td align="right">92.1</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">BERT</td>
+<td align="left">No</td>
+<td align="right">90.8</td>
+<td align="right">2</td>
+<td align="left">0.2</td>
+</tr>
+<tr class="even">
+<td align="left">mBERT + BytePair + Character</td>
+<td align="left">Yes</td>
+<td align="right">91.3</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">mBERT + BytePair</td>
+<td align="left">Yes</td>
+<td align="right">91.2</td>
+<td align="right">3</td>
+<td align="left">0.2</td>
+</tr>
+<tr class="even">
+<td align="left">mBERT + Character</td>
+<td align="left">Yes</td>
+<td align="right">90.6</td>
+<td align="right">3</td>
+<td align="left">0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">mBERT</td>
+<td align="left">Yes</td>
+<td align="right">90.3</td>
+<td align="right">2</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">Flair</td>
+<td align="left">Yes</td>
+<td align="right">84.2</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">BytePair</td>
+<td align="left">Yes</td>
+<td align="right">83.9</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">nl &lt;-<span class="st"> </span>summ <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(dataset_lang <span class="op">==</span><span class="st"> &quot;nl&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="st">  </span><span class="kw">arrange</span>(embedding_lang, <span class="kw">desc</span>(mean_f1))</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="kw">ggplot</span>(nl, <span class="kw">aes</span>(<span class="kw">reorder</span>(embedding_type, mean_f1), mean_f1, <span class="dt">color=</span>embedding_lang)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size=</span><span class="dv">3</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="st">  </span><span class="kw">geom_errorbar</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> mean_f1 <span class="op">-</span><span class="st"> </span>sd, <span class="dt">ymax=</span>mean_f1 <span class="op">+</span><span class="st"> </span>sd), <span class="dt">width=</span><span class="fl">0.2</span>, <span class="dt">alpha=</span><span class="fl">0.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-8" data-line-number="8"><span class="st">  </span><span class="kw">facet_grid</span>(<span class="dt">rows=</span><span class="kw">vars</span>(embedding_lang), <span class="dt">space =</span> <span class="st">&quot;free&quot;</span>, <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;CoNLL 2002 - Dutch&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-11" data-line-number="11"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;skyblue&quot;</span>, <span class="st">&quot;orange&quot;</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-12" data-line-number="12"><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Micro-avg F1&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">limits =</span> <span class="kw">c</span>(<span class="dv">50</span>, <span class="dv">100</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-14" data-line-number="14"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>)</a></code></pre></div>
+<p><img src="Thesis_Arthur_Leloup_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">nl_table &lt;-<span class="st"> </span>nl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">multi =</span> <span class="kw">ifelse</span>(embedding_lang <span class="op">==</span><span class="st"> &quot;monolingual&quot;</span>, <span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean_f1 =</span> <span class="kw">round</span>(mean_f1, <span class="dv">1</span>),</a>
+<a class="sourceLine" id="cb9-5" data-line-number="5">         <span class="dt">sd =</span> <span class="kw">ifelse</span>(<span class="kw">is.na</span>(sd), <span class="st">&quot;&quot;</span>, <span class="kw">round</span>(sd, <span class="dv">1</span>))) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="st">  </span><span class="kw">select</span>(embedding_type, multi, mean_f1, n, sd)</a>
+<a class="sourceLine" id="cb9-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb9-8" data-line-number="8">knitr<span class="op">::</span><span class="kw">kable</span>(nl_table, <span class="dt">booktabs=</span>T, </a>
+<a class="sourceLine" id="cb9-9" data-line-number="9">             <span class="dt">col.names =</span> <span class="kw">c</span>(<span class="st">&quot;Embedding&quot;</span>, <span class="st">&quot;Monolingual&quot;</span>, <span class="st">&quot;F1&quot;</span>, <span class="st">&quot;n&quot;</span>, <span class="st">&quot;sd&quot;</span>),</a>
+<a class="sourceLine" id="cb9-10" data-line-number="10">             <span class="dt">caption =</span> <span class="st">&quot;Estimated extra-sample performances (micro-average F1-score) of different monolingual and multilingual embeddings on the Dutch CoNLL 2002 NER task (BiLSTM-CRF classifier)&quot;</span>)</a></code></pre></div>
+<table>
+<caption><span id="tab:unnamed-chunk-6">Table 6.2: </span>Estimated extra-sample performances (micro-average F1-score) of different monolingual and multilingual embeddings on the Dutch CoNLL 2002 NER task (BiLSTM-CRF classifier)</caption>
+<thead>
+<tr class="header">
+<th align="left">Embedding</th>
+<th align="left">Monolingual</th>
+<th align="right">F1</th>
+<th align="right">n</th>
+<th align="left">sd</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Flair + fastText + Character</td>
+<td align="left">No</td>
+<td align="right">89.7</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Flair + fastText + BytePair + Character</td>
+<td align="left">No</td>
+<td align="right">89.6</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Flair + fastText + BytePair</td>
+<td align="left">No</td>
+<td align="right">89.3</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Flair + fastText</td>
+<td align="left">No</td>
+<td align="right">88.8</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Flair</td>
+<td align="left">No</td>
+<td align="right">86.6</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">fastText + Character</td>
+<td align="left">No</td>
+<td align="right">86.6</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">fastText + BytePair</td>
+<td align="left">No</td>
+<td align="right">83.5</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">fastText</td>
+<td align="left">No</td>
+<td align="right">81.2</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">BytePair</td>
+<td align="left">No</td>
+<td align="right">76.4</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">mBERT + Character</td>
+<td align="left">Yes</td>
+<td align="right">89.6</td>
+<td align="right">2</td>
+<td align="left">0.6</td>
+</tr>
+<tr class="odd">
+<td align="left">mBERT + BytePair</td>
+<td align="left">Yes</td>
+<td align="right">89.3</td>
+<td align="right">4</td>
+<td align="left">0.3</td>
+</tr>
+<tr class="even">
+<td align="left">mBERT + BytePair + Character</td>
+<td align="left">Yes</td>
+<td align="right">89.2</td>
+<td align="right">2</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left">mBERT</td>
+<td align="left">Yes</td>
+<td align="right">88.9</td>
+<td align="right">3</td>
+<td align="left">0.3</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">fr &lt;-<span class="st"> </span>summ <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(dataset_lang <span class="op">==</span><span class="st"> &quot;fr&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(mean_f1)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="st">  </span><span class="kw">arrange</span>(embedding_lang, <span class="kw">desc</span>(mean_f1))</a>
+<a class="sourceLine" id="cb10-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb10-6" data-line-number="6"><span class="kw">ggplot</span>(fr, <span class="kw">aes</span>(<span class="kw">reorder</span>(embedding_type, mean_f1), mean_f1, <span class="dt">color=</span>embedding_lang)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-7" data-line-number="7"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size=</span><span class="dv">3</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="st">  </span><span class="kw">geom_errorbar</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> mean_f1 <span class="op">-</span><span class="st"> </span>sd, <span class="dt">ymax=</span>mean_f1 <span class="op">+</span><span class="st"> </span>sd), <span class="dt">width=</span><span class="fl">0.2</span>, <span class="dt">alpha=</span><span class="fl">0.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-9" data-line-number="9"><span class="st">  </span><span class="kw">facet_grid</span>(<span class="dt">rows=</span><span class="kw">vars</span>(embedding_lang), <span class="dt">space =</span> <span class="st">&quot;free&quot;</span>, <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-11" data-line-number="11"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;WikiNER - French&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-12" data-line-number="12"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;skyblue&quot;</span>, <span class="st">&quot;orange&quot;</span>))  <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-13" data-line-number="13"><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Micro-avg F1&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-14" data-line-number="14"><span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">limits =</span> <span class="kw">c</span>(<span class="dv">50</span>, <span class="dv">100</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-15" data-line-number="15"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>)</a></code></pre></div>
+<p><img src="Thesis_Arthur_Leloup_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">fr_table &lt;-<span class="st"> </span>fr <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-2" data-line-number="2"><span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">multi =</span> <span class="kw">ifelse</span>(embedding_lang <span class="op">==</span><span class="st"> &quot;monolingual&quot;</span>, <span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-4" data-line-number="4"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean_f1 =</span> <span class="kw">round</span>(mean_f1, <span class="dv">1</span>),</a>
+<a class="sourceLine" id="cb11-5" data-line-number="5">         <span class="dt">sd =</span> <span class="kw">ifelse</span>(<span class="kw">is.na</span>(sd), <span class="st">&quot;&quot;</span>, <span class="kw">round</span>(sd, <span class="dv">1</span>))) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-6" data-line-number="6"><span class="st">  </span><span class="kw">select</span>(embedding_type, multi, mean_f1, n, sd)</a>
+<a class="sourceLine" id="cb11-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb11-8" data-line-number="8">knitr<span class="op">::</span><span class="kw">kable</span>(fr_table, <span class="dt">booktabs=</span>T, </a>
+<a class="sourceLine" id="cb11-9" data-line-number="9">             <span class="dt">col.names =</span> <span class="kw">c</span>(<span class="st">&quot;Embedding&quot;</span>, <span class="st">&quot;Monolingual&quot;</span>, <span class="st">&quot;F1&quot;</span>, <span class="st">&quot;n&quot;</span>, <span class="st">&quot;sd&quot;</span>),</a>
+<a class="sourceLine" id="cb11-10" data-line-number="10">             <span class="dt">caption =</span> <span class="st">&quot;Estimated extra-sample performances (micro-average F1-score) of different monolingual and multilingual embeddings on the French WikiNER task (BiLSTM-CRF classifier, WikiNER dataset downsampled to 10%)&quot;</span>)</a></code></pre></div>
+<table>
+<caption><span id="tab:unnamed-chunk-8">Table 6.3: </span>Estimated extra-sample performances (micro-average F1-score) of different monolingual and multilingual embeddings on the French WikiNER task (BiLSTM-CRF classifier, WikiNER dataset downsampled to 10%)</caption>
+<thead>
+<tr class="header">
+<th align="left">Embedding</th>
+<th align="left">Monolingual</th>
+<th align="right">F1</th>
+<th align="right">n</th>
+<th align="left">sd</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">CamemBERT + fastText + Character</td>
+<td align="left">No</td>
+<td align="right">88.1</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">CamemBERT + fastText + BytePair</td>
+<td align="left">No</td>
+<td align="right">87.0</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">CamemBERT + fastText</td>
+<td align="left">No</td>
+<td align="right">86.4</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">CamemBERT + BytePair</td>
+<td align="left">No</td>
+<td align="right">85.9</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">CamemBERT</td>
+<td align="left">No</td>
+<td align="right">85.2</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">fastText + Character</td>
+<td align="left">No</td>
+<td align="right">83.3</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">fastText + BytePair</td>
+<td align="left">No</td>
+<td align="right">82.0</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">fastText</td>
+<td align="left">No</td>
+<td align="right">81.0</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">BytePair</td>
+<td align="left">No</td>
+<td align="right">78.9</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Character</td>
+<td align="left">No</td>
+<td align="right">58.1</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">mBERT + Character + BytePair</td>
+<td align="left">Yes</td>
+<td align="right">87.1</td>
+<td align="right">2</td>
+<td align="left">0.2</td>
+</tr>
+<tr class="even">
+<td align="left">mBERT + Character</td>
+<td align="left">Yes</td>
+<td align="right">86.1</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">mBERT</td>
+<td align="left">Yes</td>
+<td align="right">84.7</td>
+<td align="right">1</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">BytePair</td>
+<td align="left">Yes</td>
+<td align="right">78.0</td>
+<td align="right">2</td>
+<td align="left">0.1</td>
+</tr>
+</tbody>
+</table>
+<p>Different variations of the BERT base model (cased) (such as BERT base uncased and BERT small or variations on BERT’s transformer architecture like RoBERTa, distilBERT and ALBERT) and different versions of ELMo large (like ELMo small and ELMo original) were tested as well but were not included in this overview since they were found to reduce performance. These smaller models might however be useful when computational resources are limited, e.g. the ELMo large model (shown in this plot) requires ~3 times the training time of the ELMo small model, with a performance gain (F1-score) of “only” 2% points (from ~90% to ~92%)).</p>
+<p>The obtained scores are similar to the benchmarks reported in literature for the CoNLL 2002 and CoNLL 2003 datasets. Since most of NLP research is focused on the English language and many of the state of the art language models are pretrained predominantly on (monolingual) English corpora, it is not surprising that overall NER classification performance is best for the English dataset. Monolingual (English) language models such as ELMo and Flair appear to yield excellent (contextualized) word representation for downstream NER classification, especially when they are concatenated with either fixed word or subword embeddings such as GloVe or fastText. While the English monolingual embeddings are superior to the multilingual embeddings, the difference is suprisingly small, especially for the multilingual BERT (mBERT) model. For French or Dutch NER, the difference is even smaller or absent, with mBERT-based embeddings providing state-of-the-art results. The mBERT model is a large transformer-based language model that has been pre-trained on 104 languages without any cros-lingual supervision. While the mBERT embeddings have been shown to encode some language information (i.e. they are not entirely language-independent cross-lingual semantic representations), they do perform surprisingly well on so-called zero-shot cross-lingual transfer (e.g. training a NER model using mBERT respresentations on an English NER dataset and applying the trained NER model on a Dutch NER task). This indicates that mBERT has at least some ability to generalize away from specific language, and might explain why the Dutch or French NER models seem to benefit from mBERT model’s knowledge of many - especially resource-rich - languages such as English.</p>
+<p>After the implementations of the different models were validated on these datasets, some of the best performing embeddings (i.e. essentially those that are described in table 1 above) were tested on a 2 “real-world” Faktion datasets, both consisting of OCR data from document scans of relatively poor quality. E.g. many of the tokens consisted of single characters or only punctuation, resulting in relatively long sequences and many tokens with very little semantic information. Since the input sequence length of some of the language models used to obtain contextualized word embeddings (i.e. the BERT models) is limited, the average sequence lengths of the Faktion datasets were reduced by removing all tokens that consisted only of punctuation. Another difference with the benchmark datasets described earlier is the number of NER labels to predict: while there were 4 different entity labels in the CoNLL datasets, there was only a single category in the Dutch dataset, and only 2 categories in the French datasets, with the vast majority (~ 95%) of all entities belonging to a single category. Also, none of the datasets were strictly monolingual, the language was decided on the dominant language. A thirth dataset was created by merging the two “monolingual” datasets:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="co"># figures are for train/dev/test (summed)</span></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">  <span class="dt">lang =</span> <span class="kw">c</span>(<span class="st">&quot;Dutch&quot;</span>, <span class="st">&quot;French&quot;</span>, <span class="st">&quot;Bilingual&quot;</span>),</a>
+<a class="sourceLine" id="cb12-4" data-line-number="4">  <span class="dt">documents =</span> <span class="kw">c</span>(<span class="dv">36</span>, <span class="dv">152</span>, <span class="dv">188</span>),</a>
+<a class="sourceLine" id="cb12-5" data-line-number="5">  <span class="dt">prop_bi =</span> <span class="kw">c</span>(<span class="kw">round</span>(<span class="dv">21</span><span class="op">/</span><span class="dv">36</span>, <span class="dv">2</span>), <span class="kw">round</span>(<span class="dv">14</span><span class="op">/</span><span class="dv">152</span>, <span class="dv">2</span>), <span class="st">&quot;&quot;</span>),</a>
+<a class="sourceLine" id="cb12-6" data-line-number="6">  <span class="dt">tokens=</span><span class="kw">c</span>(<span class="dv">2762</span> <span class="op">+</span><span class="st"> </span><span class="dv">923</span> <span class="op">+</span><span class="st"> </span><span class="dv">787</span>, <span class="dv">9587</span><span class="op">+</span><span class="dv">3384</span><span class="op">+</span><span class="dv">3140</span>, <span class="dv">12224</span><span class="op">+</span><span class="dv">4264</span><span class="op">+</span><span class="dv">4095</span>)</a>
+<a class="sourceLine" id="cb12-7" data-line-number="7">)</a>
+<a class="sourceLine" id="cb12-8" data-line-number="8">knitr<span class="op">::</span><span class="kw">kable</span>(df, <span class="dt">booktabs=</span><span class="ot">TRUE</span>, <span class="dt">col.names =</span> <span class="kw">c</span>(<span class="st">&quot;Language&quot;</span>, <span class="st">&quot;# documents&quot;</span>, <span class="st">&quot;Proportion of bilingual documents&quot;</span>, <span class="st">&quot;Tokens&quot;</span>))</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Language</th>
+<th align="right"># documents</th>
+<th align="left">Proportion of bilingual documents</th>
+<th align="right">Tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Dutch</td>
+<td align="right">36</td>
+<td align="left">0.58</td>
+<td align="right">4472</td>
+</tr>
+<tr class="even">
+<td align="left">French</td>
+<td align="right">152</td>
+<td align="left">0.09</td>
+<td align="right">16111</td>
+</tr>
+<tr class="odd">
+<td align="left">Bilingual</td>
+<td align="right">188</td>
+<td align="left"></td>
+<td align="right">20583</td>
+</tr>
+</tbody>
+</table>
+<p>Given the differences between the benchmark and the Faktion datasets, the NER model and training procedure was adjusted slighty. A BiLSTM-CRF model with 32 hidden units was used, mini-batch size was reduced to 8 and the annealing factor for the learning rate was increased to 0.8. The final model was refitted on the training and validation set and extra-sample performance was estimated using the held-out test set. Given the nature of the dataset and, hence, the expected inprecision of the estimated extra-sample error, the procedure was repeated 5 times on independent random splits of the data (60/20/20). Results given below are reported as (mean ± sd).</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">lang &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;nl&#39;</span>, <span class="st">&#39;bi&#39;</span>, <span class="st">&#39;fr&#39;</span>)</a>
+<a class="sourceLine" id="cb13-2" data-line-number="2">files &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;Model_overview - faktion_&quot;</span>, lang, <span class="st">&quot;.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb13-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb13-4" data-line-number="4">DIR &lt;-<span class="st"> &quot;data/raw/faktion&quot;</span></a>
+<a class="sourceLine" id="cb13-5" data-line-number="5">df &lt;-<span class="st"> </span><span class="kw">c</span>()</a>
+<a class="sourceLine" id="cb13-6" data-line-number="6"><span class="cf">for</span> (f <span class="cf">in</span> files) {</a>
+<a class="sourceLine" id="cb13-7" data-line-number="7">  df &lt;-<span class="st"> </span><span class="kw">rbind</span>(</a>
+<a class="sourceLine" id="cb13-8" data-line-number="8">    df, </a>
+<a class="sourceLine" id="cb13-9" data-line-number="9">    <span class="kw">read_csv</span>(<span class="kw">file.path</span>(DIR, f), <span class="dt">col_types =</span> <span class="kw">cols</span>(<span class="dt">date =</span> <span class="kw">col_datetime</span>(<span class="dt">format =</span> <span class="st">&quot;%d-%m-%Y&quot;</span>)))</a>
+<a class="sourceLine" id="cb13-10" data-line-number="10">  )</a>
+<a class="sourceLine" id="cb13-11" data-line-number="11">}</a>
+<a class="sourceLine" id="cb13-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb13-13" data-line-number="13">df &lt;-<span class="st"> </span>df <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb13-14" data-line-number="14"><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(f1)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb13-15" data-line-number="15"><span class="st">  </span><span class="kw">filter</span>(embedding_type <span class="op">!=</span><span class="st"> &#39;Character&#39;</span>)</a>
+<a class="sourceLine" id="cb13-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb13-17" data-line-number="17"><span class="co"># reference data Faktion</span></a>
+<a class="sourceLine" id="cb13-18" data-line-number="18">ref &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb13-19" data-line-number="19">  <span class="dt">embedding_type =</span> <span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;oldNLP&quot;</span>, <span class="dv">2</span>), <span class="kw">rep</span>(<span class="st">&quot;newNLP_crf_nobilou&quot;</span>, <span class="dv">3</span>), </a>
+<a class="sourceLine" id="cb13-20" data-line-number="20">            <span class="kw">rep</span>(<span class="st">&quot;newNLP_crf_bilou&quot;</span>, <span class="dv">3</span>), <span class="kw">rep</span>(<span class="st">&quot;newNLP_nocrf_bilou&quot;</span>, <span class="dv">3</span>)),</a>
+<a class="sourceLine" id="cb13-21" data-line-number="21">  <span class="dt">ds =</span> <span class="kw">c</span>(<span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;fr&quot;</span>, <span class="st">&quot;nl&quot;</span>, <span class="st">&quot;bi&quot;</span>), <span class="dv">4</span>))[<span class="op">-</span><span class="dv">12</span>],</a>
+<a class="sourceLine" id="cb13-22" data-line-number="22">  <span class="dt">data =</span> <span class="kw">c</span>(<span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;Faktion&quot;</span>, <span class="st">&quot;Faktion&quot;</span>, <span class="st">&quot;Faktion&quot;</span>), <span class="dv">4</span>))[<span class="op">-</span><span class="dv">12</span>],</a>
+<a class="sourceLine" id="cb13-23" data-line-number="23">  <span class="dt">recall=</span><span class="kw">c</span>(<span class="fl">0.17</span>, <span class="fl">0.02</span>,<span class="fl">0.23</span>,<span class="fl">0.05</span>,<span class="fl">0.27</span>,<span class="fl">0.25</span>,<span class="fl">0.1</span>,<span class="fl">0.52</span>,<span class="fl">0.3</span>,<span class="fl">0.1</span>,<span class="fl">0.57</span>),</a>
+<a class="sourceLine" id="cb13-24" data-line-number="24">  <span class="dt">precision=</span><span class="kw">c</span>(<span class="fl">0.53</span>,<span class="fl">0.33</span>,<span class="fl">0.41</span>,<span class="fl">0.17</span>,<span class="fl">0.75</span>,<span class="fl">0.45</span>,<span class="fl">0.4</span>,<span class="fl">0.77</span>,<span class="fl">0.43</span>,<span class="fl">0.25</span>,<span class="fl">0.76</span>),</a>
+<a class="sourceLine" id="cb13-25" data-line-number="25">  <span class="dt">f1=</span><span class="kw">c</span>(<span class="fl">0.26</span>,<span class="fl">0.04</span>,<span class="fl">0.29</span>,<span class="fl">0.07</span>,<span class="fl">0.4</span>,<span class="fl">0.32</span>,<span class="fl">0.15</span>,<span class="fl">0.62</span>,<span class="fl">0.35</span>,<span class="fl">0.14</span>,<span class="fl">0.44</span>)</a>
+<a class="sourceLine" id="cb13-26" data-line-number="26">)</a>
+<a class="sourceLine" id="cb13-27" data-line-number="27"></a>
+<a class="sourceLine" id="cb13-28" data-line-number="28">summ &lt;-<span class="st"> </span>df <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb13-29" data-line-number="29"><span class="st">  </span><span class="kw">group_by</span>(ds, embedding_type, embedding_lang) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb13-30" data-line-number="30"><span class="st">  </span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb13-31" data-line-number="31">    <span class="dt">mean_f1 =</span> <span class="kw">mean</span>(f1),</a>
+<a class="sourceLine" id="cb13-32" data-line-number="32">    <span class="dt">sd_f1 =</span> <span class="kw">sd</span>(f1),</a>
+<a class="sourceLine" id="cb13-33" data-line-number="33">    <span class="dt">mean_precision =</span> <span class="kw">mean</span>(precision),</a>
+<a class="sourceLine" id="cb13-34" data-line-number="34">    <span class="dt">sd_precision =</span> <span class="kw">sd</span>(precision),</a>
+<a class="sourceLine" id="cb13-35" data-line-number="35">    <span class="dt">mean_recall =</span> <span class="kw">mean</span>(recall),</a>
+<a class="sourceLine" id="cb13-36" data-line-number="36">    <span class="dt">sd_recall =</span> <span class="kw">sd</span>(recall),</a>
+<a class="sourceLine" id="cb13-37" data-line-number="37">    <span class="dt">mean_accuracy =</span> <span class="kw">mean</span>(accuracy),</a>
+<a class="sourceLine" id="cb13-38" data-line-number="38">    <span class="dt">sd_accuracy =</span> <span class="kw">sd</span>(accuracy),</a>
+<a class="sourceLine" id="cb13-39" data-line-number="39">    <span class="dt">n =</span> <span class="kw">n</span>()</a>
+<a class="sourceLine" id="cb13-40" data-line-number="40">  )</a>
+<a class="sourceLine" id="cb13-41" data-line-number="41"></a>
+<a class="sourceLine" id="cb13-42" data-line-number="42"><span class="kw">ggplot</span>(summ, <span class="kw">aes</span>(<span class="kw">reorder</span>(embedding_type, mean_f1), mean_f1, </a>
+<a class="sourceLine" id="cb13-43" data-line-number="43">                 <span class="dt">color=</span>embedding_lang)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb13-44" data-line-number="44"><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb13-45" data-line-number="45"><span class="st">  </span><span class="kw">geom_errorbar</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> mean_f1 <span class="op">-</span><span class="st"> </span>sd_f1, <span class="dt">ymax=</span>mean_f1 <span class="op">+</span><span class="st"> </span>sd_f1), <span class="dt">width=</span><span class="fl">0.2</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb13-46" data-line-number="46"><span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb13-47" data-line-number="47"><span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb13-48" data-line-number="48"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb13-49" data-line-number="49"><span class="st">  </span><span class="kw">facet_grid</span>(<span class="dt">rows=</span><span class="kw">vars</span>(ds), <span class="dt">scales =</span> <span class="st">&#39;free&#39;</span>, <span class="dt">space=</span><span class="st">&quot;free&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb13-50" data-line-number="50"><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb13-51" data-line-number="51"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;bottom&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb13-52" data-line-number="52"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">name=</span><span class="st">&quot;Sampling factor&quot;</span>, <span class="dt">values=</span><span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">18</span>, <span class="dv">20</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb13-53" data-line-number="53"><span class="st">  </span><span class="kw">scale_color_discrete</span>(<span class="dt">name=</span><span class="st">&quot;Embedding&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb13-54" data-line-number="54"><span class="st">  </span><span class="kw">scale_size_continuous</span>(<span class="dt">name=</span><span class="st">&quot;# runs&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb13-55" data-line-number="55"><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Micro-avg F1 &quot;</span>)</a></code></pre></div>
+<p><img src="Thesis_Arthur_Leloup_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>As expected, performance was much lower as compared to the benchmark datasets. However, there seems to be a clear advantage of using pretrained language models to provide (contextualized) word embeddings. Indeed, fixed (sub)word embeddings such as monolingual BytePair or fastText embeddings performed poorly. On the other hand, performance clearly benefitted from concatenating these fixed (sub)word representations to the contextualized word vectors obtained from pretrained language models (e.g. Dutch Flair, French camemBERT or multilingual BERT (mBERT)). Further increasing the dimensionality of the embedding vectors with trainable representations (i.e. vectors that are randomly initialized and treated as parameters of the BiLSTM-CRF model) generally improved the performance on the NER task further.</p>
+<p>Overall, performance on the (predominantly) Dutch dataset appears to be better, but direct comparison in terms of the F1 score Comparing overall performance between the Dutch and French datasets is difficult, given the differences in the number of entity classes and, hence, the associated difficulty of the prediction task. Relatively high-dimensional concatenations of different monolingual embedding vectors appeared to perform best, on average, for the “monolingual” datasets: the concatenation of camemBERT, French fastText and BytePair subword and trainable character embeddings for French (F1 = 0.54 ± 0.12), and the concatenation of Dutch Flair, Dutch fastText and Dutch BytePair embeddings for the Dutch dataset (F1 = 0.74 ± 0.05). However, the differences with the multilingual embeddings are negligible. Not surprisingly, for the bilingual dataset, multilingual embeddings (e.g. concatenated mBERT, multilingual BytePair subword and trainable character embeddings) seem to outperform monolingual embeddings.</p>
+<p>The differences of the monolingual and multilingual embeddings for each dataset in terms of precision and sensitivity are visualize below:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">ggplot</span>(summ, <span class="kw">aes</span>(mean_recall, mean_precision, <span class="dt">color=</span>embedding_lang, <span class="dt">label=</span>embedding_type)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="co">#geom_text(size=3) +</span></a>
+<a class="sourceLine" id="cb14-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size=</span><span class="dv">2</span>, <span class="dt">alpha=</span><span class="fl">0.6</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb14-4" data-line-number="4"><span class="st">  </span><span class="kw">geom_errorbarh</span>(<span class="kw">aes</span>(<span class="dt">xmin =</span> mean_recall <span class="op">-</span><span class="st"> </span>sd_recall, <span class="dt">xmax=</span>mean_recall <span class="op">+</span><span class="st"> </span>sd_recall), <span class="dt">alpha=</span><span class="fl">0.4</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb14-5" data-line-number="5"><span class="st">  </span><span class="kw">geom_errorbar</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> mean_precision <span class="op">-</span><span class="st"> </span>sd_precision, <span class="dt">ymax=</span>mean_precision <span class="op">+</span><span class="st"> </span>sd_precision), <span class="dt">width=</span><span class="dv">0</span>, <span class="dt">alpha=</span><span class="fl">0.4</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb14-6" data-line-number="6"><span class="co">#  scale_x_continuous(limits=c(0, 1)) +</span></a>
+<a class="sourceLine" id="cb14-7" data-line-number="7"><span class="co">#  scale_y_continuous(limits = c(0, 1)) +</span></a>
+<a class="sourceLine" id="cb14-8" data-line-number="8"><span class="st">  </span><span class="kw">facet_grid</span>(<span class="dt">rows=</span><span class="kw">vars</span>(ds), <span class="dt">space=</span><span class="st">&quot;free&quot;</span>, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb14-9" data-line-number="9"><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb14-10" data-line-number="10"><span class="st">  </span><span class="co">#geom_point(data = ref, aes(recall, precision), color=&quot;black&quot;) +</span></a>
+<a class="sourceLine" id="cb14-11" data-line-number="11"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb14-12" data-line-number="12"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Recall&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb14-13" data-line-number="13"><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Precision&quot;</span>)</a></code></pre></div>
+<p><img src="Thesis_Arthur_Leloup_files/figure-html/unnamed-chunk-11-1.png" width="288" style="display: block; margin: auto;" /></p>
+
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p><a href="https://github.com/flairNLP/flair" class="uri">https://github.com/flairNLP/flair</a><a href="summ.html#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://github.com/flairNLP/flair/blob/master/resources/docs/EXPERIMENTS.md" class="uri">https://github.com/flairNLP/flair/blob/master/resources/docs/EXPERIMENTS.md</a><a href="summ.html#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>Understanding the difficulty of training deep feedforward neural networks - Glorot, X. &amp; Bengio, Y. (2010)<a href="summ.html#fnref3" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="discussion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/arthur-arthur/MASTAT_thesis/edit/master/05-summary.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Thesis_Arthur_Leloup.pdf", "Thesis_Arthur_Leloup.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

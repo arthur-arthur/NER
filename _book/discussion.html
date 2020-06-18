@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Discussion | Multilingual Deep Learning models for Entity Extraction in NLP</title>
+  <meta name="description" content="MASTAT thesis" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Discussion | Multilingual Deep Learning models for Entity Extraction in NLP" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="MASTAT thesis" />
+  <meta name="github-repo" content="arthur-arthur/MASTAT_thesis" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Discussion | Multilingual Deep Learning models for Entity Extraction in NLP" />
+  
+  <meta name="twitter:description" content="MASTAT thesis" />
+  
+
+<meta name="author" content="Arthur Leloup" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="results.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Multilingual Deep Learning Models for Entity Extraction in NLP</a></li>
+<li><a href="./">Arthur Leloup</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="researchproblem.html"><a href="researchproblem.html"><i class="fa fa-check"></i><b>2</b> Research problem</a><ul>
+<li class="chapter" data-level="2.1" data-path="researchproblem.html"><a href="researchproblem.html#research-hypotheses"><i class="fa fa-check"></i><b>2.1</b> Research hypotheses</a></li>
+<li class="chapter" data-level="2.2" data-path="researchproblem.html"><a href="researchproblem.html#named-entity-recognition"><i class="fa fa-check"></i><b>2.2</b> Named Entity Recognition</a></li>
+<li class="chapter" data-level="2.3" data-path="researchproblem.html"><a href="researchproblem.html#static-word-representations"><i class="fa fa-check"></i><b>2.3</b> Static word representations</a></li>
+<li class="chapter" data-level="2.4" data-path="researchproblem.html"><a href="researchproblem.html#contextualized-word-representations-and-language-models"><i class="fa fa-check"></i><b>2.4</b> Contextualized word representations and language models</a></li>
+<li class="chapter" data-level="2.5" data-path="researchproblem.html"><a href="researchproblem.html#monolingual-versus-multilingual-embeddings"><i class="fa fa-check"></i><b>2.5</b> Monolingual versus multilingual embeddings</a></li>
+<li class="chapter" data-level="2.6" data-path="researchproblem.html"><a href="researchproblem.html#summary"><i class="fa fa-check"></i><b>2.6</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a><ul>
+<li class="chapter" data-level="3.1" data-path="methods.html"><a href="methods.html#data"><i class="fa fa-check"></i><b>3.1</b> Data</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="methods.html"><a href="methods.html#benchmark-datasets"><i class="fa fa-check"></i><b>3.1.1</b> Benchmark datasets</a></li>
+<li class="chapter" data-level="3.1.2" data-path="methods.html"><a href="methods.html#faktion-datasets"><i class="fa fa-check"></i><b>3.1.2</b> Faktion datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="methods.html"><a href="methods.html#word-embeddings"><i class="fa fa-check"></i><b>3.2</b> Word embeddings</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="methods.html"><a href="methods.html#static-and-task-specific-embeddings"><i class="fa fa-check"></i><b>3.2.1</b> Static and task-specific embeddings</a></li>
+<li class="chapter" data-level="3.2.2" data-path="methods.html"><a href="methods.html#contextualized-word-embeddings"><i class="fa fa-check"></i><b>3.2.2</b> Contextualized word embeddings</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="methods.html"><a href="methods.html#ner-classifier"><i class="fa fa-check"></i><b>3.3</b> NER classifier</a></li>
+<li class="chapter" data-level="3.4" data-path="methods.html"><a href="methods.html#ner-evaluation"><i class="fa fa-check"></i><b>3.4</b> NER evaluation</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a><ul>
+<li class="chapter" data-level="4.1" data-path="results.html"><a href="results.html#benchmark-datasets-1"><i class="fa fa-check"></i><b>4.1</b> Benchmark datasets</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="results.html"><a href="results.html#conll2003---english"><i class="fa fa-check"></i><b>4.1.1</b> CoNLL2003 - English</a></li>
+<li class="chapter" data-level="4.1.2" data-path="results.html"><a href="results.html#conll2002---dutch"><i class="fa fa-check"></i><b>4.1.2</b> CoNLL2002 - Dutch</a></li>
+<li class="chapter" data-level="4.1.3" data-path="results.html"><a href="results.html#wikiner---french"><i class="fa fa-check"></i><b>4.1.3</b> WikiNER - French</a></li>
+<li class="chapter" data-level="4.1.4" data-path="results.html"><a href="results.html#trilingual-ner"><i class="fa fa-check"></i><b>4.1.4</b> Trilingual NER</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="results.html"><a href="results.html#faktion-datasets-1"><i class="fa fa-check"></i><b>4.2</b> Faktion datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>5</b> Discussion</a><ul>
+<li class="chapter" data-level="5.1" data-path="discussion.html"><a href="discussion.html#benchmarkt-datasets"><i class="fa fa-check"></i><b>5.1</b> Benchmarkt datasets</a></li>
+<li class="chapter" data-level="5.2" data-path="discussion.html"><a href="discussion.html#faktion-datasets-2"><i class="fa fa-check"></i><b>5.2</b> Faktion datasets</a></li>
+<li class="chapter" data-level="5.3" data-path="discussion.html"><a href="discussion.html#conclusion"><i class="fa fa-check"></i><b>5.3</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="benchmark-results.html"><a href="benchmark-results.html"><i class="fa fa-check"></i><b>A</b> Benchmark results</a></li>
+<li class="chapter" data-level="B" data-path="faktion-results.html"><a href="faktion-results.html"><i class="fa fa-check"></i><b>B</b> Faktion results</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Multilingual Deep Learning models for Entity Extraction in NLP</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="discussion" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Discussion</h1>
+<p>In this thesis, we aimed to evaluate how different monolingual and multilingual embeddings affected the performance of different monolingual and multilingual NER tasks. We addressed this question by performing a wide range of NER experiments on well-validated English, Dutch and French benchmark datasets, using different combinations of either monolingual or multilingual contextualized, static and/or task-specific word representations. Next, these systems were compared when the input data itself was multilingual. We were able to achieve F1-scores that were in accordance with state-of-the-art results reported in literature and confirmed earlier studies demonstrating that NER performance typically benefits from concatenating different embeddings together into single, high-dimensional representations. Monolingual embeddings outperformed multilingual embeddings on each of the monolingual NER tasks, but the differences were surprisingly small. Conversely, multilingual embeddings clearly outperformed monolingual embeddings on a multilingual NER task.</p>
+<p>In addition, we evaluated how our monolingual and multilingual NER implementations performed on “real-world” datasets that were generated from OCR on scans of building plans in the context of a document annotation application developed by <a href="https://www.faktion.com/">Faktion</a>. Not surprisingly, the results on these small, noisy datasets were - on average - much lower as compared to the benchmark datasets. However, concatenating multiple embeddings together into single, high-dimensional representations again showed to be a successful approach to optimize NER performance. The fact that these datasets were not strictly monolingual was reflected in the performance differences between monolingual and multilingual embeddings: they performed similarly on the predominantly monolingual datasets, but multilingual embeddings outperformed monolingual embeddings when the input data was multilingual. These results suggest that state-of-the-art multilingual representations available today are ready to be implemented in practical applications, thus greatly reducing pipeline complexity at no cost of reduced performance.</p>
+<div id="benchmarkt-datasets" class="section level2">
+<h2><span class="header-section-number">5.1</span> Benchmarkt datasets</h2>
+<p>By using a state-of-the-art BiLSTM-CRF sequence labeling architecture <span class="citation">(Akbik, Blythe, and Vollgraf <a href="#ref-akbik2018">2018</a>; Huang, Xu, and Yu <a href="#ref-huang2015">2015</a>; Lample et al. <a href="#ref-lample2016">2016</a>)</span>, we were able to achieve results that were similar or slightly below results reported in literature for the CoNLL2003 task. While a direct comparison of our results with literature data was not the primary goal, it does indicate that our implementations provided a very useful framework to compare state-of-the-art monolingual and multilingual embeddings. The single point estimates of the extra-sample performances that were obtained for the different monolingual and multilingual embeddings did not allow us to thoroughly study the score distributions of all the implementations. We specifically opted to evaluate a wide range of different stacked combinations of monolingual and multilingual embeddings, in order to acquire a general overview on:</p>
+<ul>
+<li>Baseline performance with task-specific representations (i.e. without transferring knowledge from static or contextualized representations)</li>
+<li>The added value of static word or subword embeddings</li>
+<li>The added value of state-of-the-art contextualized representations from pretrained Flair or BERT models</li>
+</ul>
+<p>For most tasks, the Transformer-based BERT models (BERTje, CamemBERT, BERT and mBERT) outperformed the character-based Flair LMs, except for monolingual English, where the Flair model provided excellent representations that resulted in a similar performance on the NER task as compared to BERT-based representations. Interestingly, the difference between BERT-based and Flair-based embeddings was even more pronounced for multilingual models: mBERT clearly outperformed mFlair on all monolingual as well as multilingual benchmark datasets. In many cases, mFlair-based stacked embeddings were even outperformed by embeddings that did not include any contextualized representation obtained from a pretrained LM. There are several reasons that may account for this. Firstly, mBERT was trained on roughly 100 of the most common languages on Wikipedia, while <a href="https://github.com/flairNLP/flair/issues/1099">mFlair</a> was provided with the JW300 training corpus containing just over 2 billion tokens in more than 300 languages <span class="citation">(Agi’c and Vuli’c <a href="#ref-agic2019">2019</a>)</span>. Given the significant cost involved into training a neural LM from scratch, the size of the training corpus is often limited. While corpus sizes in terms of number of tokens are not always directly comparable between models (e.g. mBERT relied on subword tokenization and resampling strategies to account for the imbalance between different languages in the multilingual corpus), most models are pretrained on a corpora of at most a few billion tokens. This means that - in practice - the amount of training data for each specific language in a multilingual training corpus is inversely proportional to the number of different languages. Among many other differences between the mFlair and mBERT models, this might explain why mBERT seems to provide better representations for very common languages like English, Dutch or French. It might be interesting to evaluate how mBERT and mFlair embeddings perform on low-resource languages that are not among the 100 most commong languages on Wikipedia.</p>
+<p>An interesting results was obtained with the Dutch version of BERT’s Transformer architecture, BERTje <span class="citation">(de Vries et al. <a href="#ref-devries2019">2019</a>)</span>. Using the representations from its top layer, we achieved - to the best of our knowledge - a new state-of-the art on the Dutch CoNLL2002 task, outperforming the previous best result obtained with fine-tuning of mBERT <span class="citation">(Wu and Dredze <a href="#ref-wu2019">2019</a>)</span> by 2.1 percentage points (from 90.9 % to 93.0 %). However, one should be cautious directly comparing these results. Firstly, computational resources did not allow us to perform multiple training runs for the different configurations. The stochastic nature of the training algorithm renders the BiLSTM-CRF architecture non-deterministic. Even though the obtained F1 point estimates are statistically unbiased, they are not necesarily representative for the entire score distribution. Indeed, empirical evidence has shown that the seed value chosen for the random number generator for state-of-the-art BiLSTM-CRF systems can result in F1-score differences as large as 1 percentage points on the CoNLL2003 task, which translates into a system being perceived as mediocre or state-of-the-art <span class="citation">(Reimers and Gurevych <a href="#ref-reimers2017">2017</a>)</span>. In addition, our results on the CoNLL2002 dataset were obtained after (minor) preprocessing: 4/15806 sentences in the training set and 1/5195 sentences from the test set were removed for all experiments because they exceeded the maximum input sequence length for some models included in our evaluation. Nevertheless, all results for the different stackings based on BERTje embeddings (ranging from 91.5 % (for BERTje embeddings alone) to 93.0 % (for the largest stacked embedding)) consistently outperformed the result reported before <span class="citation">(de Vries et al. <a href="#ref-devries2019">2019</a>; Wu and Dredze <a href="#ref-wu2019">2019</a>)</span>. The importance of the sequence labeling architecture has been acknowledged already by the authors of the BERTje model <span class="citation">(de Vries et al. <a href="#ref-devries2019">2019</a>)</span> and our results seem to confirm that feeding the activations from BERTje’s top layer into a BiLSTM-CRF model yields a considerable increase in performance as compared to fine-tuning BERTje or mBERT and using a regular softmax layer on top of the Transformer model to predict the NER labels.</p>
+<p>Since we only used the activations for every first subtoken extracted from BERTje’s top layer, we hypothesize that this result can be optimized even further. Indeed, earlier studies have indicated that performance of many NLP tasks can significanlty benefit from strategies that aim to specifically extract representations from the different layers of the pretrained Transformer LM. This includes manual per-layer analysis to find which layers encode information most relevant for the specific task or, alternative, automativally learning a scalar mixture of the activations from the different layers to find the representation most relevant for the downstream task. Scalar mixing seems to outperform the best individual layer’s representation on a wide range of NLP tasks <span class="citation">(Liu et al. <a href="#ref-liu2019">2019</a>)</span> and was shown to be one of the main factors that determined the success of the representations obtained from the deep BiLSTM LM ELMo <span class="citation">(Peters et al. <a href="#ref-peters2018">2018</a>)</span>.</p>
+<p>The conclusions for the French WikiNER dataset were in accordance with the Dutch and English NER: monolingual systems outperformed multilingual ones, with a pronounced difference between Flair-based and Transformer-based representations. Given that this difference was not present in the results of the English CoNLL2003 task suggests that this is not merely a result of the intrinsic properties of the neural network architecture as such, but that - indeed - a character-based LM is able to provide excellent representations for downstream NER, if trained well. Given that the Dutch, French and multilingual Flair models have been pretrained by members of the Flair NLP community, while all other models (English Flair and the monolingual and multilingual versions of BERT) have been pretrained by research institutions might suggest that this difference can be - at least partly - attributed to the availability of resources to train these models. Even though the training of character-based LMs like Flair is order of magnitudes more efficient than traditional word-based BiLSTM LMs <span class="citation">(Akbik, Blythe, and Vollgraf <a href="#ref-akbik2018">2018</a>)</span>, it still requires the availability of enormous amounts of data and training for more than one week on a powerful GPU<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>.</p>
+<p>Overall, our results for the benchmark datasets are in accordance with results reported in literature. Performance of the NER classifier consistently increased from representations learned from scratch directly onto the NER objective (OHE or character embeddings), to pretrained (static) vectors like fastText or BytePair embeddings, to contextualized representations obtained from large, pretrained neural LMs, as anticipated. Even though static word vectors provide only a single, “average” representation for polysemous words and are, hence, typically outperformed by contextualized representations on NER tasks, interestingly, performance seems to increase when static word vectors are concatenated to these contextualized representations, suggesting that they do add relevant information. This has been reported before, i.e. Akbik and colleagues obtained state-of-the-art performance on the CoNLL2003 task using concatenated Flair, GloVe and character-level representations <span class="citation">(Akbik, Blythe, and Vollgraf <a href="#ref-akbik2018">2018</a>)</span>. An interesting study by Kawin Ethayarajh investigated how the different context-specific representations of the same word (obtained from e.g. BERT) compared against static - non-contextualized - embeddings. They found that BERT’s representations (especially the representations in the upper layers) were highly contextualized, in the sense that a single static embedding (the first principal component of the different context-dependent representations of a word) explained, on average, less than 5 % of the total variance <span class="citation">(Ethayarajh <a href="#ref-ethayarajh2019">2019</a>)</span>. This might explain why concatenating the apparently highly context-dependent representation obtained from the last layer of BERT with a static word embedding that encodes more latent word-level semantics helps the NER classifier to perform well on the task.</p>
+<p>Even though the large, high-dimensional stackings of different embedding types generally outperformed lower-dimensional representations obtained from a single pretrained model, the difference was typically small. However, the computational requirements to train models using these high-dimensional representations are much higher. In particular, the task-specific representations that are iteratively updated during training on the NER objective are essentially parameters of the BiLSTM-CRF model. As such, expanding the parameter space slows down the training procedure considerably and even though these high-dimensional representations seem to consistently (but slightly) outperform lower-dimensional embeddings, this balance between training efficiency and performance might be considered a limitation for some practical applications.</p>
+</div>
+<div id="faktion-datasets-2" class="section level2">
+<h2><span class="header-section-number">5.2</span> Faktion datasets</h2>
+<p>There were major differences between the characteristics of the Faktion datasets and the benchmark datasets discussed previously, which translated - not surprisingly - into different conclusions with respect to:</p>
+<ul>
+<li>The performance of monolingual and multilingual embeddings</li>
+<li>The added value of obtaining contextualized representations from pretrained LMs</li>
+</ul>
+<p>Firstly, the monolingal datasets were not strictly monolingual. This was reflected in the performance for monolingual and multilingual embeddings: while the former consistently outperformed the latter on the CoNLL and WikiNER datasets, there was virtually no difference for the Faktion datasets. In both the trilingual benchmark dataset as well as the bilingual Faktion dataset, the multilingual embeddings clearly outperformed any monolingual embedding. Currently, the NER-step in the Faktion document annotation application relies on a two-step procedure: first, the language of the document is predicted, and this determines which (monolingual) NER system is used. Even though the advantage of monolingual embeddings over multilingual embeddings might be more pronounced when the training datasets are strictly monolingual, the results obtained here provide strong indications that a multilingual NER pipeline might provide similar performance while completely omitting the need to maintain a separate language prediction step. In addition to this simplification, the risk of poor NER performance caused by errors in the upstream language prediction step is greatly reduced, as suggested by the presults obtained on the multilingual dataset.</p>
+<p>Again - there was a clear trend of increasing NER performance when concatenating multiple embedding types into large, stacked embeddings. It was, however, surprising that the added value of contextualized embeddings from either pretrained Flair or BERT-like architectures was much less pronounced as compared to the benchmark NER tasks. Performance of the multilingual BytePair embeddings was, in general, surprisingly high, not only as compared directly to either French or Dutch monolingual BytePair embeddings, but especially when compared to the contextualized embeddings obtained from pretrained Flair or BERT. Condidering the nature of the Faktion datasets (i.e. relatively noisy data obtained from OCR on scans of building plans) this might not come as a big surprise: many of the tokens contained punctuation or digits, were very short or even consisted of a single character. Since the “linguistic knowledge” acquired by these pretrained neural LMs are based on corpora that are chosen to be as representative as possible for “general language” (i.e. news articles, Wikipedia, books, …), they are expected to work best in this context. The fact that the semantic dependencies between tokens in the documents of the Faktion datasets are not necessarily representative for “general language”, might partly explain why the acquired linguistic knowledge of pretrained BERT and Flair to provide contextualized token representations does not seem to help the NER classifier to perform well on this task. This has also been described in situations of e.g. jargon-rich language like biomedical text. BioBERT - a BERT architecture pretrained on biomedical data - has been shown to outperform regular BERT for many NLP tasks specific to the field, including biomedical NER <span class="citation">(Lee et al. <a href="#ref-lee2020">2020</a>)</span>. Unfortunately, training such a model entirely from scratch requires enormous amounts of data and comes at a significant cost. Since the weights of pretrained BERT have already very sensible values for many problems, a more efficient approach is to finetune the parameters of pretrained models using task-specific data. Indeed, this approach has shown to be very succesful for different scientific domains <span class="citation">(Beltagy, Lo, and Cohan <a href="#ref-beltagy2019">2019</a>)</span> or to enrich the language-specific vocabulary of multilingual models <span class="citation">(Wang et al. <a href="#ref-wang2019">2019</a>)</span>.</p>
+<p>As mentioned before, the Faktion datasets consisted of only one (for the Dutch dataset) or two (for the French and bilingual dataset) entity categories. For the latter, the vast majority of all entities (approximately 95 %) belonged to a single category. In order to be consistent with the gold-standard evaluation procedure for NER tasks reported in literature, we reported micro-average entity-level precision, recall and F1-scores. Even though the F1-score is typically used to compare different NER systems and rank the performance on benchmark tasks like CoNLL, it should be mentioned that for some cases - including the highly imbalanced Faktion datasets - this does not provide a good representation of the per-class performance of the model. Since it is a weighted average of the F1-score per entity class, poor performance on the minority class is not well-reflected in the overall micro-average score. When optimizing NER classifiers for practical applications and depending on the relative cost of wrongly classifying entities belonging to the minority class, this should be taken into account. Also, as mentioned before, NER evaluation is typically performed on the entity-level, not on the token level. This means that optimizing an NER system for this metric essentially penalizes the model to be “partially correct”. Indeed, a system that predicts “In Prato [B-LOC] allo [I-LOC] Stelvio [I-LOC]” as “In Prato [B-LOC] allo Stelvio [B-LOC]” makes 2 false positive predictions (Prato [B-LOC] and Stelvio [B-LOC]) and one false negative prediction (Prato [B-LOC] allo [I-LOC] Stelvio [I-LOC]). As a result, the system is penalized both in terms of precision (+ 2 FPs) and recall (+ 1 FN). In contrast, when the NER system predicts no entities at all, only a single false negative prediction is counted because the system failed to correctly predict the entity “Prato [B-LOC] allo [I-LOC] Stelvio [I-LOC]”, thus only penalizing recall (+ 1 FN). This means that by optimizing a NER system on the entity-level F1-score, the system is essentially discouraged to predict these partial matches. One can argue that for many practical applications, the behavior of the first system is preferred, and optimizing for the F1-score might not be the best strategy in this case. This issue has been raised previously<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> and alternative evaluation strategies have been proposed to allow these partial matches to be taken into account <span class="citation">(Chinchor and Sundheim <a href="#ref-chinchor1993">1993</a>; Doddington et al. <a href="#ref-doddington2004">2004</a>; Esuli and Sebastiani <a href="#ref-esuli2010">2010</a>)</span>. However, these systems are typically quite complex and the vast majority of researchers adheres to the convention of evaluating NER systems according to micro-average F1-score. It might be interesting, however, to explore how other evaluation metrics compare to the way humans would naturally judge the performance of a NER system and how a lower F1-score might actually be preferable for practical applications like Metamaze.</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2><span class="header-section-number">5.3</span> Conclusion</h2>
+<p>To conclude, we discuss some limitations of the work presented here as well as some future perspectives. The main goal of this thesis was to acquire an overview on how different monolingual and multilingual embeddings affect NER performance in different situations. With this goal in mind, we aimed to keep the model parameters and embedding types consistent between experiments. While this provided a good overview on the relative contribution of the different embedding types to NER performance in many different situations, we did not specifically aim to maximize performance of each individual system or provide a robust analysis on the score distributions of each system. However, given the stochastic nature of the training algorithms, one should consider the entire score distribution in order to formally infer whether different monolingual and multilingual systems perform - on average - differently. It might be interesting to perform such a study in the future. In addition, when it comes to implementing a system for a practical application, it is very likely that performance will benefit from optimization. In particular, we did not explore which layers of the Transformer models provided the most informative representations for the NER task but focused predominantly on the comparison between monolingual and multilingual systems based on the activations from the top layer only. However, using different combinations of layers or weighted averages of the activations from different layers has been shown to improve performance in many cases <span class="citation">(Devlin et al. <a href="#ref-devlin2019">2019</a>; Liu et al. <a href="#ref-liu2019">2019</a>)</span>. Hence, it might be very interesting to explore to what extend these strategies can further improve both monolingual as well as multilingual NER systems based on BERT-embeddings. These optimization steps might be equally effective in improving the results on the Faktion datasets, even though - in general - the advantage of these state-of-the-art contextualized embeddings from pretrained neural LMs was more limited. Considering the nature of the Faktion datasets and the limited overlap between the type of text data that was used to train these LMs and the Faktion datasets, it might be very interesting to explore how fine-tuning the weights of mBERT with data more relevant to this specific problem might result in representations that are able to improve the performance of the NER system in this specific context even further. Nevertheless, even without extensive optimization, our results indicate that the multilingual embeddings that were evaluated during this thesis have the ability to significantly reduce the complexity of the current document annotation pipeline of Metamaze, by omitting the need for a separate language-prediction step, while achieving excellent performance compared to monolingual systems, in particular when the language heterogeneity of the dataset grows.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-agic2019">
+<p>Agi’c, and Ivan Vuli’c. 2019. “JW300: A Wide-Coverage Parallel Corpus for Low-Resource Languages.” In <em>Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics</em>, 3204–10. Florence, Italy: Association for Computational Linguistics. <a href="https://doi.org/10.18653/v1/P19-1310">https://doi.org/10.18653/v1/P19-1310</a>.</p>
+</div>
+<div id="ref-akbik2018">
+<p>Akbik, Alan, Duncan Blythe, and Roland Vollgraf. 2018. “Contextual String Embeddings for Sequence Labeling.” In <em>Proceedings of the 27th International Conference on Computational Linguistics</em>, 1638–49. Santa Fe, New Mexico, USA: Association for Computational Linguistics.</p>
+</div>
+<div id="ref-beltagy2019">
+<p>Beltagy, Iz, Kyle Lo, and Arman Cohan. 2019. “SciBERT: A Pretrained Language Model for Scientific Text.” In <em>Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</em>, 3615–20. Hong Kong, China: Association for Computational Linguistics. <a href="https://doi.org/10.18653/v1/D19-1371">https://doi.org/10.18653/v1/D19-1371</a>.</p>
+</div>
+<div id="ref-chinchor1993">
+<p>Chinchor, Nancy, and Beth Sundheim. 1993. “MUC-5 Evaluation Metrics.” In <em>Fifth Message Understanding Conference (MUC-5): Proceedings of a Conference Held in Baltimore, Maryland, August 25-27, 1993</em>.</p>
+</div>
+<div id="ref-devlin2019">
+<p>Devlin, Jacob, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. “BERT: Pre-Training of Deep Bidirectional Transformers for Language Understanding.” In <em>Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)</em>, 4171–86. Minneapolis, Minnesota: Association for Computational Linguistics. <a href="https://doi.org/10.18653/v1/N19-1423">https://doi.org/10.18653/v1/N19-1423</a>.</p>
+</div>
+<div id="ref-devries2019">
+<p>de Vries, Wietse, Andreas van Cranenburgh, Arianna Bisazza, Tommaso Caselli, Gertjan van Noord, and Malvina Nissim. 2019. “BERTje: A Dutch BERT Model.” <em>arXiv Preprint arXiv:1912.09582</em>.</p>
+</div>
+<div id="ref-doddington2004">
+<p>Doddington, George, Alexis Mitchell, Mark Przybocki, Lance Ramshaw, Stephanie Strassel, and Ralph Weischedel. 2004. “The Automatic Content Extraction (ACE) Program , Data, and Evaluation.” In <em>Proceedings of the Fourth International Conference on Language Resources and Evaluation (LREC’04)</em>. Lisbon, Portugal: European Language Resources Association (ELRA).</p>
+</div>
+<div id="ref-esuli2010">
+<p>Esuli, Andrea, and Fabrizio Sebastiani. 2010. “Evaluating Information Extraction.” In <em>Multilingual and Multimodal Information Access Evaluation</em>, edited by Maristella Agosti, Nicola Ferro, Carol Peters, Maarten de Rijke, and Alan Smeaton, 100–111. Lecture Notes in Computer Science. Berlin, Heidelberg: Springer. <a href="https://doi.org/10.1007/978-3-642-15998-5_12">https://doi.org/10.1007/978-3-642-15998-5_12</a>.</p>
+</div>
+<div id="ref-ethayarajh2019">
+<p>Ethayarajh, Kawin. 2019. “How Contextual Are Contextualized Word Representations? Comparing the Geometry of BERT, ELMo, and GPT-2 Embeddings.” In <em>Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</em>, 55–65. Hong Kong, China: Association for Computational Linguistics. <a href="https://doi.org/10.18653/v1/D19-1006">https://doi.org/10.18653/v1/D19-1006</a>.</p>
+</div>
+<div id="ref-huang2015">
+<p>Huang, Zhiheng, Wei Xu, and Kai Yu. 2015. “Bidirectional LSTM-CRF Models for Sequence Tagging.” <em>arXiv Preprint arXiv:1508.01991</em>.</p>
+</div>
+<div id="ref-lample2016">
+<p>Lample, Guillaume, Miguel Ballesteros, Sandeep Subramanian, Kazuya Kawakami, and Chris Dyer. 2016. “Neural Architectures for Named Entity Recognition.” In <em>Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</em>, 260–70. San Diego, California: Association for Computational Linguistics. <a href="https://doi.org/10.18653/v1/N16-1030">https://doi.org/10.18653/v1/N16-1030</a>.</p>
+</div>
+<div id="ref-lee2020">
+<p>Lee, Jinhyuk, Wonjin Yoon, Sungdong Kim, Donghyeon Kim, Sunkyu Kim, Chan Ho So, and Jaewoo Kang. 2020. “BioBERT: A Pre-Trained Biomedical Language Representation Model for Biomedical Text Mining.” <em>Bioinformatics (Oxford, England)</em> 36 (4): 1234–40. <a href="https://doi.org/10.1093/bioinformatics/btz682">https://doi.org/10.1093/bioinformatics/btz682</a>.</p>
+</div>
+<div id="ref-liu2019">
+<p>Liu, Nelson F., Matt Gardner, Yonatan Belinkov, Matthew E. Peters, and Noah A. Smith. 2019. “Linguistic Knowledge and Transferability of Contextual Representations.” <em>arXiv:1903.08855 [Cs]</em>, April. <a href="http://arxiv.org/abs/1903.08855">http://arxiv.org/abs/1903.08855</a>.</p>
+</div>
+<div id="ref-peters2018">
+<p>Peters, Matthew, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark, Kenton Lee, and Luke Zettlemoyer. 2018. “Deep Contextualized Word Representations.” In <em>Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers)</em>, 2227–37. New Orleans, Louisiana: Association for Computational Linguistics. <a href="https://doi.org/10.18653/v1/N18-1202">https://doi.org/10.18653/v1/N18-1202</a>.</p>
+</div>
+<div id="ref-reimers2017">
+<p>Reimers, Nils, and Iryna Gurevych. 2017. “Reporting Score Distributions Makes a Difference: Performance Study of LSTM-Networks for Sequence Tagging.” <em>arXiv:1707.09861 [Cs, Stat]</em>, July. <a href="http://arxiv.org/abs/1707.09861">http://arxiv.org/abs/1707.09861</a>.</p>
+</div>
+<div id="ref-wang2019">
+<p>Wang, Hai, Dian Yu, Kai Sun, Jianshu Chen, and Dong Yu. 2019. “Improving Pre-Trained Multilingual Model with Vocabulary Expansion.” In <em>Proceedings of the 23rd Conference on Computational Natural Language Learning (CoNLL)</em>, 316–27. Hong Kong, China: Association for Computational Linguistics. <a href="https://doi.org/10.18653/v1/K19-1030">https://doi.org/10.18653/v1/K19-1030</a>.</p>
+</div>
+<div id="ref-wu2019">
+<p>Wu, Shijie, and Mark Dredze. 2019. “Beto, Bentz, Becas: The Surprising Cross-Lingual Effectiveness of BERT.” In <em>Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</em>, 833–44. Hong Kong, China: Association for Computational Linguistics. <a href="https://doi.org/10.18653/v1/D19-1077">https://doi.org/10.18653/v1/D19-1077</a>.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="11">
+<li id="fn11"><p><a href="https://github.com/flairNLP/flair-lms">GitHub: flairNLP/flair-lms</a><a href="discussion.html#fnref11" class="footnote-back">↩</a></p></li>
+<li id="fn12"><p><a href="https://nlpers.blogspot.com/2006/08/doing-named-entity-recognition-dont.html">“Doing Named Entity Recognition? Don’t optimize for F1” - Chris Manning (2006)</a><a href="discussion.html#fnref12" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="results.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/arthur-arthur/MASTAT_thesis/edit/master/05-discussion.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Thesis_Arthur_Leloup.pdf", "Thesis_Arthur_Leloup.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

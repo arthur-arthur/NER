@@ -1,0 +1,2468 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Results | Multilingual Deep Learning models for Entity Extraction in NLP</title>
+  <meta name="description" content="MASTAT thesis" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Results | Multilingual Deep Learning models for Entity Extraction in NLP" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="MASTAT thesis" />
+  <meta name="github-repo" content="arthur-arthur/MASTAT_thesis" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Results | Multilingual Deep Learning models for Entity Extraction in NLP" />
+  
+  <meta name="twitter:description" content="MASTAT thesis" />
+  
+
+<meta name="author" content="Arthur Leloup" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="methods.html"/>
+<link rel="next" href="discussion.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Multilingual Deep Learning Models for Entity Extraction in NLP</a></li>
+<li><a href="./">Arthur Leloup</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="researchproblem.html"><a href="researchproblem.html"><i class="fa fa-check"></i><b>2</b> Research problem</a><ul>
+<li class="chapter" data-level="2.1" data-path="researchproblem.html"><a href="researchproblem.html#research-hypotheses"><i class="fa fa-check"></i><b>2.1</b> Research hypotheses</a></li>
+<li class="chapter" data-level="2.2" data-path="researchproblem.html"><a href="researchproblem.html#named-entity-recognition"><i class="fa fa-check"></i><b>2.2</b> Named Entity Recognition</a></li>
+<li class="chapter" data-level="2.3" data-path="researchproblem.html"><a href="researchproblem.html#static-word-representations"><i class="fa fa-check"></i><b>2.3</b> Static word representations</a></li>
+<li class="chapter" data-level="2.4" data-path="researchproblem.html"><a href="researchproblem.html#contextualized-word-representations-and-language-models"><i class="fa fa-check"></i><b>2.4</b> Contextualized word representations and language models</a></li>
+<li class="chapter" data-level="2.5" data-path="researchproblem.html"><a href="researchproblem.html#monolingual-versus-multilingual-embeddings"><i class="fa fa-check"></i><b>2.5</b> Monolingual versus multilingual embeddings</a></li>
+<li class="chapter" data-level="2.6" data-path="researchproblem.html"><a href="researchproblem.html#summary"><i class="fa fa-check"></i><b>2.6</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a><ul>
+<li class="chapter" data-level="3.1" data-path="methods.html"><a href="methods.html#data"><i class="fa fa-check"></i><b>3.1</b> Data</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="methods.html"><a href="methods.html#benchmark-datasets"><i class="fa fa-check"></i><b>3.1.1</b> Benchmark datasets</a></li>
+<li class="chapter" data-level="3.1.2" data-path="methods.html"><a href="methods.html#faktion-datasets"><i class="fa fa-check"></i><b>3.1.2</b> Faktion datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="methods.html"><a href="methods.html#word-embeddings"><i class="fa fa-check"></i><b>3.2</b> Word embeddings</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="methods.html"><a href="methods.html#static-and-task-specific-embeddings"><i class="fa fa-check"></i><b>3.2.1</b> Static and task-specific embeddings</a></li>
+<li class="chapter" data-level="3.2.2" data-path="methods.html"><a href="methods.html#contextualized-word-embeddings"><i class="fa fa-check"></i><b>3.2.2</b> Contextualized word embeddings</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="methods.html"><a href="methods.html#ner-classifier"><i class="fa fa-check"></i><b>3.3</b> NER classifier</a></li>
+<li class="chapter" data-level="3.4" data-path="methods.html"><a href="methods.html#ner-evaluation"><i class="fa fa-check"></i><b>3.4</b> NER evaluation</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a><ul>
+<li class="chapter" data-level="4.1" data-path="results.html"><a href="results.html#benchmark-datasets-1"><i class="fa fa-check"></i><b>4.1</b> Benchmark datasets</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="results.html"><a href="results.html#conll2003---english"><i class="fa fa-check"></i><b>4.1.1</b> CoNLL2003 - English</a></li>
+<li class="chapter" data-level="4.1.2" data-path="results.html"><a href="results.html#conll2002---dutch"><i class="fa fa-check"></i><b>4.1.2</b> CoNLL2002 - Dutch</a></li>
+<li class="chapter" data-level="4.1.3" data-path="results.html"><a href="results.html#wikiner---french"><i class="fa fa-check"></i><b>4.1.3</b> WikiNER - French</a></li>
+<li class="chapter" data-level="4.1.4" data-path="results.html"><a href="results.html#trilingual-ner"><i class="fa fa-check"></i><b>4.1.4</b> Trilingual NER</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="results.html"><a href="results.html#faktion-datasets-1"><i class="fa fa-check"></i><b>4.2</b> Faktion datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>5</b> Discussion</a><ul>
+<li class="chapter" data-level="5.1" data-path="discussion.html"><a href="discussion.html#benchmarkt-datasets"><i class="fa fa-check"></i><b>5.1</b> Benchmarkt datasets</a></li>
+<li class="chapter" data-level="5.2" data-path="discussion.html"><a href="discussion.html#faktion-datasets-2"><i class="fa fa-check"></i><b>5.2</b> Faktion datasets</a></li>
+<li class="chapter" data-level="5.3" data-path="discussion.html"><a href="discussion.html#conclusion"><i class="fa fa-check"></i><b>5.3</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="benchmark-results.html"><a href="benchmark-results.html"><i class="fa fa-check"></i><b>A</b> Benchmark results</a></li>
+<li class="chapter" data-level="B" data-path="faktion-results.html"><a href="faktion-results.html"><i class="fa fa-check"></i><b>B</b> Faktion results</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Multilingual Deep Learning models for Entity Extraction in NLP</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="results" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Results</h1>
+<div id="benchmark-datasets-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> Benchmark datasets</h2>
+<div id="conll2003---english" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> CoNLL2003 - English</h3>
+<p>The best results obtained on the CoNLL2003 task (Fig <a href="results.html#fig:conll2003-fig">4.1</a>) using state-of-the-art contextualized embeddings from pretrained LMs were similar to the state-of-the-art results reported in literature (Table <a href="results.html#tab:conll2003-tab">4.1</a>). As a proof of concept to demonstrate the added value of “transfer learning” in the context of NER, the BiLSTM-CRF classifier was trained without any input from pretrained (either static or contextualized) embeddings, i.e. only using randomly initialized embeddings that were updated during training to minimize the loss w.r.t. to the NER objective. Both the one hot word type and character-feature embeddings performed poorly, with F1-scores of 74.0 % and 75.4 %, respectively (Fig <a href="results.html#fig:conll2003-fig">4.1</a>). Performance improved drastically when using static BytePair or fastText embeddings alone (Fig <a href="results.html#fig:conll2003-fig">4.1</a>). However, as expected, best performance was provided when contextualized representations from pretrained LMs were used, with the performance obtained with embeddings based on BERT, Flair or both being similar when they were concatenated into large vectors containing all static and task-specific embedding types evaluated here (Table <a href="results.html#tab:conll2003-tab">4.1</a>).</p>
+<p>While the monolingual embeddings appeared to outperform the multilingual embeddings, the differences between large stackings of respectively BERT and mBERT embeddings were surprisingly small (F1-scores of 92.1 % vs. 91.4 %, respectively), with mBERT-based embeddings being clearly superior to mFlair-based embeddings (Table <a href="results.html#tab:conll2003-tab">4.1</a>). Interestingly, adding mFlair embeddings to the stacked embedding consisting of mBytePair, OHE and character embeddings (F1-score: 88.0 %) did not improve performance (F1-score: 87.9 %) (Fig <a href="results.html#fig:conll2003-fig">4.1</a>, Table <a href="results.html#tab:conll2003-tab">4.1</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:conll2003-fig"></span>
+<img src="Thesis_Arthur_Leloup_files/figure-html/conll2003-fig-1.png" alt="Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the English CoNLL2003 NER task. The results are grouped according to the constituents of each (stacked) embedding, consistent with Table 3.4. The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, the results for the language-independent OHE and Char embeddings are indicated on both the upper (monolingual) and lower (multilingual) panels. Char: character embeddings; OHE: One Hot Embeddings; BPEmb: BytePair embeddings; fastT: fastText embeddings; All: all embeddings indicated on the x-axis for this panel concatenated into a single vector." width="768" />
+<p class="caption">
+Figure 4.1: Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the English CoNLL2003 NER task. The results are grouped according to the constituents of each (stacked) embedding, consistent with Table <a href="methods.html#tab:embeddings">3.4</a>. The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, the results for the language-independent OHE and Char embeddings are indicated on both the upper (monolingual) and lower (multilingual) panels. <em>Char: character embeddings; OHE: One Hot Embeddings; BPEmb: BytePair embeddings; fastT: fastText embeddings; All: all embeddings indicated on the x-axis for this panel concatenated into a single vector.</em>
+</p>
+</div>
+
+<table>
+<caption>
+<span id="tab:conll2003-tab">Table 4.1: </span>Results acquired on the English CoNLL2003 task with monolingual and multilingual NER systems. The results for the best-performing model for the original CoNLL2003 shared task is included for comparison <span class="citation">(Florian et al. <a href="#ref-florian2003">2003</a>)</span>. A complete overview of all results is provided in Table <a href="benchmark-results.html#tab:apx-en">A.1</a>.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:left;">
+Precision
+</th>
+<th style="text-align:left;">
+Recall
+</th>
+<th style="text-align:left;">
+F1-score
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="10">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Monolingual</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;color: #999999 !important;" indentlevel="1">
+CoNLL2003 best - IBM Florian 
+</td>
+<td style="text-align:left;color: #999999 !important;">
+89.0
+</td>
+<td style="text-align:left;color: #999999 !important;">
+88.5
+</td>
+<td style="text-align:left;color: #999999 !important;">
+88.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;color: #999999 !important;" indentlevel="1">
+Flair - BiLSTM-CRF 
+</td>
+<td style="text-align:left;color: #999999 !important;">
+</td>
+<td style="text-align:left;color: #999999 !important;">
+</td>
+<td style="text-align:left;color: #999999 !important;">
+93.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;color: #999999 !important;" indentlevel="1">
+BERT base - finetuned 
+</td>
+<td style="text-align:left;color: #999999 !important;">
+</td>
+<td style="text-align:left;color: #999999 !important;">
+</td>
+<td style="text-align:left;color: #999999 !important;">
+92.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+90.8
+</td>
+<td style="text-align:left;">
+90.9
+</td>
+<td style="text-align:left;">
+90.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERT
+</td>
+<td style="text-align:left;">
+91.3
+</td>
+<td style="text-align:left;">
+91.1
+</td>
+<td style="text-align:left;">
+91.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERT + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-en</a>
+</td>
+<td style="text-align:left;">
+91.9
+</td>
+<td style="text-align:left;">
+92.3
+</td>
+<td style="text-align:left;">
+92.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair
+</td>
+<td style="text-align:left;">
+90.3
+</td>
+<td style="text-align:left;">
+90.8
+</td>
+<td style="text-align:left;">
+90.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-en</a>
+</td>
+<td style="text-align:left;">
+92.3
+</td>
+<td style="text-align:left;">
+92.4
+</td>
+<td style="text-align:left;">
+92.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERT + Flair
+</td>
+<td style="text-align:left;">
+91.3
+</td>
+<td style="text-align:left;">
+91.9
+</td>
+<td style="text-align:left;">
+91.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERT + Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-en</a>
+</td>
+<td style="text-align:left;">
+92.3
+</td>
+<td style="text-align:left;">
+92.7
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr grouplength="8">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Multilingual</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;color: #999999 !important;" indentlevel="1">
+mBERT - finetuned 
+</td>
+<td style="text-align:left;color: #999999 !important;">
+</td>
+<td style="text-align:left;color: #999999 !important;">
+</td>
+<td style="text-align:left;color: #999999 !important;">
+92.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+88.3
+</td>
+<td style="text-align:left;">
+87.8
+</td>
+<td style="text-align:left;">
+88.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT
+</td>
+<td style="text-align:left;">
+90.8
+</td>
+<td style="text-align:left;">
+90.6
+</td>
+<td style="text-align:left;">
+90.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+91.0
+</td>
+<td style="text-align:left;">
+91.9
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair
+</td>
+<td style="text-align:left;">
+84.6
+</td>
+<td style="text-align:left;">
+84.8
+</td>
+<td style="text-align:left;">
+84.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+87.6
+</td>
+<td style="text-align:left;">
+88.2
+</td>
+<td style="text-align:left;">
+87.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair
+</td>
+<td style="text-align:left;">
+90.5
+</td>
+<td style="text-align:left;">
+91.2
+</td>
+<td style="text-align:left;">
+90.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+90.8
+</td>
+<td style="text-align:left;">
+91.4
+</td>
+<td style="text-align:left;">
+91.1
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<span style="font-style: italic;">References</span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup>a</sup> Florian et al (2003)
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup>b</sup> Akbik et al (2018)
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup>c</sup> Devlin et al (2019)
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup>d</sup> Wu et al (2019)
+</td>
+</tr>
+</tfoot>
+</table>
+
+</div>
+<div id="conll2002---dutch" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> CoNLL2002 - Dutch</h3>
+<p>Results were similar for the Dutch CoNLL2002 task (Fig <a href="results.html#fig:conll2002-fig">4.2</a>, Table <a href="results.html#tab:conll2002-tab">4.2</a>) in the sense that task-specific representations (i.e. character embeddings (F1: 67.8 %) or OHE (F1: 61.7 %)) were clearly inferior to embeddings obtained from pretrained LMs, with the best-performing monolingual system being based on the large (i.e. 5614-dimensional) concatenations of embeddings from both BERTje and Dutch Flair embeddings, stacked with Dutch fastText, Dutch BytePair and task-specific OHE and character embeddings (F1: 93.0 %, Table <a href="results.html#tab:conll2002-tab">4.2</a>). Even though this is the result of only a single training run, all the monolingual embeddings based on BERTje consistently outperformed the result reported in the BERTje paper itself (F1: 90.2 %) <span class="citation">(de Vries et al. <a href="#ref-devries2019">2019</a>)</span> as well as the current best result on the CoNLL2002 task, obtained by the fine-tuned mBERT model (F1-score: 90.9 %) <span class="citation">(Wu and Dredze <a href="#ref-wu2019">2019</a>)</span>. In contrast to the English CoNLL2003 task, monolingual embeddings from the Flair model performed poorly as compared to the BERT-based embeddings, with the difference being even more pronounced when comparing mFlair-based embeddings with mBERT-based embeddings (Table <a href="results.html#tab:conll2002-tab">4.2</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:conll2002-fig"></span>
+<img src="Thesis_Arthur_Leloup_files/figure-html/conll2002-fig-1.png" alt="Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the Dutch CoNLL2002 NER task. The results are grouped according to the constituents of each (stacked) embedding, consistent with Table 3.4. The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, the results for the language-independent OHE and Char embeddings are indicated on both the upper (monolingual) and lower (multilingual) panels. Char: character embeddings; OHE: One Hot Embeddings; BPEmb: BytePair embeddings; fastT: fastText embeddings; All: all embeddings indicated on the x-axis for this panel concatenated into a single vector." width="768" />
+<p class="caption">
+Figure 4.2: Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the Dutch CoNLL2002 NER task. The results are grouped according to the constituents of each (stacked) embedding, consistent with Table <a href="methods.html#tab:embeddings">3.4</a>. The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, the results for the language-independent OHE and Char embeddings are indicated on both the upper (monolingual) and lower (multilingual) panels. <em>Char: character embeddings; OHE: One Hot Embeddings; BPEmb: BytePair embeddings; fastT: fastText embeddings; All: all embeddings indicated on the x-axis for this panel concatenated into a single vector.</em>
+</p>
+</div>
+
+<table>
+<caption>
+<span id="tab:conll2002-tab">Table 4.2: </span>Results acquired on the Dutch CoNLL2002 task with monolingual and multilingual NER systems. The best-performing model for the original CoNLL2002 shared task <span class="citation">(Carreras, M‘arquez, and Padr’o <a href="#ref-carreras2002">2002</a>)</span> is included for comparison. A complete overview of all results is provided in Table <a href="benchmark-results.html#tab:apx-nl">A.2</a>.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:left;">
+Precision
+</th>
+<th style="text-align:left;">
+Recall
+</th>
+<th style="text-align:left;">
+F1-score
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="10">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Monolingual</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;color: #999999 !important;" indentlevel="1">
+CoNLL2002 best - AdaBoost 
+</td>
+<td style="text-align:left;color: #999999 !important;">
+77.8
+</td>
+<td style="text-align:left;color: #999999 !important;">
+76.3
+</td>
+<td style="text-align:left;color: #999999 !important;">
+77.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;color: #999999 !important;" indentlevel="1">
+Flair NL - BiLSTM-CRF 
+</td>
+<td style="text-align:left;color: #999999 !important;">
+</td>
+<td style="text-align:left;color: #999999 !important;">
+</td>
+<td style="text-align:left;color: #999999 !important;">
+89.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;color: #999999 !important;" indentlevel="1">
+fine-tuned BERTje 
+</td>
+<td style="text-align:left;color: #999999 !important;">
+</td>
+<td style="text-align:left;color: #999999 !important;">
+</td>
+<td style="text-align:left;color: #999999 !important;">
+90.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+88.1
+</td>
+<td style="text-align:left;">
+86.8
+</td>
+<td style="text-align:left;">
+87.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje
+</td>
+<td style="text-align:left;">
+91.8
+</td>
+<td style="text-align:left;">
+91.3
+</td>
+<td style="text-align:left;">
+91.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-nl</a>
+</td>
+<td style="text-align:left;">
+93.1
+</td>
+<td style="text-align:left;">
+92.2
+</td>
+<td style="text-align:left;">
+92.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair
+</td>
+<td style="text-align:left;">
+86.9
+</td>
+<td style="text-align:left;">
+86.2
+</td>
+<td style="text-align:left;">
+86.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-nl</a>
+</td>
+<td style="text-align:left;">
+90.2
+</td>
+<td style="text-align:left;">
+89.3
+</td>
+<td style="text-align:left;">
+89.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje + Flair
+</td>
+<td style="text-align:left;">
+92.4
+</td>
+<td style="text-align:left;">
+92.5
+</td>
+<td style="text-align:left;">
+92.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje + Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-nl</a>
+</td>
+<td style="text-align:left;">
+93.1
+</td>
+<td style="text-align:left;">
+93.0
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr grouplength="8">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Multilingual</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;color: #999999 !important;" indentlevel="1">
+fine-tuned mBERT 
+</td>
+<td style="text-align:left;color: #999999 !important;">
+</td>
+<td style="text-align:left;color: #999999 !important;">
+</td>
+<td style="text-align:left;color: #999999 !important;">
+90.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+82.8
+</td>
+<td style="text-align:left;">
+80.0
+</td>
+<td style="text-align:left;">
+81.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT
+</td>
+<td style="text-align:left;">
+89.2
+</td>
+<td style="text-align:left;">
+88.5
+</td>
+<td style="text-align:left;">
+88.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+90.6
+</td>
+<td style="text-align:left;">
+89.4
+</td>
+<td style="text-align:left;">
+90.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair
+</td>
+<td style="text-align:left;">
+79.8
+</td>
+<td style="text-align:left;">
+78.8
+</td>
+<td style="text-align:left;">
+79.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+84.7
+</td>
+<td style="text-align:left;">
+82.6
+</td>
+<td style="text-align:left;">
+83.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair
+</td>
+<td style="text-align:left;">
+89.8
+</td>
+<td style="text-align:left;">
+89.4
+</td>
+<td style="text-align:left;">
+89.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+90.4
+</td>
+<td style="text-align:left;">
+89.8
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<span style="font-style: italic;">References</span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup>a</sup> Carreras et al 2002
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup>b</sup> GitHub: stefan-it/flair-experiments
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup>c</sup> GitHub: wietsedv/bertje
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup>d</sup> Wu et al (2019)
+</td>
+</tr>
+</tfoot>
+</table>
+
+</div>
+<div id="wikiner---french" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> WikiNER - French</h3>
+<p>To evaluate how monolingual and multilingual embeddings performed on a French NER task, we used a small subset of the French WikiNER dataset. Even though the entity classes (i.e. PER, ORG, LOC and MISC) were identical to the CoNLL2002 and CoNLL2003 datasets, performance was - on average - lower for the WikiNER dataset. However, the general trend that stacking multiple embedding types together typically improves performance was also observed here (Fig <a href="results.html#fig:wikiner-fig">4.3</a>). This was less pronounced for monolingual embeddings based on CamemBERT or multilingual embeddings based on mBERT, where performance was already relatively high at baseline (i.e. when no additional static or task-specific embeddings were included) (Table <a href="results.html#tab:conll2002-tab">4.2</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:wikiner-fig"></span>
+<img src="Thesis_Arthur_Leloup_files/figure-html/wikiner-fig-1.png" alt="Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the French WikiNER task. The results are grouped according to the constituents of each (stacked) embedding, consistent with Table 3.4. The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, the results for the language-independent OHE and Char embeddings are indicated on both the upper (monolingual) and lower (multilingual) panels. Char: character embeddings; OHE: One Hot Embeddings; BPEmb: BytePair embeddings; fastT: fastText embeddings; All: all embeddings indicated on the x-axis for this panel concatenated into a single vector." width="768" />
+<p class="caption">
+Figure 4.3: Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the French WikiNER task. The results are grouped according to the constituents of each (stacked) embedding, consistent with Table <a href="methods.html#tab:embeddings">3.4</a>. The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, the results for the language-independent OHE and Char embeddings are indicated on both the upper (monolingual) and lower (multilingual) panels. <em>Char: character embeddings; OHE: One Hot Embeddings; BPEmb: BytePair embeddings; fastT: fastText embeddings; All: all embeddings indicated on the x-axis for this panel concatenated into a single vector.</em>
+</p>
+</div>
+
+<table>
+<caption>
+<span id="tab:wikiner-tab">Table 4.3: </span>Overview of results acquired on the French WikiNER task with monolingual and multilingual NER systems. Note that we used a subset consisting of only 10 % of the entire WikiNER dataset. A complete overview of all results is provided in Table <a href="benchmark-results.html#tab:apx-fr">A.3</a>.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:left;">
+Precision
+</th>
+<th style="text-align:left;">
+Recall
+</th>
+<th style="text-align:left;">
+F1-score
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="9">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Monolingual</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;color: #999999 !important;" indentlevel="1">
+SpaCy fr 
+</td>
+<td style="text-align:left;color: #999999 !important;">
+82.2
+</td>
+<td style="text-align:left;color: #999999 !important;">
+81.6
+</td>
+<td style="text-align:left;color: #999999 !important;">
+81.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;color: #999999 !important;" indentlevel="1">
+Flair 
+</td>
+<td style="text-align:left;color: #999999 !important;">
+87.9
+</td>
+<td style="text-align:left;color: #999999 !important;">
+87.7
+</td>
+<td style="text-align:left;color: #999999 !important;">
+87.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+84.0
+</td>
+<td style="text-align:left;">
+83.9
+</td>
+<td style="text-align:left;">
+83.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT
+</td>
+<td style="text-align:left;">
+84.5
+</td>
+<td style="text-align:left;">
+84.8
+</td>
+<td style="text-align:left;">
+84.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-fr</a>
+</td>
+<td style="text-align:left;">
+86.3
+</td>
+<td style="text-align:left;">
+86.4
+</td>
+<td style="text-align:left;">
+86.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair
+</td>
+<td style="text-align:left;">
+79.1
+</td>
+<td style="text-align:left;">
+80.0
+</td>
+<td style="text-align:left;">
+79.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-fr</a>
+</td>
+<td style="text-align:left;">
+85.2
+</td>
+<td style="text-align:left;">
+85.3
+</td>
+<td style="text-align:left;">
+85.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT + Flair
+</td>
+<td style="text-align:left;">
+86.2
+</td>
+<td style="text-align:left;">
+86.2
+</td>
+<td style="text-align:left;">
+86.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT + Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-fr</a>
+</td>
+<td style="text-align:left;">
+87.4
+</td>
+<td style="text-align:left;">
+87.4
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr grouplength="8">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Multilingual</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;color: #999999 !important;" indentlevel="1">
+SpaCy XX 
+</td>
+<td style="text-align:left;color: #999999 !important;">
+80.3
+</td>
+<td style="text-align:left;color: #999999 !important;">
+79.5
+</td>
+<td style="text-align:left;color: #999999 !important;">
+79.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+80.2
+</td>
+<td style="text-align:left;">
+80.8
+</td>
+<td style="text-align:left;">
+80.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT
+</td>
+<td style="text-align:left;">
+85.5
+</td>
+<td style="text-align:left;">
+85.4
+</td>
+<td style="text-align:left;">
+85.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+85.3
+</td>
+<td style="text-align:left;">
+85.0
+</td>
+<td style="text-align:left;">
+85.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair
+</td>
+<td style="text-align:left;">
+74.4
+</td>
+<td style="text-align:left;">
+75.7
+</td>
+<td style="text-align:left;">
+74.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+81.0
+</td>
+<td style="text-align:left;">
+81.6
+</td>
+<td style="text-align:left;">
+81.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair
+</td>
+<td style="text-align:left;">
+84.8
+</td>
+<td style="text-align:left;">
+84.9
+</td>
+<td style="text-align:left;">
+84.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+86.2
+</td>
+<td style="text-align:left;">
+86.3
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<span style="font-style: italic;">References</span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup>a</sup> GitHub: flairNLP/flair/issues/238
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup>b</sup> GitHub: flairNLP/flair/issues/238
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup>c</sup> spacy.io/models/xx
+</td>
+</tr>
+</tfoot>
+</table>
+
+<p>In general - for all three monolingual datasets - high-dimensional vectors based on contextualized representations obtained from pretrained LMs clearly improved performance as compared to high-dimensional stackings of static and task-specific representations. BERT-based embeddings generally outperformed Flair-based embeddings, except for monolingual English NER, where Flair- and BERT-based embeddings performed similarly.</p>
+</div>
+<div id="trilingual-ner" class="section level3">
+<h3><span class="header-section-number">4.1.4</span> Trilingual NER</h3>
+<p>As expected, monolingual embeddings outperformed multilingual embeddings on the aforementioned (monolingual) NER tasks, which might reflect the lack of language-specific knowledge of the multilingual embeddings. The difference, however, was small for multilingual representations based on mBERT embeddings. To test the hypothesis that the multilingual knowledge acquired by mBERT during pretraining is particularly beneficial when the input data is multilingual, we combined random subsets of the CoNLL2002, CoNLL2003 and WikiNER dataset into a single, multilingual dataset. We evaluated NER performance using all monolingual and multilingual embeddings used for the monolingual NER tasks. Evaluating the different monolingual embeddings on the multilingual dataset provides an indication on how NER performance might suffer from incorrect predictions by an upstream language-prediction system in a document annotation pipeline like Metamaze (cf supra).</p>
+<p>For clarity, only the F1-scores of a subset of the results are included in Fig <a href="results.html#fig:trilingual-fig">4.4</a>. Consistently with previous results, the precision, recall and F1-score for either the different contextualized embeddings as such, or concatenated with all monolingual or multilingual static/task-specific embeddings are provided in Table <a href="results.html#tab:benchmark-multi-tab">4.4</a>. Task-specific representations (OHE and Character embeddings) performed, as expected, poorly, with F1-scores of 60.4 % and 60.8 %, respectively (Table <a href="benchmark-results.html#tab:apx-trired">A.4</a>). Adding contextualized embeddings from pretrained LMs improved results drastically, again demonstrating that the acquired knowledge of the LM provided representations that encoded information highly relevant for the NER classifier to perform well - even when this LM was trained in the language that represented merely one third of the entire dataset.</p>
+<p>For all monolingual embeddings, concatenating both Flair and BERT embeddings together improved performance as compared to the representations obtained from either Flair- or BERT-based embeddings alone (Table <a href="results.html#tab:benchmark-multi-tab">4.4</a>). When increasing the dimensionality of the BERT + Flair stacked embeddings further through concatenating fastText and BytePair embeddings (in the respective languages) and task-specific OHE and character embeddings, performance increased further to roughly 85 % for all monolingual systems (Fig <a href="results.html#fig:trilingual-fig">4.4</a>). Interestingly, even mBERT embeddings alone performed better on this multilingual dataset (F1-score: 86.5 %), confirming our hypothesis that, indeed, pretraining on a multilingual dataset improves performance for multilingual NER as compared to the monolingual LMs. An additional (slight) performance increase was achieved through stacking mBERT embeddings with mBytePair, OHE and character embeddings (F1-score: 87.5 %) (Table <a href="results.html#tab:benchmark-multi-tab">4.4</a>). The performance of mFlair-based embeddings was again low, in general. Not only compared to mBERT-based embeddings, but even compared to monolingual embeddings containing no BERT- or Flair-based embeddings at all (Figure <a href="results.html#fig:trilingual-fig">4.4</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:trilingual-fig"></span>
+<img src="Thesis_Arthur_Leloup_files/figure-html/trilingual-fig-1.png" alt="Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the multilingual (English + Dutch + French) benchmark dataset. The results are grouped according to the constituents of each (stacked) embedding, consistent with Table 3.4. The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, only the results for experiments that did not include any static/task-specific embeddings (None) and for the experiments where all static/task-specific embeddings were included (All) are shown. No CE: No contextualized embeddings" width="768" />
+<p class="caption">
+Figure 4.4: Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the multilingual (English + Dutch + French) benchmark dataset. The results are grouped according to the constituents of each (stacked) embedding, consistent with Table <a href="methods.html#tab:embeddings">3.4</a>. The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, only the results for experiments that did not include any static/task-specific embeddings (None) and for the experiments where all static/task-specific embeddings were included (All) are shown. <em>No CE: No contextualized embeddings</em>
+</p>
+</div>
+
+<table>
+<caption>
+<span id="tab:benchmark-multi-tab">Table 4.4: </span>Results obtained on the multilingual dataset, consisting of a random sample of the aformentioned English, Dutch and French benchmark datasets. A complete overview of all results is provided in Table <a href="benchmark-results.html#tab:apx-trired">A.4</a>.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Embedding type
+</th>
+<th style="text-align:left;">
+Precision
+</th>
+<th style="text-align:left;">
+Recall
+</th>
+<th style="text-align:left;">
+F1-score
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="7">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Monolingual English embeddings</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+84.4
+</td>
+<td style="text-align:left;">
+83.8
+</td>
+<td style="text-align:left;">
+84.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERT
+</td>
+<td style="text-align:left;">
+82.0
+</td>
+<td style="text-align:left;">
+81.0
+</td>
+<td style="text-align:left;">
+81.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERT + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-en</a>
+</td>
+<td style="text-align:left;">
+85.0
+</td>
+<td style="text-align:left;">
+84.2
+</td>
+<td style="text-align:left;">
+84.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair
+</td>
+<td style="text-align:left;">
+79.5
+</td>
+<td style="text-align:left;">
+79.2
+</td>
+<td style="text-align:left;">
+79.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-en</a>
+</td>
+<td style="text-align:left;">
+85.2
+</td>
+<td style="text-align:left;">
+85.1
+</td>
+<td style="text-align:left;">
+85.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERT + Flair
+</td>
+<td style="text-align:left;">
+83.5
+</td>
+<td style="text-align:left;">
+83.4
+</td>
+<td style="text-align:left;">
+83.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERT + Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-en</a>
+</td>
+<td style="text-align:left;">
+85.3
+</td>
+<td style="text-align:left;">
+85.1
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr grouplength="7">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Monolingual Dutch embeddings</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+83.5
+</td>
+<td style="text-align:left;">
+82.9
+</td>
+<td style="text-align:left;">
+83.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje
+</td>
+<td style="text-align:left;">
+80.1
+</td>
+<td style="text-align:left;">
+77.4
+</td>
+<td style="text-align:left;">
+78.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-nl</a>
+</td>
+<td style="text-align:left;">
+85.0
+</td>
+<td style="text-align:left;">
+84.8
+</td>
+<td style="text-align:left;">
+84.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair
+</td>
+<td style="text-align:left;">
+79.1
+</td>
+<td style="text-align:left;">
+79.7
+</td>
+<td style="text-align:left;">
+79.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-nl</a>
+</td>
+<td style="text-align:left;">
+84.1
+</td>
+<td style="text-align:left;">
+84.2
+</td>
+<td style="text-align:left;">
+84.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje + Flair
+</td>
+<td style="text-align:left;">
+80.7
+</td>
+<td style="text-align:left;">
+80.6
+</td>
+<td style="text-align:left;">
+80.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje + Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-nl</a>
+</td>
+<td style="text-align:left;">
+85.2
+</td>
+<td style="text-align:left;">
+85.8
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr grouplength="7">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Monolingual French embeddings</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+83.8
+</td>
+<td style="text-align:left;">
+83.0
+</td>
+<td style="text-align:left;">
+83.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT
+</td>
+<td style="text-align:left;">
+81.0
+</td>
+<td style="text-align:left;">
+79.6
+</td>
+<td style="text-align:left;">
+80.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-fr</a>
+</td>
+<td style="text-align:left;">
+86.1
+</td>
+<td style="text-align:left;">
+85.6
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair
+</td>
+<td style="text-align:left;">
+76.5
+</td>
+<td style="text-align:left;">
+75.8
+</td>
+<td style="text-align:left;">
+76.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-fr</a>
+</td>
+<td style="text-align:left;">
+84.4
+</td>
+<td style="text-align:left;">
+83.3
+</td>
+<td style="text-align:left;">
+83.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT + Flair
+</td>
+<td style="text-align:left;">
+82.0
+</td>
+<td style="text-align:left;">
+81.2
+</td>
+<td style="text-align:left;">
+81.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT + Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-fr</a>
+</td>
+<td style="text-align:left;">
+86.0
+</td>
+<td style="text-align:left;">
+85.5
+</td>
+<td style="text-align:left;">
+85.7
+</td>
+</tr>
+<tr grouplength="7">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Multilingual embeddings</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+80.2
+</td>
+<td style="text-align:left;">
+79.1
+</td>
+<td style="text-align:left;">
+79.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT
+</td>
+<td style="text-align:left;">
+86.6
+</td>
+<td style="text-align:left;">
+86.4
+</td>
+<td style="text-align:left;">
+86.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+87.6
+</td>
+<td style="text-align:left;">
+87.4
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair
+</td>
+<td style="text-align:left;">
+76.8
+</td>
+<td style="text-align:left;">
+77.0
+</td>
+<td style="text-align:left;">
+76.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+81.2
+</td>
+<td style="text-align:left;">
+81.5
+</td>
+<td style="text-align:left;">
+81.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair
+</td>
+<td style="text-align:left;">
+86.6
+</td>
+<td style="text-align:left;">
+86.9
+</td>
+<td style="text-align:left;">
+86.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+86.9
+</td>
+<td style="text-align:left;">
+86.9
+</td>
+<td style="text-align:left;">
+86.9
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div id="faktion-datasets-1" class="section level2">
+<h2><span class="header-section-number">4.2</span> Faktion datasets</h2>
+<p>As discussed in chapter <a href="methods.html#methods">3</a>, the Faktion datasets were considerably smaller and more noisy compared to the benchmark datasets presented earlier. Therefore, it was not very surprising that performance on the Dutch Faktion dataset was - on average - much lower as compared to the CoNLL 2002 task (Fig <a href="results.html#fig:faktion-nl-fig">4.5</a>, Table <a href="results.html#tab:faktion-nl-tab">4.5</a>). However, there was a clear advantage of using pretrained language models to provide word embeddings. Indeed, fixed (sub)word embeddings such as monolingual BytePair or fastText embeddings performed poorly with F1-scores of roughly 50 % (Fig <a href="results.html#fig:faktion-nl-fig">4.5</a>). On the other hand, performance did benefit from concatenating these fixed (sub)word embeddings with contextualized word vectors obtained from - especially - the pretrained Dutch Flair model. This was in contrast to the results on the CoNLL2002 task, where Flair-based embeddings were clearly outperformed by embeddings obtained from BERTje (Fig <a href="results.html#fig:conll2002-fig">4.2</a>). Even though some of the embeddings seemed to benefit from further increasing the dimensionality of the vectors with trainable character-feature representations, there was no clear pattern accross the types of contextualized embeddings or across monolingual and multilingual embeddings. This, combined with the observation that character-feature embeddings alone performed very poorly, might indicate that this specific representation was not very informative for the BiLSTM-CRF classifier. The fact that the dataset was not completely monolingual is further reflected in the results for the multilingual embeddings: not only was the performance of the mBERT/mFlair-based embeddings on a par with the monolingual embeddings (Table <a href="results.html#tab:faktion-nl-tab">4.5</a>), multilingual BytePair embeddings also clearly outperformed their monolingual counterparts (Fig <a href="#faktion-nl-fig"><strong>??</strong></a>). Performance was, on average, highest for the monolingual Flair embeddings, concatenated with all monolingual static and task-specific representations (F1-score: 72.0 ± 4.8 %). Among all multilingual embeddings, the best performance was, on average, obtained with the concatenation of all multilingual static and task-specific representations (F1-score: 70.8 ± 4.8 %) (Table <a href="results.html#tab:faktion-nl-tab">4.5</a>). A complete overview of all results is given in Table <a href="faktion-results.html#tab:apx-f-nl">B.1</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:faktion-nl-fig"></span>
+<img src="Thesis_Arthur_Leloup_files/figure-html/faktion-nl-fig-1.png" alt="Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the Dutch Faktion NER task. The results are grouped according to the constituents of each (stacked) embedding (Table 3.4). The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, the results for the language-independent OHE and Char embeddings are indicated on both the upper (monolingual) and lower (multilingual) panels. The symbol and error bars indicate the mean and standard error of the mean, respectively. Char: character embeddings; OHE: One Hot Embeddings; BPEmb: BytePair embeddings; fastT: fastText embeddings; All: all embeddings indicated on the x-axis for this panel concatenated into a single vector." width="768" />
+<p class="caption">
+Figure 4.5: Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the Dutch Faktion NER task. The results are grouped according to the constituents of each (stacked) embedding (Table <a href="methods.html#tab:embeddings">3.4</a>). The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, the results for the language-independent OHE and Char embeddings are indicated on both the upper (monolingual) and lower (multilingual) panels. The symbol and error bars indicate the mean and standard error of the mean, respectively. <em>Char: character embeddings; OHE: One Hot Embeddings; BPEmb: BytePair embeddings; fastT: fastText embeddings; All: all embeddings indicated on the x-axis for this panel concatenated into a single vector.</em>
+</p>
+</div>
+
+<table>
+<caption>
+<span id="tab:faktion-nl-tab">Table 4.5: </span>Results acquired on the Dutch Faktion NER task with both monolingual and multilingual NER systems. Results are reported as mean ± standard error of the mean (k = 5). A complete overview of all results is provided in Table <a href="faktion-results.html#tab:apx-f-nl">B.1</a>.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Embedding type
+</th>
+<th style="text-align:left;">
+Precision
+</th>
+<th style="text-align:left;">
+Recall
+</th>
+<th style="text-align:left;">
+F1-score
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="7">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Monolingual embeddings</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+76.4 ± 7.5
+</td>
+<td style="text-align:left;">
+50.2 ± 6.1
+</td>
+<td style="text-align:left;">
+59.8 ± 5.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje
+</td>
+<td style="text-align:left;">
+81.5 ± 3.8
+</td>
+<td style="text-align:left;">
+51.5 ± 4.8
+</td>
+<td style="text-align:left;">
+62.3 ± 3.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+79.1 ± 2.9
+</td>
+<td style="text-align:left;">
+56.2 ± 4.6
+</td>
+<td style="text-align:left;">
+65.2 ± 3.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair
+</td>
+<td style="text-align:left;">
+71.6 ± 5.2
+</td>
+<td style="text-align:left;">
+59.9 ± 7.1
+</td>
+<td style="text-align:left;">
+64.8 ± 6.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+78.7 ± 7.3
+</td>
+<td style="text-align:left;">
+67.8 ± 6.1
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje + Flair
+</td>
+<td style="text-align:left;">
+79.0 ± 4.0
+</td>
+<td style="text-align:left;">
+50.9 ± 4.1
+</td>
+<td style="text-align:left;">
+61.3 ± 2.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje + Flair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+84.6 ± 2.2
+</td>
+<td style="text-align:left;">
+60.2 ± 5.4
+</td>
+<td style="text-align:left;">
+69.6 ± 3.3
+</td>
+</tr>
+<tr grouplength="7">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Multilingual embeddings</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+84.7 ± 5.0
+</td>
+<td style="text-align:left;">
+62.2 ± 7.3
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT
+</td>
+<td style="text-align:left;">
+80.5 ± 5.0
+</td>
+<td style="text-align:left;">
+57.3 ± 5.4
+</td>
+<td style="text-align:left;">
+66.5 ± 5.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+81.6 ± 4.6
+</td>
+<td style="text-align:left;">
+58.5 ± 5.7
+</td>
+<td style="text-align:left;">
+67.7 ± 4.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair
+</td>
+<td style="text-align:left;">
+81.4 ± 5.3
+</td>
+<td style="text-align:left;">
+51.0 ± 4.1
+</td>
+<td style="text-align:left;">
+62.4 ± 4.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+82.2 ± 5.0
+</td>
+<td style="text-align:left;">
+60.4 ± 7.8
+</td>
+<td style="text-align:left;">
+68.3 ± 5.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair
+</td>
+<td style="text-align:left;">
+87.0 ± 3.3
+</td>
+<td style="text-align:left;">
+53.8 ± 9.2
+</td>
+<td style="text-align:left;">
+65.1 ± 8.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+80.4 ± 5.6
+</td>
+<td style="text-align:left;">
+60.9 ± 6.5
+</td>
+<td style="text-align:left;">
+69.0 ± 5.9
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>The performance on the French Faktion dataset was, on average, lower in comparison with the Dutch dataset. However, it should be noted that the French dataset consisted of 2 entity categories while the Dutch dataset only contained a single entiy class to predict. The high-dimensional concatenations of CamemBERT together with all static and task-specific embeddings performed best, on average (F1-score: 54.6 ± 4.8 %). In line with the previous observations, the differences between monolingual and multilingual embeddings were negligible (Table <a href="results.html#tab:faktion-fr-tab">4.6</a>), with the multilingual BytePair embeddings performing surprisingly well (Fig <a href="results.html#fig:faktion-multi-fig">4.7</a>). Among all multilingual embeddings that were tested for this dataset, estimated performance was, on average, highest for the concatenations of mFlair embeddings with mBytePair, OHE and character embeddings (F1-score: 54.5 ± 5.8 %).</p>
+<p>For the benchmark datasets, the performance as expressed in terms of the F1-score typically reflected a good balance between precision and recall. This was, however, not always the case for this dataset. Indeed, while the the French Flair-embeddings performed poorly in terms of the average F1-score (42.3 ± 3.8 %), they did provide the highest precision, on average, among all monolingual systems (62.3 ± 6.6 %). This is a direct result of the fact that the F1-score is defined as the harmonic mean of precision and recall, with the latter being low, on average, for this system (32.2 ± 2.8 %), resulting in a low overall F1-score. For specific applications that require either a high precision or recall, it might make sense in these situations to not only consider their harmonic mean alone, but also evaluate the performance of the system in terms of precision and recall separately. An overview of all results is given in Table <a href="faktion-results.html#tab:apx-f-fr">B.2</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:faktion-fr-fig"></span>
+<img src="Thesis_Arthur_Leloup_files/figure-html/faktion-fr-fig-1.png" alt="Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the French Faktion NER task. The results are grouped according to the constituents of each (stacked) embedding (Table 3.4). The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, the results for the language-independent OHE and Char embeddings are indicated on both the upper (monolingual) and lower (multilingual) panels. The symbol and error bars indicate the mean and standard error of the mean, respectively. Char: character embeddings; OHE: One Hot Embeddings; BPEmb: BytePair embeddings; fastT: fastText embeddings; All: all embeddings indicated on the x-axis for this panel concatenated into a single vector." width="768" />
+<p class="caption">
+Figure 4.6: Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the French Faktion NER task. The results are grouped according to the constituents of each (stacked) embedding (Table <a href="methods.html#tab:embeddings">3.4</a>). The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, the results for the language-independent OHE and Char embeddings are indicated on both the upper (monolingual) and lower (multilingual) panels. The symbol and error bars indicate the mean and standard error of the mean, respectively. <em>Char: character embeddings; OHE: One Hot Embeddings; BPEmb: BytePair embeddings; fastT: fastText embeddings; All: all embeddings indicated on the x-axis for this panel concatenated into a single vector.</em>
+</p>
+</div>
+
+<table>
+<caption>
+<span id="tab:faktion-fr-tab">Table 4.6: </span>Results acquired on the French Faktion NER task with both monolingual and multilingual NER systems. Results are reported as mean ± standard error of the mean (k = 5). A complete overview of all results is provided in Table <a href="faktion-results.html#tab:apx-f-nl">B.1</a>.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Embedding type
+</th>
+<th style="text-align:left;">
+Precision
+</th>
+<th style="text-align:left;">
+Recall
+</th>
+<th style="text-align:left;">
+F1-score
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="7">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Monolingual embeddings</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+53.7 ± 3.6
+</td>
+<td style="text-align:left;">
+44.9 ± 4.0
+</td>
+<td style="text-align:left;">
+48.6 ± 3.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT
+</td>
+<td style="text-align:left;">
+49.9 ± 5.4
+</td>
+<td style="text-align:left;">
+26.9 ± 3.2
+</td>
+<td style="text-align:left;">
+34.7 ± 3.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+60.1 ± 6.3
+</td>
+<td style="text-align:left;">
+50.5 ± 5.0
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair
+</td>
+<td style="text-align:left;">
+62.3 ± 6.6
+</td>
+<td style="text-align:left;">
+32.2 ± 2.8
+</td>
+<td style="text-align:left;">
+42.3 ± 3.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+56.2 ± 5.2
+</td>
+<td style="text-align:left;">
+47.7 ± 5.1
+</td>
+<td style="text-align:left;">
+51.4 ± 5.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT + Flair
+</td>
+<td style="text-align:left;">
+60.2 ± 4.5
+</td>
+<td style="text-align:left;">
+35.8 ± 4.9
+</td>
+<td style="text-align:left;">
+44.6 ± 5.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT + Flair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+59.6 ± 5.4
+</td>
+<td style="text-align:left;">
+50.9 ± 4.7
+</td>
+<td style="text-align:left;">
+54.6 ± 4.8
+</td>
+</tr>
+<tr grouplength="7">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Multilingual embeddings</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+52.1 ± 5.4
+</td>
+<td style="text-align:left;">
+44.6 ± 3.9
+</td>
+<td style="text-align:left;">
+47.6 ± 4.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT
+</td>
+<td style="text-align:left;">
+62.3 ± 7.3
+</td>
+<td style="text-align:left;">
+39.7 ± 3.4
+</td>
+<td style="text-align:left;">
+48.3 ± 4.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+59.9 ± 4.4
+</td>
+<td style="text-align:left;">
+49.0 ± 3.8
+</td>
+<td style="text-align:left;">
+53.7 ± 3.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair
+</td>
+<td style="text-align:left;">
+50.3 ± 5.8
+</td>
+<td style="text-align:left;">
+28.6 ± 5.2
+</td>
+<td style="text-align:left;">
+36.2 ± 5.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+60.6 ± 6.6
+</td>
+<td style="text-align:left;">
+49.6 ± 5.3
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair
+</td>
+<td style="text-align:left;">
+62.4 ± 2.6
+</td>
+<td style="text-align:left;">
+41.5 ± 2.7
+</td>
+<td style="text-align:left;">
+49.6 ± 2.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+61.4 ± 3.7
+</td>
+<td style="text-align:left;">
+47.0 ± 2.7
+</td>
+<td style="text-align:left;">
+53.0 ± 2.7
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Lastly, a bilingual dataset was constructed by merging the entire Dutch and French Faktion datasets. Consistently with the results on the multilingual benchmark dataset, we provide the F1-scores for a subset of embedding types in Figure <a href="results.html#fig:faktion-multi-fig">4.7</a> and the precision, recall and F1-scores for this subset in Table <a href="results.html#tab:faktion-bi-tab">4.7</a>. Multilingual stacked embeddings (e.g. mBERT, mBPEmb and character-feature embeddings) outperformed (either French or Dutch) monolingual embeddings (Table <a href="results.html#tab:faktion-bi-tab">4.7</a>), with the the concatenation of mBERT, mBytePair and character embeddings performing best, on average (F1-score: 62.8 ± 1.9 %, <a href="faktion-results.html#tab:apx-f-bi">B.3</a>). These results are in line with the results obtained on the multilingual benchmark dataset, thus confirming our research hypothesis that these multilingual embeddings are more effective than monolingual embeddings when the input data itself is multilingual. A complete overview of all results is provided in Table <a href="faktion-results.html#tab:apx-f-bi">B.3</a>.</p>
+<table>
+<caption>
+<span id="tab:faktion-bi-tab">Table 4.7: </span>Results acquired on the multilingual (Dutch + French) Faktion NER task with both monolingual and multilingual NER systems. Results are reported as mean ± standard error of the mean (k = 5). A complete overview of all results is provided in Table <a href="faktion-results.html#tab:apx-f-nl">B.1</a>.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Embedding type
+</th>
+<th style="text-align:left;">
+Precision
+</th>
+<th style="text-align:left;">
+Recall
+</th>
+<th style="text-align:left;">
+F1-score
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="7">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Monolingual Dutch embeddings</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+67.3 ± 3.4
+</td>
+<td style="text-align:left;">
+51.7 ± 4.3
+</td>
+<td style="text-align:left;">
+58.3 ± 3.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje
+</td>
+<td style="text-align:left;">
+67.8 ± 3.6
+</td>
+<td style="text-align:left;">
+32.5 ± 1.8
+</td>
+<td style="text-align:left;">
+43.7 ± 1.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-nl</a>
+</td>
+<td style="text-align:left;">
+65.9 ± 2.8
+</td>
+<td style="text-align:left;">
+41.0 ± 3.3
+</td>
+<td style="text-align:left;">
+50.2 ± 2.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair
+</td>
+<td style="text-align:left;">
+67.1 ± 2.6
+</td>
+<td style="text-align:left;">
+43.9 ± 3.6
+</td>
+<td style="text-align:left;">
+52.7 ± 2.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-nl</a>
+</td>
+<td style="text-align:left;">
+69.8 ± 2.1
+</td>
+<td style="text-align:left;">
+54.5 ± 1.6
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje + Flair
+</td>
+<td style="text-align:left;">
+67.1 ± 2.1
+</td>
+<td style="text-align:left;">
+28.7 ± 1.8
+</td>
+<td style="text-align:left;">
+40.1 ± 2.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+BERTje + Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-nl</a>
+</td>
+<td style="text-align:left;">
+67.7 ± 2.6
+</td>
+<td style="text-align:left;">
+39.5 ± 3.3
+</td>
+<td style="text-align:left;">
+49.7 ± 3.0
+</td>
+</tr>
+<tr grouplength="7">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Monolingual French embeddings</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+66.0 ± 2.6
+</td>
+<td style="text-align:left;">
+51.5 ± 3.4
+</td>
+<td style="text-align:left;">
+57.7 ± 3.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT
+</td>
+<td style="text-align:left;">
+52.8 ± 5.2
+</td>
+<td style="text-align:left;">
+22.2 ± 1.6
+</td>
+<td style="text-align:left;">
+30.9 ± 1.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-fr</a>
+</td>
+<td style="text-align:left;">
+67.4 ± 3.6
+</td>
+<td style="text-align:left;">
+53.4 ± 3.0
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair
+</td>
+<td style="text-align:left;">
+61.9 ± 4.1
+</td>
+<td style="text-align:left;">
+28.0 ± 2.9
+</td>
+<td style="text-align:left;">
+38.0 ± 2.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-fr</a>
+</td>
+<td style="text-align:left;">
+68.4 ± 3.9
+</td>
+<td style="text-align:left;">
+49.9 ± 3.9
+</td>
+<td style="text-align:left;">
+57.3 ± 3.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT + Flair
+</td>
+<td style="text-align:left;">
+72.0 ± 4.4
+</td>
+<td style="text-align:left;">
+40.6 ± 3.8
+</td>
+<td style="text-align:left;">
+51.6 ± 3.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+CamemBERT + Flair + <a href="fastT%20+%20BPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all-fr</a>
+</td>
+<td style="text-align:left;">
+68.3 ± 1.8
+</td>
+<td style="text-align:left;">
+51.8 ± 3.0
+</td>
+<td style="text-align:left;">
+58.6 ± 1.6
+</td>
+</tr>
+<tr grouplength="7">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Multilingual embeddings</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+<td style="text-align:left;">
+73.7 ± 4.6
+</td>
+<td style="text-align:left;">
+53.3 ± 3.4
+</td>
+<td style="text-align:left;">
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT
+</td>
+<td style="text-align:left;">
+68.1 ± 2.3
+</td>
+<td style="text-align:left;">
+45.8 ± 2.6
+</td>
+<td style="text-align:left;">
+54.6 ± 2.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+72.3 ± 3.2
+</td>
+<td style="text-align:left;">
+52.3 ± 2.9
+</td>
+<td style="text-align:left;">
+60.2 ± 2.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair
+</td>
+<td style="text-align:left;">
+68.2 ± 4.6
+</td>
+<td style="text-align:left;">
+35.5 ± 3.1
+</td>
+<td style="text-align:left;">
+46.3 ± 2.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+69.0 ± 2.9
+</td>
+<td style="text-align:left;">
+50.8 ± 3.9
+</td>
+<td style="text-align:left;">
+58.3 ± 3.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair
+</td>
+<td style="text-align:left;">
+71.0 ± 2.6
+</td>
+<td style="text-align:left;">
+41.8 ± 1.6
+</td>
+<td style="text-align:left;">
+52.5 ± 1.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+mBERT + mFlair + <a href="mBPEmb%20+%20Char%20+%20OHE%20%3C/td%3E">all</a>
+</td>
+<td style="text-align:left;">
+71.1 ± 3.3
+</td>
+<td style="text-align:left;">
+51.2 ± 3.2
+</td>
+<td style="text-align:left;">
+59.4 ± 3.0
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="figure" style="text-align: center"><span id="fig:faktion-multi-fig"></span>
+<img src="Thesis_Arthur_Leloup_files/figure-html/faktion-multi-fig-1.png" alt="Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the multilingual (Dutch + French) Faktion dataset. The results are grouped according to the constituents of each (stacked) embedding (Table 3.4). The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, only the results for experiments that did not include any static/task-specific embeddings (None) and for the experiments where all static/task-specific embeddings were included (All), are shown. No CE: No contextualized embeddings" width="768" />
+<p class="caption">
+Figure 4.7: Test-set micro-average precision, recall and F1-score for monolingual (top) and multilingual (bottom) embeddings on the multilingual (Dutch + French) Faktion dataset. The results are grouped according to the constituents of each (stacked) embedding (Table <a href="methods.html#tab:embeddings">3.4</a>). The contextualized embedding type, if present, is indicated on the different panels from left to right. The stacked/task-specific embedding type (if present) is shown on the x-axis. For clarity, only the results for experiments that did not include any static/task-specific embeddings (None) and for the experiments where all static/task-specific embeddings were included (All), are shown. <em>No CE: No contextualized embeddings</em>
+</p>
+</div>
+
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-carreras2002">
+<p>Carreras, Xavier, Lluís M‘arquez, and Lluís Padr’o. 2002. “Named Entity Extraction Using AdaBoost.” In <em>COLING-02: The 6th Conference on Natural Language Learning 2002 (CoNLL-2002)</em>.</p>
+</div>
+<div id="ref-devries2019">
+<p>de Vries, Wietse, Andreas van Cranenburgh, Arianna Bisazza, Tommaso Caselli, Gertjan van Noord, and Malvina Nissim. 2019. “BERTje: A Dutch BERT Model.” <em>arXiv Preprint arXiv:1912.09582</em>.</p>
+</div>
+<div id="ref-florian2003">
+<p>Florian, Radu, Abe Ittycheriah, Hongyan Jing, and Tong Zhang. 2003. “Named Entity Recognition Through Classifier Combination.” In <em>Proceedings of the Seventh Conference on Natural Language Learning at HLT-NAACL 2003</em>, 168–71.</p>
+</div>
+<div id="ref-wu2019">
+<p>Wu, Shijie, and Mark Dredze. 2019. “Beto, Bentz, Becas: The Surprising Cross-Lingual Effectiveness of BERT.” In <em>Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</em>, 833–44. Hong Kong, China: Association for Computational Linguistics. <a href="https://doi.org/10.18653/v1/D19-1077">https://doi.org/10.18653/v1/D19-1077</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="discussion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/arthur-arthur/MASTAT_thesis/edit/master/04-results.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Thesis_Arthur_Leloup.pdf", "Thesis_Arthur_Leloup.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
