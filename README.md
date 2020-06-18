@@ -1,48 +1,69 @@
 # NER benchmarking: monolingual vs. multilingual embeddings
 
-This repository bundles different NER benchmark experiments to compare the performance of monolingual and multilingual embeddings for both monolingual (Dutch, French and English) and multilingual datasets. All experiments made use of the [Flair library](https://github.com/flairNLP/flair). The experiments were run using in individual scripts on Kaggle. A simple CLI was used to generate the script and metadata file to push the scripts to Kaggle using the [Kaggle API](https://github.com/Kaggle/kaggle-api).
+This repository bundles different NER benchmark experiments to compare the performance of monolingual and multilingual embeddings for both monolingual (Dutch, French and English) and multilingual datasets. The experiments were performed in the context of my dissertation for the Master of Statistical Data Analysis - Ghent University. A bookdown website of the thesis can be found [here](https://arthur-arthur.github.io/thesis/index.html).
+
+All experiments made use of the [Flair library](https://github.com/flairNLP/flair). The experiments were run using in individual scripts on Kaggle. A simple CLI was used to generate self-contained script and metadata files and push these to Kaggle using the [Kaggle API](https://github.com/Kaggle/kaggle-api).
 
 ## Datasets
 
 | Language     	| Dataset   	| Downsampled 	| Tokens (train) 	| Tokens (dev) 	| Tokens (test) 	|
 |--------------	|-----------	|-------------	|----------------	|--------------	|---------------	|
-| Dutch        	| CoNLL2002 	| No          	|                	|              	|               	|
-| French       	| WikiNER   	| Yes (0.10)  	|                	|              	|               	|
-| English      	| CoNLL2003 	| No          	|                	|              	|               	|
-| Multilingual 	| All       	| No          	|                	|              	|               	|
+| English      	| CoNLL2003 	| No          	| 203621            | 51362         | 46435              	|
+| Dutch      	| CoNLL2002 	| No          	| 199969            | 37687	      	| 68466              	|
+| French       	| WikiNER   	| Yes (0.10)  	| 279729            | 34824         | 30991              	|
+| Multilingual 	| All       	| No          	| 232173	        | 40141         | 49444              	|
 
-Note: all datasets were converted to standard CoNLL (BIO)-format. Sentences containing more than 250 tokens (i.e. a total of 3 sentences in the CoNLL2002 dataset) were removed to allow the use of BERT embeddings (limited input sequence length). All three datasets were combined to obtain a multilingual dataset.
+Note: all datasets were converted to standard CoNLL2002 (BIO2)-format. Sentences containing more than 250 tokens (i.e. a total of 5 sentences in the CoNLL2002 dataset) were removed to allow the use of BERT embeddings (limited input sequence length). Document delimiters - when present - were removed as well. All three datasets were combined to obtain a multilingual dataset. Since the CoNLL2003 dataset requires a license (free for research) only the preprocessed CoNLL2002 and WikiNER datasets are included in this repository.
 
 ## Embeddings
 
-Different monolingual and multilingual embeddings were tested. This included 2 contextualized embeddings (language-specific or multilingual BERT and Flair) stacked with trainable embeddings (`OneHotEmbeddings` and `CharacterEmbeddings` Lample et al. (2016)) and fixed non-contextualized embeddings (fastText, BytePair embeddings). In addition, stackings of the contextualized embeddings (BERT and Flair) were tested. A full overview of the embeddings that were used is given below:
+Different monolingual and multilingual embeddings were tested. This included monolingual, contextualized Flair and BERT embeddings, monolingual static fastText and BytePair embeddings and task-specific word type embeddings (OneHotEmbeddings) and character-feature embeddings (CharacterEmbeddings). For multilingual embeddings, we included multilingual BERT (mBERT), multilingual Flair (mFlair) and multilingual BytePair embeddings. A full overview is provided below:
 
-| Name                  	| Language     	| Type                           	| Ref                                                                                         	|
-|-----------------------	|--------------	|--------------------------------	|---------------------------------------------------------------------------------------------	|
-|  BERT                 	| English      	| bert-base-cased                	|                                                                                             	|
-| BERTje                	| Dutch        	| bert-dutch-base-cased          	| https://github.com/wietsedv/bertje                                                          	|
-| CamemBERT             	| French       	| camembert-base                 	| https://camembert-model.fr/                                                                 	|
-| multilingual BERT     	| multilingual 	| bert-base-multilingual-cased   	|                                                                                             	|
-| Flair                 	| English      	| en-forward + en-backward       	| https://github.com/flairNLP/flair/blob/master/resources/docs/embeddings/FLAIR_EMBEDDINGS.md 	|
-| Flair NL              	| Dutch        	| nl-forward + nl-backward       	| https://github.com/flairNLP/flair/blob/master/resources/docs/embeddings/FLAIR_EMBEDDINGS.md 	|
-| Flair FR              	| French       	| fr-forward + fr-backward       	| https://github.com/flairNLP/flair/blob/master/resources/docs/embeddings/FLAIR_EMBEDDINGS.md 	|
-| multilingual Flair    	| multilingual 	| multi-forward + multi-backward 	|                                                                                             	|
-| fastText            	| English      	|                                	|                                                                                             	|
-| fastText            	| Dutch        	|                                	|                                                                                             	|
-| fastText            	| French       	|                                	|                                                                                             	|
-| BytePair            	| English     	|                                	|                                                                                             	|
-| BytePair            	| Dutch        	|                                	|                                                                                             	|
-| BytePair            	|              	|                                	|                                                                                             	|
-| multilingual BytePair 	|              	|                                	|                                                                                             	|
-| Character embeddings  	| NA           	|                                	|                                                                                             	|
-| OneHotEmbeddings      	| NA           	|                                	|                                                                                             	|
+| No contextualized embeddings 	| BERT                   	| Flair                   	| BERT + Flair                        	|
+|------------------------------	|------------------------	|-------------------------	|-------------------------------------	|
+| **English**                      	|                        	|                         	|                                     	|
+|                       	| BERT                   	| Flair                   	| BERT + Flair                        	|
+| Char                         	| BERT + Char            	| Flair + Char            	| BERT + Flair + Char                 	|
+| OHE                          	| BERT + OHE             	| Flair + OHE             	| BERT + Flair + OHE                  	|
+| BPEmb (En)                   	| BERT + BPEmb (En)      	| Flair + BPEmb (En)      	| BERT + Flair + BPEmb (En)           	|
+| fastT (En)                   	| BERT + fastT (En)      	| Flair + fastT (En)      	| BERT + Flair + fastT (En)           	|
+| All                          	| BERT + All             	| Flair + All             	| BERT + Flair + All                  	|
+| **Dutch**                        	|                        	|                         	|                                     	|
+|                          	| BERTje                 	| Flair (Nl)              	| BERTje + Flair (Nl)                 	|
+| Char                         	| BERTje + Char          	| Flair (Nl) + Char       	| BERTje + Flair (Nl) + Char          	|
+| OHE                          	| BERTje + OHE           	| Flair (Nl) + OHE        	| BERTje + Flair (Nl) + OHE           	|
+| BPEmb (Nl)                   	| BERTje + BPEmb (Nl)    	| Flair (Nl) + BPEmb (Nl) 	| BERTje + Flair (Nl) + BPEmb (Nl)    	|
+| fastT (Nl)                   	| BERTje + fastT (Nl)    	| Flair (Nl) + fastT (Nl) 	| BERTje + Flair (Nl) + fastT (Nl)    	|
+| All                          	| BERTje + All           	| Flair (Nl) + All        	| BERTje + Flair (Nl) + All           	|
+| **French**                       	|                        	|                         	|                                     	|
+| n.a.                         	| CamemBERT              	| Flair (Fr)              	| CamemBERT + Flair (Fr)              	|
+| Char                         	| CamemBERT + Char       	| Flair (Fr) + Char       	| CamemBERT + Flair (Fr) + Char       	|
+| OHE                          	| CamemBERT + OHE        	| Flair (Fr) + OHE        	| CamemBERT + Flair (Fr) + OHE        	|
+| BPEmb (Fr)                   	| CamemBERT + BPEmb (Fr) 	| Flair (Fr) + BPEmb (Fr) 	| CamemBERT + Flair (Fr) + BPEmb (Fr) 	|
+| fastT (Fr)                   	| CamemBERT + fastT (Fr) 	| Flair (Fr) + fastT (Fr) 	| CamemBERT + Flair (Fr) + fastT (Fr) 	|
+| All                          	| CamemBERT + All        	| Flair (Fr) + All        	| CamemBERT + Flair (Fr) + All        	|
+| **Multilingual**                 	|                        	|                         	|                                     	|
+| n.a.                         	| mBERT                  	| mFlair                  	| mBERT + mFlair                      	|
+| Char                         	| mBERT + Char           	| mFlair + Char           	| mBERT + mFlair + Char               	|
+| OHE                          	| mBERT + OHE            	| mFlair + OHE            	| mBERT + mFlair + OHE                	|
+| mBPEmb                       	| mBERT + mBPEmb         	| mFlair + mBPEmb         	| mBERT + mFlair + mBPEmb             	|
+| All                          	| mBERT + All            	| mFlair + All            	| mBERT + mFlair + All                	|
 
+All refers to - for monolingual embeddings - stacked Char + OHE + BPEmb + fastT. For multilingual experiments, "All" refers to Char + OHE + mBPEmb. For Flair embeddings, both forward and backward representations were included. BERT-based embeddings (both monolingual and multilingual) were obtained using the following parameters of the `TransformerWordEmbeddings` class (i.e. default with only the last layer selected).
+
+| parameter         	| value 	|
+|-------------------	|-------	|
+| layers            	| -1    	|
+| pooling_operation 	| first 	|
+| use_scalar_mix    	| False 	|
 
 ## Command line interface
 
-Since the Kaggle API does not allow to import utility scripts directly from the command line, every experiment was executed from a self-contained script containing all the code to load the dataset, initialize the embeddings, train and evaluate the model. This script was automatically generated and pushed to Kaggle using a simple command line interface. The following command creates the python script, the `kernel-metadata.json` file (kernel name is the concatenation of dataset, language and the different embeddings) and pushes the script to Kaggle. By default, the embedding storage mode of the ModelTrainer instance is set to 'cpu'. When `--storage` option is set to `gpu`, the GPU is automatically enabled on Kaggle.
+Since the Kaggle API does not allow to import utility scripts directly from the command line, every experiment was executed from a self-contained script containing all the code to load the dataset, initialize the embeddings, train and evaluate the model. This script was automatically generated and pushed to Kaggle using a simple command line interface. Results were obtained by extracting the tp, fp and fn counts provided by Flair's training log and computing micro-average precision, recall and F1-score using sklearn. The Dropbox API was used to collect these results (token required).
 
-Important: the `--data` option requires a valid name of the dataset on Kaggle (path: `/kaggle/input/<data>`)
+The following command creates the python script, the `kernel-metadata.json` file (kernel name is the concatenation of dataset, language and the different embeddings) and pushes the script to Kaggle. By default, the embedding storage mode of the ModelTrainer instance is set to 'cpu'. When `--storage` option is set to `gpu`, the GPU is automatically enabled on Kaggle.
+
+Important: the `--data` option requires a valid name of the dataset on Kaggle (path: `/kaggle/input/<data>`).
 
 ```bash
 $ python3 push_and_run.py --help
