@@ -1,6 +1,6 @@
 # NER benchmarking: monolingual vs. multilingual embeddings
 
-This repository bundles different NER benchmark experiments to compare the performance of monolingual and multilingual embeddings for both monolingual (Dutch, French and English) and multilingual datasets. The experiments were performed in the context of my dissertation for the Master of Statistical Data Analysis - Ghent University. A bookdown website of the thesis can be found [here](https://arthur-arthur.github.io/thesis/index.html).
+This repository bundles different NER benchmark experiments to compare the performance of monolingual and multilingual embeddings for both monolingual (Dutch, French and English) and multilingual datasets. The experiments were performed in the context of my dissertation for the Master of Statistical Data Analysis - Ghent University. A bookdown website of the thesis which includes all the results can be found [here](https://arthur-arthur.github.io/thesis/index.html).
 
 All experiments made use of the [Flair library](https://github.com/flairNLP/flair). The experiments were run using in individual scripts on Kaggle. A simple CLI was used to generate self-contained script and metadata files and push these to Kaggle using the [Kaggle API](https://github.com/Kaggle/kaggle-api).
 
@@ -17,45 +17,69 @@ Note: all datasets were converted to standard CoNLL2002 (BIO2)-format. Sentences
 
 ## Embeddings
 
-Different monolingual and multilingual embeddings were tested. This included monolingual, contextualized Flair and BERT embeddings, monolingual static fastText and BytePair embeddings and task-specific word type embeddings (OneHotEmbeddings) and character-feature embeddings (CharacterEmbeddings). For multilingual embeddings, we included multilingual BERT (mBERT), multilingual Flair (mFlair) and multilingual BytePair embeddings. A full overview is provided below:
+Different monolingual and multilingual embeddings were tested. This included monolingual, contextualized Flair and BERT embeddings, monolingual static fastText (fastT) and BytePair embeddings (BPEmbs) and task-specific word type embeddings (`OneHotEmbeddings`) (OHE) and character-feature embeddings (`CharacterEmbeddings`) (Char). For multilingual embeddings, we included multilingual BERT (mBERT), multilingual Flair (mFlair) and multilingual BytePair embeddings (mBPEmb).
 
-| No contextualized embeddings 	| BERT                   	| Flair                   	| BERT + Flair                        	|
-|------------------------------	|------------------------	|-------------------------	|-------------------------------------	|
-| **English**                      	|                        	|                         	|                                     	|
-|                       	| BERT                   	| Flair                   	| BERT + Flair                        	|
-| Char                         	| BERT + Char            	| Flair + Char            	| BERT + Flair + Char                 	|
-| OHE                          	| BERT + OHE             	| Flair + OHE             	| BERT + Flair + OHE                  	|
-| BPEmb (En)                   	| BERT + BPEmb (En)      	| Flair + BPEmb (En)      	| BERT + Flair + BPEmb (En)           	|
-| fastT (En)                   	| BERT + fastT (En)      	| Flair + fastT (En)      	| BERT + Flair + fastT (En)           	|
-| All                          	| BERT + All             	| Flair + All             	| BERT + Flair + All                  	|
-| **Dutch**                        	|                        	|                         	|                                     	|
-|                          	| BERTje                 	| Flair (Nl)              	| BERTje + Flair (Nl)                 	|
-| Char                         	| BERTje + Char          	| Flair (Nl) + Char       	| BERTje + Flair (Nl) + Char          	|
-| OHE                          	| BERTje + OHE           	| Flair (Nl) + OHE        	| BERTje + Flair (Nl) + OHE           	|
-| BPEmb (Nl)                   	| BERTje + BPEmb (Nl)    	| Flair (Nl) + BPEmb (Nl) 	| BERTje + Flair (Nl) + BPEmb (Nl)    	|
-| fastT (Nl)                   	| BERTje + fastT (Nl)    	| Flair (Nl) + fastT (Nl) 	| BERTje + Flair (Nl) + fastT (Nl)    	|
-| All                          	| BERTje + All           	| Flair (Nl) + All        	| BERTje + Flair (Nl) + All           	|
-| **French**                       	|                        	|                         	|                                     	|
-| n.a.                         	| CamemBERT              	| Flair (Fr)              	| CamemBERT + Flair (Fr)              	|
-| Char                         	| CamemBERT + Char       	| Flair (Fr) + Char       	| CamemBERT + Flair (Fr) + Char       	|
-| OHE                          	| CamemBERT + OHE        	| Flair (Fr) + OHE        	| CamemBERT + Flair (Fr) + OHE        	|
-| BPEmb (Fr)                   	| CamemBERT + BPEmb (Fr) 	| Flair (Fr) + BPEmb (Fr) 	| CamemBERT + Flair (Fr) + BPEmb (Fr) 	|
-| fastT (Fr)                   	| CamemBERT + fastT (Fr) 	| Flair (Fr) + fastT (Fr) 	| CamemBERT + Flair (Fr) + fastT (Fr) 	|
-| All                          	| CamemBERT + All        	| Flair (Fr) + All        	| CamemBERT + Flair (Fr) + All        	|
-| **Multilingual**                 	|                        	|                         	|                                     	|
-| n.a.                         	| mBERT                  	| mFlair                  	| mBERT + mFlair                      	|
-| Char                         	| mBERT + Char           	| mFlair + Char           	| mBERT + mFlair + Char               	|
-| OHE                          	| mBERT + OHE            	| mFlair + OHE            	| mBERT + mFlair + OHE                	|
-| mBPEmb                       	| mBERT + mBPEmb         	| mFlair + mBPEmb         	| mBERT + mFlair + mBPEmb             	|
-| All                          	| mBERT + All            	| mFlair + All            	| mBERT + mFlair + All                	|
-
-All refers to - for monolingual embeddings - stacked Char + OHE + BPEmb + fastT. For multilingual experiments, "All" refers to Char + OHE + mBPEmb. For Flair embeddings, both forward and backward representations were included. BERT-based embeddings (both monolingual and multilingual) were obtained using the following parameters of the `TransformerWordEmbeddings` class (i.e. default with only the last layer selected).
+For Flair embeddings, both forward and backward representations were included. BERT-based embeddings (both monolingual and multilingual) were obtained using the following parameter configuration of the `TransformerWordEmbeddings` class (i.e. default with only the last layer selected).
 
 | parameter         	| value 	|
 |-------------------	|-------	|
 | layers            	| -1    	|
 | pooling_operation 	| first 	|
 | use_scalar_mix    	| False 	|
+
+A full overview of all configurations that were evaluated is provided below:
+
+### Monolingual English
+
+| No contextualized embeddings 	| BERT                   	| Flair                   	| BERT + Flair                        	|
+|------------------------------	|------------------------	|-------------------------	|-------------------------------------	|
+|                       	    | BERT                   	| Flair                   	| BERT + Flair                        	|
+| Char                         	| BERT + Char            	| Flair + Char            	| BERT + Flair + Char                 	|
+| OHE                          	| BERT + OHE             	| Flair + OHE             	| BERT + Flair + OHE                  	|
+| BPEmb (En)                   	| BERT + BPEmb (En)      	| Flair + BPEmb (En)      	| BERT + Flair + BPEmb (En)           	|
+| fastT (En)                   	| BERT + fastT (En)      	| Flair + fastT (En)      	| BERT + Flair + fastT (En)           	|
+| All                          	| BERT + All             	| Flair + All             	| BERT + Flair + All                  	|
+
+_All refers to Char + OHE + fastT (En) and BPEmb (En)_
+
+### Monolingual Dutch
+
+| No contextualized embeddings 	| BERT                   	| Flair                   	| BERT + Flair                        	|
+|------------------------------	|------------------------	|-------------------------	|-------------------------------------	|
+|                          	    | BERTje                 	| Flair (Nl)              	| BERTje + Flair (Nl)                 	|
+| Char                         	| BERTje + Char          	| Flair (Nl) + Char       	| BERTje + Flair (Nl) + Char          	|
+| OHE                          	| BERTje + OHE           	| Flair (Nl) + OHE        	| BERTje + Flair (Nl) + OHE           	|
+| BPEmb (Nl)                   	| BERTje + BPEmb (Nl)    	| Flair (Nl) + BPEmb (Nl) 	| BERTje + Flair (Nl) + BPEmb (Nl)    	|
+| fastT (Nl)                   	| BERTje + fastT (Nl)    	| Flair (Nl) + fastT (Nl) 	| BERTje + Flair (Nl) + fastT (Nl)    	|
+| All                          	| BERTje + All           	| Flair (Nl) + All        	| BERTje + Flair (Nl) + All           	|
+
+_All refers to Char + OHE + fastT (Nl) and BPEmb (Nl)_
+
+### Monolingual French
+
+| No contextualized embeddings 	| BERT                   	| Flair                   	| BERT + Flair                        	|
+|------------------------------	|------------------------	|-------------------------	|-------------------------------------	|
+|                            	| CamemBERT              	| Flair (Fr)              	| CamemBERT + Flair (Fr)              	|
+| Char                         	| CamemBERT + Char       	| Flair (Fr) + Char       	| CamemBERT + Flair (Fr) + Char       	|
+| OHE                          	| CamemBERT + OHE        	| Flair (Fr) + OHE        	| CamemBERT + Flair (Fr) + OHE        	|
+| BPEmb (Fr)                   	| CamemBERT + BPEmb (Fr) 	| Flair (Fr) + BPEmb (Fr) 	| CamemBERT + Flair (Fr) + BPEmb (Fr) 	|
+| fastT (Fr)                   	| CamemBERT + fastT (Fr) 	| Flair (Fr) + fastT (Fr) 	| CamemBERT + Flair (Fr) + fastT (Fr) 	|
+| All                          	| CamemBERT + All        	| Flair (Fr) + All        	| CamemBERT + Flair (Fr) + All        	|
+
+_All refers to Char + OHE + fastT (Fr) and BPEmb (Fr)_
+
+### Multilingual
+
+| No contextualized embeddings 	| BERT                   	| Flair                   	| BERT + Flair                        	|
+|------------------------------	|------------------------	|-------------------------	|-------------------------------------	|
+| n.a.                         	| mBERT                  	| mFlair                  	| mBERT + mFlair                      	|
+| Char                         	| mBERT + Char           	| mFlair + Char           	| mBERT + mFlair + Char               	|
+| OHE                          	| mBERT + OHE            	| mFlair + OHE            	| mBERT + mFlair + OHE                	|
+| mBPEmb                       	| mBERT + mBPEmb         	| mFlair + mBPEmb         	| mBERT + mFlair + mBPEmb             	|
+| All                          	| mBERT + All            	| mFlair + All            	| mBERT + mFlair + All                	|
+
+_All refers to Char + OHE + mBPEmb_
+
 
 ## Command line interface
 
