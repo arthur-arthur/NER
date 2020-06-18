@@ -1,6 +1,6 @@
 # NER benchmarking: monolingual vs. multilingual embeddings
 
-This repository bundles different NER benchmark experiments to compare the performance of monolingual and multilingual embeddings for both monolingual (Dutch, French and English) and multilingual datasets. The experiments were performed in the context of my dissertation for the Master of Statistical Data Analysis - Ghent University. A bookdown website of the thesis which includes all the results can be found [here](https://arthur-arthur.github.io/thesis/index.html) (a PDF or ePub-version can be obtained as well).
+This repository bundles different NER benchmark experiments to compare the performance of monolingual and multilingual embeddings for both monolingual (Dutch, French and English) and multilingual datasets. The experiments were performed in the context of my dissertation for the Master of Statistical Data Analysis - Ghent University. A bookdown website of the thesis which includes all the results can be found [here](https://arthur-arthur.github.io/thesis/index.html) (not everything is optimized for html so downloading the book in PDF or ePub-format is preferred).
 
 All experiments made use of the great [Flair library](https://github.com/flairNLP/flair). The experiments were run using in individual scripts on [Kaggle](https://www.kaggle.com/). A simple CLI was used to generate self-contained script and metadata files and push these to Kaggle using the [Kaggle API](https://github.com/Kaggle/kaggle-api), some examples can be found below.
 
