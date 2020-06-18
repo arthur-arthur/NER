@@ -1,14 +1,13 @@
-
 ############################
 # Experiment configuration #
 ############################
-DATA = 'conll2002'
-LANG = 'multi'
-EMB = ['bert', 'ohe']
+DATA = "conll2002"
+LANG = "multi"
+EMB = ["bert", "ohe"]
 MAX_EPOCH = 100
-STORAGE = 'gpu'
+STORAGE = "gpu"
 ############################
-                                                                                                                                                                                                                                                
+
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,6 +18,7 @@ import os
 import subprocess
 
 subprocess.run("pip install flair", shell=True, check=True)
+subprocess.run("pip install dropbox", shell=True, check=True)
 
 if "elmo" in EMB:
     subprocess.run("pip install allennlp", shell=True, check=True)
@@ -34,7 +34,7 @@ from flair.embeddings import (
     CharacterEmbeddings,
     TransformerWordEmbeddings,
     OneHotEmbeddings,
-    ELMoEmbeddings
+    ELMoEmbeddings,
 )
 from flair.trainers import ModelTrainer
 
@@ -58,20 +58,6 @@ class NER_experiment:
 
     def build_embedding(self, lang, embedding_codes: List[str]) -> None:
 
-        """
-        pass a list of abbreviated embedding codes as the embedding_codes argument (CLI: emb arg)
-        instantiation of the correct class depends on the lang argument (CLI: --lang option)
-        Abbr:
-            "bert": BERTje (nl), CamemBERT (fr), BERT (en), mBERT (multi) (base cased)
-                    (always last layer, first subtoken embedding, ie no scalar mix)
-            "bpe": BytePairEmbeddings (fr/nl/en/multi)
-            "ohe": OneHotEmbeddings
-            "char": CharacterEmbeddings
-            "ft": fastText nl/fr/en (WordEmbeddings)
-            "flair": flair (nl/fr/en/multi) -> fw + bw for all
-            "elmo": elmo large
-        """
-
         self.tic = time.time()
         self.embedding_name: str = "-".join(embedding_codes)
         self.lang = lang
@@ -88,7 +74,7 @@ class NER_experiment:
                 "ft",
                 "char",
                 "ohe",
-                "elmo"
+                "elmo",
             ], f"{code} - Invalid embedding code"
 
             if code == "ohe":
@@ -112,7 +98,9 @@ class NER_experiment:
                 embedding_types.append(FlairEmbeddings(f"{self.lang}-forward"))
                 embedding_types.append(FlairEmbeddings(f"{self.lang}-backward"))
             elif code == "elmo":
-                embedding_types.append(ELMoEmbeddings(model="large", embedding_mode="all"))
+                embedding_types.append(
+                    ELMoEmbeddings(model="large", embedding_mode="all")
+                )
 
         self.embedding: StackedEmbeddings = StackedEmbeddings(
             embeddings=embedding_types
@@ -179,8 +167,9 @@ class NER_experiment:
 
     def _extract_from_log(self) -> Dict[str, int]:
 
-        # TODO: compute from test set
-        log: List[str] = open(self.output_path + "/training.log", "r").readlines()[-5:-1]
+        log: List[str] = open(self.output_path + "/training.log", "r").readlines()[
+            -5:-1
+        ]
         out = {m: [] for m in ["precision", "recall", "accuracy", "f1"]}
         weights = []
 
@@ -191,12 +180,12 @@ class NER_experiment:
 
             weights.append(
                 np.sum(results[:4])
-            )  # tp, fp, fn, tn  -->  count instances/class
+            )  # tp, fp, fn, tn (ignore)  -->  count instances/class
 
             for value, k in zip(results[4:], out):  # pr, rec, acc, f1
                 out[k].append(value)
 
-        # micro-average precision, recall, acc, F1
+        # micro-average precision, recall, acc (ignore), F1
         return {m: np.average(v, weights=weights) for m, v in out.items()}
 
     def _plot_history(self) -> None:
@@ -229,3 +218,71 @@ class NER_experiment:
 # Run experiment given conditions in script header
 exp = NER_experiment(dataset_name=DATA)
 exp.run(LANG, EMB, MAX_EPOCH, STORAGE)
+
+# Collect results in Dropbox folder
+# Script adapted from Keshava11/SFileUploader.py
+import sys
+import dropbox
+from dropbox.files import WriteMode
+from dropbox.exceptions import ApiError, AuthError
+
+# Provide access token
+# TOKEN
+
+LOCALFILE = "/kaggle/working/results.csv"
+BACKUPPATH = f"/benchmark_{DATA}__{LANG}_{exp.embedding_name}.csv"
+
+# Uploads contents of LOCALFILE to Dropbox
+def backup():
+    with open(LOCALFILE, "rb") as f:
+        try:
+            dbx.files_upload(f.read(), BACKUPPATH, mode=WriteMode("overwrite"))
+
+        except ApiError as err:
+            if (
+                err.error.is_path()
+                and err.error.get_path().error.is_insufficient_space()
+            ):
+                sys.exit("ERROR: Cannot back up; insufficient space.")
+            elif err.user_message_text:
+                print(err.user_message_text)
+                sys.exit()
+            else:
+                print(err)
+                sys.exit()
+
+
+def checkFileDetails():
+
+    for entry in dbx.files_list_folder("").entries:
+        print("File list is : ")
+        print(entry.name)
+
+
+if __name__ == "__main__":
+
+    if len(TOKEN) == 0:
+        sys.exit("No TOKEN provided")
+
+    # Create an instance of a Dropbox class, which can make requests to the API.
+    print("Creating a Dropbox object...")
+    dbx = dropbox.Dropbox(TOKEN)
+
+    # Check that the access token is valid
+    try:
+        dbx.users_get_current_account()
+    except AuthError as err:
+        sys.exit(
+            "ERROR: Invalid access token; try re-generating an access token from the app console on the web."
+        )
+
+    try:
+        checkFileDetails()
+    except Error as err:
+        sys.exit("Error while checking file details")
+
+    print("Creating backup...")
+    # Create a backup of the current settings file
+    backup()
+
+    print("Done!")

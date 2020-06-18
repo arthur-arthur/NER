@@ -17,14 +17,15 @@ from utils import KagglePusher, build_script_from_options
     type=str,
     default="cpu",
     show_default=True,
-    help="Embedding storage mode. When storage_mode is 'gpu', GPU will be automatically enabled in the Kaggle environment.",
+    help="When storage_mode is 'gpu', GPU will be automatically enabled in the Kaggle environment.",
 )
 @click.argument("embedding_codes", nargs=-1)  # multiple arguments for emb --> tuple
 def push_to_kaggle(data, lang, embedding_codes, epochs, storage):
 
     """
     Embedding codes can be passed as arguments, the appropriate classes are initiated
-    according to the --lang option. Multiple embeddings are concatenated (StackedEmbeddings)
+    according to the --lang option. Multiple embeddings are concatenated into instances
+    of the StackedEmbeddings class
 
     Abbreviations:
 
@@ -52,5 +53,6 @@ def push_to_kaggle(data, lang, embedding_codes, epochs, storage):
     pusher = KagglePusher(data, lang, embedding_codes, storage)
     pusher.init_metadata()
     pusher.push()
+
 
 push_to_kaggle()

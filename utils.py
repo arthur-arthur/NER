@@ -35,7 +35,6 @@ STORAGE = '{storage}'
 
 
 def build_script_from_file(file):
-    # TODO: batch init from folder of config files
     pass
 
 
