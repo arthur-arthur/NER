@@ -80,7 +80,6 @@ _All refers to Char + OHE + fastT (Fr) and BPEmb (Fr)_
 
 _All refers to Char + OHE + mBPEmb_
 
-
 ## Command line interface
 
 Since the Kaggle API does not allow to import utility scripts directly from the command line, every experiment was executed from a self-contained script containing all the code to load the dataset, initialize the embeddings, train and evaluate the model. This script was automatically generated and pushed to Kaggle using a simple command line interface. Results were obtained by extracting the tp, fp and fn counts provided by Flair's training log and computing micro-average precision, recall and F1-score using sklearn. The Dropbox API was used to collect these results (token required).
@@ -138,3 +137,7 @@ Example 2: To run an experiment using mBERT + mFlair + multilingual BytePair emb
 ```bash
 $ python3 push_and_run.py --data trilingual --lang multi bert flair bpe
 ```
+
+# Results
+
+All the results can be found in the [thesis](https://arthur-arthur.github.io/thesis/index.html) itself. Even though you can find most results in the html version, everything has been optimized for PDF so it is preferred to download [the PDF version](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup.pdf) directly.
