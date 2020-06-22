@@ -140,4 +140,20 @@ $ python3 push_and_run.py --data trilingual --lang multi bert flair bpe
 
 # Results
 
-All the results can be found in the [thesis](https://arthur-arthur.github.io/thesis/index.html) itself. Even though you can find most results in the html version, everything has been optimized for PDF so it is preferred to download [the PDF version](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup.pdf) directly.
+All the results can be found in the [thesis](https://arthur-arthur.github.io/thesis/index.html) itself. Even though you can find most results in the html version, everything has been optimized for PDF so it is preferred to download [the PDF version](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup.pdf) directly. The main results are included below. These represent the test-set micro-average precision, recall and F1-score for a single training run. For the details on the embeddings we refer to the tables above. Note that the x-axis label 'All' refers to the concatenation of all static and task-specific embeddings that were included per category, i.e. for monolingual embeddings: Character embeddings + OHE + fastText + BytePair (in the respective languages). For multilingual embeddings, 'All' refers to the concatenation of Character embeddings + OHEs + multilingual BytePair embeddings.
+
+## CoNLL2003
+
+![CoNLL2003](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup_files/figure-html/conll2003-fig-1.png)
+
+## CoNLL2002
+
+![CoNLL2002](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup_files/figure-html/conll2002-fig-1.png)
+
+## WikiNER
+
+![WikiNER](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup_files/figure-html/wikiner-fig-1.png)
+
+## Trilingual dataset
+
+![Trilingual (only Dutch monolingual embeddings are included)](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup_files/figure-html/trilingual-fig-1.png)
