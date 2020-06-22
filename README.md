@@ -72,7 +72,7 @@ _All refers to Char + OHE + fastT (Fr) and BPEmb (Fr)_
 
 | No contextualized embeddings 	| BERT                   	| Flair                   	| BERT + Flair                        	|
 |------------------------------	|------------------------	|-------------------------	|-------------------------------------	|
-| n.a.                         	| mBERT                  	| mFlair                  	| mBERT + mFlair                      	|
+|                           	| mBERT                  	| mFlair                  	| mBERT + mFlair                      	|
 | Char                         	| mBERT + Char           	| mFlair + Char           	| mBERT + mFlair + Char               	|
 | OHE                          	| mBERT + OHE            	| mFlair + OHE            	| mBERT + mFlair + OHE                	|
 | mBPEmb                       	| mBERT + mBPEmb         	| mFlair + mBPEmb         	| mBERT + mFlair + mBPEmb             	|
