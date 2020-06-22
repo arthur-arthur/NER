@@ -91,38 +91,42 @@ Important: the `--data` option requires a valid name of the dataset on Kaggle (p
 
 ```bash
 $ python3 push_and_run.py --help
-Usage: push_and_run.py [OPTIONS] [EMB]...
+Usage: push_to_kaggle.py [OPTIONS] [EMBEDDING_CODES]...
 
   Embedding codes can be passed as arguments, the appropriate classes are
   initiated according to the --lang option. Multiple embeddings are
   concatenated (StackedEmbeddings)
 
-  Abbreviations (not case-sensitive):
+  Abbreviations:
 
   =====================================================================
 
       "bert":     BERTje (nl), CamemBERT (fr), BERT (en), mBERT (multi)
 
-      "bpe":      BytePairEmbeddings (fr, nl, en or multi)
+      "bpe":      BytePairEmbeddings (fr, nl, en, multi)
 
       "ohe":      OneHotEmbeddings
 
       "char":     CharacterEmbeddings
 
-      "ft":       fastText nl/fr/en (WordEmbeddings)
+      "ft":       fastText WordEmbeddings (fr, nl, en)
 
-      "flair":    flair nl/fr/en, both fw and bw
+      "flair":    flair fw + bw (fr, nl, en, multi)
+
+      "elmo:      ELMo embeddings (all 3 layers of ELMo large) (en)
 
   =====================================================================
 
 Options:
-  --data TEXT       Dataset: [conll2002, conll2003, wikiner, trilingual]
+  --user TEXT
+  --data TEXT       Dataset: [conll2002, conll2003, wikiner, trired]
   --lang TEXT       Language of embedding class: [en, nl, fr, multi]
   --epochs INTEGER  Max number of epochs  [default: 100]
-  --storage TEXT    Embedding storage mode. When set to gpu, gpu will be automatically enabled on Kaggle [default: cpu]
+  --storage TEXT    Embedding storage mode. When storage_mode is 'gpu', GPU
+                    will be automatically enabled in the Kaggle environment.
+                    [default: cpu]
   --help            Show this message and exit.
 ```
-
 Example 1: To run an experiment using CamemBERT + French fastText + OneHotEmbeddings on the WikiNER DS:
 
 ```bash
