@@ -11,7 +11,7 @@ All experiments made use of the great [Flair library](https://github.com/flairNL
 | English      	| CoNLL2003 	| No          	| 203621            | 51362         | 46435              	|
 | Dutch      	| CoNLL2002 	| No          	| 199969            | 37687	      	| 68466              	|
 | French       	| WikiNER   	| Yes (0.10)  	| 279729            | 34824         | 30991              	|
-| Multilingual 	| All       	| No          	| 232173	        | 40141         | 49444              	|
+| Multilingual 	| All       	| Yes (0.33)   	| 232173	        | 40141         | 49444              	|
 
 Note: all datasets were converted to standard CoNLL2002 (BIO2)-format. Sentences containing more than 250 tokens (i.e. a total of 5 sentences in the CoNLL2002 dataset) were removed to allow the use of BERT embeddings (limited input sequence length). Document delimiters - when present - were removed as well. All three datasets were combined to obtain a multilingual dataset. Since the CoNLL2003 dataset requires a license (free for research) only the preprocessed CoNLL2002 and WikiNER datasets are included in this repository.
 
@@ -27,7 +27,7 @@ For Flair embeddings, both forward and backward representations were included. B
 | pooling_operation 	| first 	|
 | use_scalar_mix    	| False 	|
 
-A full overview of all configurations that were evaluated is provided below:
+A full overview of all configurations that were evaluated is provided below ("+" indicates concatenation into a single `StackedEmbedding`):
 
 ### Monolingual English
 
