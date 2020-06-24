@@ -146,14 +146,19 @@ All the results can be found in the [thesis](https://arthur-arthur.github.io/the
 
 ![CoNLL2003](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup_files/figure-html/conll2003-fig-1.png)
 
+_NOTE: "All" refers to Char + OHE + fastT and BPEmb (for monolingual embeddings) and Char + OHE + mBPEmb (for multilingual embeddings)_
+
 ## CoNLL2002
 
 ![CoNLL2002](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup_files/figure-html/conll2002-fig-1.png)
+_NOTE: "All" refers to Char + OHE + fastT and BPEmb (for monolingual embeddings) and Char + OHE + mBPEmb (for multilingual embeddings)_
 
 ## WikiNER
 
 ![WikiNER](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup_files/figure-html/wikiner-fig-1.png)
+_NOTE: "All" refers to Char + OHE + fastT and BPEmb (for monolingual embeddings) and Char + OHE + mBPEmb (for multilingual embeddings)_
 
 ## Trilingual dataset
 
 ![Trilingual (only Dutch monolingual embeddings are included)](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup_files/figure-html/trilingual-fig-1.png)
+_NOTE: "All" refers to Char + OHE + fastT and BPEmb (for monolingual embeddings) and Char + OHE + mBPEmb (for multilingual embeddings)_
