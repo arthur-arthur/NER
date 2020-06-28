@@ -12,6 +12,12 @@ embeddings",Char,char,n.a.,Recall,60.519999999999996
 wikiner,"No contextualized
 embeddings",Char,char,n.a.,F1,60.19
 wikiner,"No contextualized
+embeddings",Char,char,n.a.,Precision,60.06
+wikiner,"No contextualized
+embeddings",Char,char,n.a.,Recall,59.85
+wikiner,"No contextualized
+embeddings",Char,char,n.a.,F1,59.36
+wikiner,"No contextualized
 embeddings",OHE,ohe,n.a.,Precision,71.61999999999999
 wikiner,"No contextualized
 embeddings",OHE,ohe,n.a.,Recall,63.239999999999995
