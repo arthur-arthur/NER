@@ -140,25 +140,22 @@ $ python3 push_and_run.py --data trilingual --lang multi bert flair bpe
 
 # Results
 
-All the results can be found in the [thesis](https://arthur-arthur.github.io/thesis/index.html) itself. Even though you can find most results in the html version, everything has been optimized for PDF so it is preferred to download [the PDF version](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup.pdf) directly. The main results are included below. These represent the test-set micro-average precision, recall and F1-score for a single training run. For the details on the embeddings we refer to the tables above. Note that the x-axis label 'All' refers to the concatenation of all static and task-specific embeddings that were included per category, i.e. for monolingual embeddings: Character embeddings + OHE + fastText + BytePair (in the respective languages). For multilingual embeddings, 'All' refers to the concatenation of Character embeddings + OHEs + multilingual BytePair embeddings. The plots are largely self-explanatory, more information can be found in the thesis itself.
+All the results can be found in the [thesis](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup.pdf) directly. All results obtained so far can be found here and are visualized below (currently, n=3 training runs for each experiment). These represent the test-set micro-average precision, recall and F1-score for a single training run. For the details on the embeddings we refer to the tables above.
+
+The plots included below show the mean precision, recall and F1-score for 3 training runs. The scores for each experiment were the micro-average of the per-class scores. The error bars indicate the standard deviation, when their size exceeded the symbol dimensions).
 
 ## CoNLL2003
 
-![CoNLL2003](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup_files/figure-html/conll2003-fig-1.png)
+![CoNLL2003](https://raw.githubusercontent.com/arthur-arthur/NER/master/results/conll2003.png)
 
 _NOTE: "All" refers to Char + OHE + fastT and BPEmb (for monolingual embeddings) and Char + OHE + mBPEmb (for multilingual embeddings)_
 
 ## CoNLL2002
 
-![CoNLL2002](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup_files/figure-html/conll2002-fig-1.png)
+![CoNLL2002](https://raw.githubusercontent.com/arthur-arthur/NER/master/results/conll2002.png)
 _NOTE: "All" refers to Char + OHE + fastT and BPEmb (for monolingual embeddings) and Char + OHE + mBPEmb (for multilingual embeddings)_
 
 ## WikiNER
 
-![WikiNER](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup_files/figure-html/wikiner-fig-1.png)
-_NOTE: "All" refers to Char + OHE + fastT and BPEmb (for monolingual embeddings) and Char + OHE + mBPEmb (for multilingual embeddings)_
-
-## Trilingual dataset
-
-![Trilingual (only Dutch monolingual embeddings are included)](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup_files/figure-html/trilingual-fig-1.png)
+![WikiNER](https://github.com/arthur-arthur/NER/blob/master/results/wikiner.png)
 _NOTE: "All" refers to Char + OHE + fastT and BPEmb (for monolingual embeddings) and Char + OHE + mBPEmb (for multilingual embeddings)_
