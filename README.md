@@ -140,7 +140,7 @@ $ python3 push_and_run.py --data trilingual --lang multi bert flair bpe
 
 # Results
 
-An overview of the results can be found in the [thesis](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup.pdf), the `.csv` files can be downloaded [here](https://github.com/arthur-arthur/NER/tree/master/results) and the most recent results (currently, n=3 training runs for each experiment) are also visualized below. The precision, recall and F1-scores for each experiment were obtained by micro-averaging the per-class scores. The symbol and error bars indicate the mean and standard deviation (only included when they exceeded the symbol dimensions) for n=3.
+An overview of the results can be found in the [thesis](https://arthur-arthur.github.io/thesis/Thesis_Arthur_Leloup.pdf), `.csv` files can be downloaded [here](https://github.com/arthur-arthur/NER/tree/master/results) and the most recent results (currently, n=3 training runs for each experiment) are also visualized below. The precision, recall and F1-scores for each experiment were obtained by micro-averaging the per-class scores. The symbol and error bars indicate the mean and standard deviation (only included when they exceeded the symbol dimensions) for n=3.
 
 ## CoNLL2003
 
