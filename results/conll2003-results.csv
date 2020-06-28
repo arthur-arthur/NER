@@ -1,0 +1,424 @@
+dataset,context,static,embedding,lang,metric,value
+conll2003,"No contextualized
+embeddings",Char,char,n.a.,Precision,75.19
+conll2003,"No contextualized
+embeddings",Char,char,n.a.,Recall,75.22999999999999
+conll2003,"No contextualized
+embeddings",Char,char,n.a.,F1,75.17
+conll2003,"No contextualized
+embeddings",Char,char,n.a.,Precision,74.13
+conll2003,"No contextualized
+embeddings",Char,char,n.a.,Recall,73.92
+conll2003,"No contextualized
+embeddings",Char,char,n.a.,F1,73.99
+conll2003,"No contextualized
+embeddings",Char,char,n.a.,Precision,75.16000000000001
+conll2003,"No contextualized
+embeddings",Char,char,n.a.,Recall,74.72
+conll2003,"No contextualized
+embeddings",Char,char,n.a.,F1,74.91
+conll2003,"No contextualized
+embeddings",OHE,ohe,n.a.,Precision,81.24
+conll2003,"No contextualized
+embeddings",OHE,ohe,n.a.,Recall,71.87
+conll2003,"No contextualized
+embeddings",OHE,ohe,n.a.,F1,76.24
+conll2003,"No contextualized
+embeddings",OHE,ohe,n.a.,Precision,80.73
+conll2003,"No contextualized
+embeddings",OHE,ohe,n.a.,Recall,70.78
+conll2003,"No contextualized
+embeddings",OHE,ohe,n.a.,F1,75.37
+conll2003,"No contextualized
+embeddings",OHE,ohe,n.a.,Precision,81.81
+conll2003,"No contextualized
+embeddings",OHE,ohe,n.a.,Recall,71.27
+conll2003,"No contextualized
+embeddings",OHE,ohe,n.a.,F1,76.01
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,Precision,86.97
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,Recall,84.89
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,F1,85.84
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,Precision,86.74
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,Recall,84.85000000000001
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,F1,85.7
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,Precision,86.50999999999999
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,Recall,84.61
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,F1,85.47
+conll2003,"No contextualized
+embeddings",fastT,ft,Monolingual,Precision,90.63
+conll2003,"No contextualized
+embeddings",fastT,ft,Monolingual,Recall,90
+conll2003,"No contextualized
+embeddings",fastT,ft,Monolingual,F1,90.3
+conll2003,"No contextualized
+embeddings",fastT,ft,Monolingual,Precision,90.41
+conll2003,"No contextualized
+embeddings",fastT,ft,Monolingual,Recall,89.89
+conll2003,"No contextualized
+embeddings",fastT,ft,Monolingual,F1,90.14999999999999
+conll2003,"No contextualized
+embeddings",fastT,ft,Monolingual,Precision,90.63
+conll2003,"No contextualized
+embeddings",fastT,ft,Monolingual,Recall,90.13
+conll2003,"No contextualized
+embeddings",fastT,ft,Monolingual,F1,90.36999999999999
+conll2003,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,Precision,91.06
+conll2003,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,Recall,91.28
+conll2003,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,F1,91.16
+conll2003,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,Precision,90.85
+conll2003,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,Recall,90.89
+conll2003,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,F1,90.86
+conll2003,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,Precision,91.2
+conll2003,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,Recall,91.43
+conll2003,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,F1,91.3
+conll2003,BERT,None,bert,Monolingual,Precision,91.22
+conll2003,BERT,None,bert,Monolingual,Recall,90.92
+conll2003,BERT,None,bert,Monolingual,F1,91.06
+conll2003,BERT,None,bert,Monolingual,Precision,91.28
+conll2003,BERT,None,bert,Monolingual,Recall,91.14
+conll2003,BERT,None,bert,Monolingual,F1,91.21000000000001
+conll2003,BERT,None,bert,Monolingual,Precision,90.73
+conll2003,BERT,None,bert,Monolingual,Recall,90.67
+conll2003,BERT,None,bert,Monolingual,F1,90.7
+conll2003,BERT,Char,bert-char,Monolingual,Precision,90.72
+conll2003,BERT,Char,bert-char,Monolingual,Recall,90.63
+conll2003,BERT,Char,bert-char,Monolingual,F1,90.68
+conll2003,BERT,Char,bert-char,Monolingual,Precision,91.11
+conll2003,BERT,Char,bert-char,Monolingual,Recall,91.2
+conll2003,BERT,Char,bert-char,Monolingual,F1,91.16
+conll2003,BERT,Char,bert-char,Monolingual,Precision,90.83
+conll2003,BERT,Char,bert-char,Monolingual,Recall,90.9
+conll2003,BERT,Char,bert-char,Monolingual,F1,90.86
+conll2003,BERT,OHE,bert-ohe,Monolingual,Precision,91.32000000000001
+conll2003,BERT,OHE,bert-ohe,Monolingual,Recall,90.8
+conll2003,BERT,OHE,bert-ohe,Monolingual,F1,91.05
+conll2003,BERT,OHE,bert-ohe,Monolingual,Precision,91.11
+conll2003,BERT,OHE,bert-ohe,Monolingual,Recall,90.47
+conll2003,BERT,OHE,bert-ohe,Monolingual,F1,90.78
+conll2003,BERT,OHE,bert-ohe,Monolingual,Precision,91.07
+conll2003,BERT,OHE,bert-ohe,Monolingual,Recall,90.67
+conll2003,BERT,OHE,bert-ohe,Monolingual,F1,90.86
+conll2003,BERT,BPEmb,bert-bpe,Monolingual,Precision,91.44
+conll2003,BERT,BPEmb,bert-bpe,Monolingual,Recall,91.82000000000001
+conll2003,BERT,BPEmb,bert-bpe,Monolingual,F1,91.63
+conll2003,BERT,BPEmb,bert-bpe,Monolingual,Precision,91.06
+conll2003,BERT,BPEmb,bert-bpe,Monolingual,Recall,91.51
+conll2003,BERT,BPEmb,bert-bpe,Monolingual,F1,91.28
+conll2003,BERT,BPEmb,bert-bpe,Monolingual,Precision,91.53999999999999
+conll2003,BERT,BPEmb,bert-bpe,Monolingual,Recall,91.97
+conll2003,BERT,BPEmb,bert-bpe,Monolingual,F1,91.75999999999999
+conll2003,BERT,fastT,bert-ft,Monolingual,Precision,91.44
+conll2003,BERT,fastT,bert-ft,Monolingual,Recall,91.81
+conll2003,BERT,fastT,bert-ft,Monolingual,F1,91.62
+conll2003,BERT,fastT,bert-ft,Monolingual,Precision,91.66
+conll2003,BERT,fastT,bert-ft,Monolingual,Recall,92.02
+conll2003,BERT,fastT,bert-ft,Monolingual,F1,91.83
+conll2003,BERT,fastT,bert-ft,Monolingual,Precision,91.77
+conll2003,BERT,fastT,bert-ft,Monolingual,Recall,92.10000000000001
+conll2003,BERT,fastT,bert-ft,Monolingual,F1,91.94
+conll2003,BERT,All,bert-ft-bpe-char-ohe,Monolingual,Precision,92.22
+conll2003,BERT,All,bert-ft-bpe-char-ohe,Monolingual,Recall,92.60000000000001
+conll2003,BERT,All,bert-ft-bpe-char-ohe,Monolingual,F1,92.41
+conll2003,BERT,All,bert-ft-bpe-char-ohe,Monolingual,Precision,91.91
+conll2003,BERT,All,bert-ft-bpe-char-ohe,Monolingual,Recall,92.33
+conll2003,BERT,All,bert-ft-bpe-char-ohe,Monolingual,F1,92.12
+conll2003,BERT,All,bert-ft-bpe-char-ohe,Monolingual,Precision,92.13
+conll2003,BERT,All,bert-ft-bpe-char-ohe,Monolingual,Recall,92.47999999999999
+conll2003,BERT,All,bert-ft-bpe-char-ohe,Monolingual,F1,92.31
+conll2003,Flair,None,flair,Monolingual,Precision,90.63
+conll2003,Flair,None,flair,Monolingual,Recall,91.03999999999999
+conll2003,Flair,None,flair,Monolingual,F1,90.83
+conll2003,Flair,None,flair,Monolingual,Precision,90.31
+conll2003,Flair,None,flair,Monolingual,Recall,90.79
+conll2003,Flair,None,flair,Monolingual,F1,90.55
+conll2003,Flair,None,flair,Monolingual,Precision,90.16999999999999
+conll2003,Flair,None,flair,Monolingual,Recall,91.05
+conll2003,Flair,None,flair,Monolingual,F1,90.61
+conll2003,Flair,Char,flair-char,Monolingual,Precision,90.25999999999999
+conll2003,Flair,Char,flair-char,Monolingual,Recall,91.09
+conll2003,Flair,Char,flair-char,Monolingual,F1,90.67
+conll2003,Flair,Char,flair-char,Monolingual,Precision,90.56
+conll2003,Flair,Char,flair-char,Monolingual,Recall,91.13
+conll2003,Flair,Char,flair-char,Monolingual,F1,90.85
+conll2003,Flair,Char,flair-char,Monolingual,Precision,90.44
+conll2003,Flair,Char,flair-char,Monolingual,Recall,91.2
+conll2003,Flair,Char,flair-char,Monolingual,F1,90.82000000000001
+conll2003,Flair,OHE,flair-ohe,Monolingual,Precision,91.13
+conll2003,Flair,OHE,flair-ohe,Monolingual,Recall,91.33
+conll2003,Flair,OHE,flair-ohe,Monolingual,F1,91.23
+conll2003,Flair,OHE,flair-ohe,Monolingual,Precision,90.09
+conll2003,Flair,OHE,flair-ohe,Monolingual,Recall,90.82000000000001
+conll2003,Flair,OHE,flair-ohe,Monolingual,F1,90.44
+conll2003,Flair,OHE,flair-ohe,Monolingual,Precision,90.48
+conll2003,Flair,OHE,flair-ohe,Monolingual,Recall,90.85
+conll2003,Flair,OHE,flair-ohe,Monolingual,F1,90.66
+conll2003,Flair,BPEmb,flair-bpe,Monolingual,Precision,91.23
+conll2003,Flair,BPEmb,flair-bpe,Monolingual,Recall,91.77
+conll2003,Flair,BPEmb,flair-bpe,Monolingual,F1,91.49000000000001
+conll2003,Flair,BPEmb,flair-bpe,Monolingual,Precision,91.67999999999999
+conll2003,Flair,BPEmb,flair-bpe,Monolingual,Recall,92.2
+conll2003,Flair,BPEmb,flair-bpe,Monolingual,F1,91.94
+conll2003,Flair,BPEmb,flair-bpe,Monolingual,Precision,91.31
+conll2003,Flair,BPEmb,flair-bpe,Monolingual,Recall,91.71000000000001
+conll2003,Flair,BPEmb,flair-bpe,Monolingual,F1,91.51
+conll2003,Flair,fastT,flair-ft,Monolingual,Precision,91.88
+conll2003,Flair,fastT,flair-ft,Monolingual,Recall,92.24
+conll2003,Flair,fastT,flair-ft,Monolingual,F1,92.05
+conll2003,Flair,fastT,flair-ft,Monolingual,Precision,92.01
+conll2003,Flair,fastT,flair-ft,Monolingual,Recall,92.57
+conll2003,Flair,fastT,flair-ft,Monolingual,F1,92.28
+conll2003,Flair,fastT,flair-ft,Monolingual,Precision,91.69
+conll2003,Flair,fastT,flair-ft,Monolingual,Recall,92.23
+conll2003,Flair,fastT,flair-ft,Monolingual,F1,91.96
+conll2003,Flair,All,flair-ft-bpe-char-ohe,Monolingual,Precision,92.08
+conll2003,Flair,All,flair-ft-bpe-char-ohe,Monolingual,Recall,92.31
+conll2003,Flair,All,flair-ft-bpe-char-ohe,Monolingual,F1,92.19000000000001
+conll2003,Flair,All,flair-ft-bpe-char-ohe,Monolingual,Precision,92.28
+conll2003,Flair,All,flair-ft-bpe-char-ohe,Monolingual,Recall,92.36
+conll2003,Flair,All,flair-ft-bpe-char-ohe,Monolingual,F1,92.32000000000001
+conll2003,Flair,All,flair-ft-bpe-char-ohe,Monolingual,Precision,92.07
+conll2003,Flair,All,flair-ft-bpe-char-ohe,Monolingual,Recall,92.5
+conll2003,Flair,All,flair-ft-bpe-char-ohe,Monolingual,F1,92.28
+conll2003,BERT + Flair,None,bert-flair,Monolingual,Precision,91.47
+conll2003,BERT + Flair,None,bert-flair,Monolingual,Recall,91.94
+conll2003,BERT + Flair,None,bert-flair,Monolingual,F1,91.71000000000001
+conll2003,BERT + Flair,None,bert-flair,Monolingual,Precision,91.29
+conll2003,BERT + Flair,None,bert-flair,Monolingual,Recall,91.88
+conll2003,BERT + Flair,None,bert-flair,Monolingual,F1,91.59
+conll2003,BERT + Flair,None,bert-flair,Monolingual,Precision,91.4
+conll2003,BERT + Flair,None,bert-flair,Monolingual,Recall,91.86999999999999
+conll2003,BERT + Flair,None,bert-flair,Monolingual,F1,91.63
+conll2003,BERT + Flair,Char,bert-flair-char,Monolingual,Precision,91.32000000000001
+conll2003,BERT + Flair,Char,bert-flair-char,Monolingual,Recall,91.97
+conll2003,BERT + Flair,Char,bert-flair-char,Monolingual,F1,91.64
+conll2003,BERT + Flair,Char,bert-flair-char,Monolingual,Precision,91.31
+conll2003,BERT + Flair,Char,bert-flair-char,Monolingual,Recall,92.14
+conll2003,BERT + Flair,Char,bert-flair-char,Monolingual,F1,91.72
+conll2003,BERT + Flair,Char,bert-flair-char,Monolingual,Precision,91.53
+conll2003,BERT + Flair,Char,bert-flair-char,Monolingual,Recall,92
+conll2003,BERT + Flair,Char,bert-flair-char,Monolingual,F1,91.75999999999999
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Monolingual,Precision,91.25999999999999
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Monolingual,Recall,91.82000000000001
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Monolingual,F1,91.53999999999999
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Monolingual,Precision,91.58
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Monolingual,Recall,91.95
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Monolingual,F1,91.75999999999999
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Monolingual,Precision,91.62
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Monolingual,Recall,91.96
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Monolingual,F1,91.79
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,Precision,91.86
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,Recall,92.43
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,F1,92.14
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,Precision,91.78
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,Recall,92.2
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,F1,91.99000000000001
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,Precision,91.44
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,Recall,92.34
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,F1,91.88
+conll2003,BERT + Flair,fastT,bert-flair-ft,Monolingual,Precision,91.46
+conll2003,BERT + Flair,fastT,bert-flair-ft,Monolingual,Recall,92.5
+conll2003,BERT + Flair,fastT,bert-flair-ft,Monolingual,F1,91.97999999999999
+conll2003,BERT + Flair,fastT,bert-flair-ft,Monolingual,Precision,91.67999999999999
+conll2003,BERT + Flair,fastT,bert-flair-ft,Monolingual,Recall,92.32000000000001
+conll2003,BERT + Flair,fastT,bert-flair-ft,Monolingual,F1,92
+conll2003,BERT + Flair,fastT,bert-flair-ft,Monolingual,Precision,91.63
+conll2003,BERT + Flair,fastT,bert-flair-ft,Monolingual,Recall,92.49000000000001
+conll2003,BERT + Flair,fastT,bert-flair-ft,Monolingual,F1,92.06
+conll2003,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,Precision,91.86
+conll2003,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,Recall,92.44
+conll2003,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,F1,92.14
+conll2003,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,Precision,92.28
+conll2003,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,Recall,92.65
+conll2003,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,F1,92.46
+conll2003,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,Precision,92.44
+conll2003,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,Recall,92.74
+conll2003,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,F1,92.58999999999999
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,Precision,85.83
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,Recall,83.02000000000001
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,F1,84.32
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,Precision,85.97
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,Recall,83.23
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,F1,84.5
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,Precision,86.05000000000001
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,Recall,83.26
+conll2003,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,F1,84.56
+conll2003,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,Precision,87.76
+conll2003,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,Recall,87.63
+conll2003,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,F1,87.64999999999999
+conll2003,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,Precision,88.31
+conll2003,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,Recall,87.77000000000001
+conll2003,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,F1,87.99
+conll2003,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,Precision,87.89
+conll2003,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,Recall,87.41
+conll2003,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,F1,87.61
+conll2003,BERT,None,bert,Multilingual,Precision,90.18
+conll2003,BERT,None,bert,Multilingual,Recall,90.2
+conll2003,BERT,None,bert,Multilingual,F1,90.16999999999999
+conll2003,BERT,None,bert,Multilingual,Precision,90.8
+conll2003,BERT,None,bert,Multilingual,Recall,90.63
+conll2003,BERT,None,bert,Multilingual,F1,90.71000000000001
+conll2003,BERT,None,bert,Multilingual,Precision,90.5
+conll2003,BERT,None,bert,Multilingual,Recall,90.86999999999999
+conll2003,BERT,None,bert,Multilingual,F1,90.68
+conll2003,BERT,Char,bert-char,Multilingual,Precision,90.58
+conll2003,BERT,Char,bert-char,Multilingual,Recall,90.56
+conll2003,BERT,Char,bert-char,Multilingual,F1,90.57
+conll2003,BERT,Char,bert-char,Multilingual,Precision,90.64
+conll2003,BERT,Char,bert-char,Multilingual,Recall,91.43
+conll2003,BERT,Char,bert-char,Multilingual,F1,91.03
+conll2003,BERT,Char,bert-char,Multilingual,Precision,90.47
+conll2003,BERT,Char,bert-char,Multilingual,Recall,91.19
+conll2003,BERT,Char,bert-char,Multilingual,F1,90.83
+conll2003,BERT,OHE,bert-ohe,Multilingual,Precision,90.69
+conll2003,BERT,OHE,bert-ohe,Multilingual,Recall,91.03999999999999
+conll2003,BERT,OHE,bert-ohe,Multilingual,F1,90.86
+conll2003,BERT,OHE,bert-ohe,Multilingual,Precision,90.46
+conll2003,BERT,OHE,bert-ohe,Multilingual,Recall,90.86
+conll2003,BERT,OHE,bert-ohe,Multilingual,F1,90.64999999999999
+conll2003,BERT,OHE,bert-ohe,Multilingual,Precision,90.75
+conll2003,BERT,OHE,bert-ohe,Multilingual,Recall,90.75
+conll2003,BERT,OHE,bert-ohe,Multilingual,F1,90.75
+conll2003,BERT,BPEmb,bert-bpe,Multilingual,Precision,91.08000000000001
+conll2003,BERT,BPEmb,bert-bpe,Multilingual,Recall,91.75999999999999
+conll2003,BERT,BPEmb,bert-bpe,Multilingual,F1,91.41
+conll2003,BERT,BPEmb,bert-bpe,Multilingual,Precision,90.95
+conll2003,BERT,BPEmb,bert-bpe,Multilingual,Recall,91.74
+conll2003,BERT,BPEmb,bert-bpe,Multilingual,F1,91.34
+conll2003,BERT,BPEmb,bert-bpe,Multilingual,Precision,91.12
+conll2003,BERT,BPEmb,bert-bpe,Multilingual,Recall,91.92
+conll2003,BERT,BPEmb,bert-bpe,Multilingual,F1,91.51
+conll2003,BERT,All,bert-bpe-char-ohe,Multilingual,Precision,91.22
+conll2003,BERT,All,bert-bpe-char-ohe,Multilingual,Recall,91.94
+conll2003,BERT,All,bert-bpe-char-ohe,Multilingual,F1,91.58
+conll2003,BERT,All,bert-bpe-char-ohe,Multilingual,Precision,90.96
+conll2003,BERT,All,bert-bpe-char-ohe,Multilingual,Recall,91.92
+conll2003,BERT,All,bert-bpe-char-ohe,Multilingual,F1,91.43
+conll2003,BERT,All,bert-bpe-char-ohe,Multilingual,Precision,91.03
+conll2003,BERT,All,bert-bpe-char-ohe,Multilingual,Recall,91.83
+conll2003,BERT,All,bert-bpe-char-ohe,Multilingual,F1,91.43
+conll2003,Flair,None,flair,Multilingual,Precision,84.36
+conll2003,Flair,None,flair,Multilingual,Recall,84.78
+conll2003,Flair,None,flair,Multilingual,F1,84.54
+conll2003,Flair,None,flair,Multilingual,Precision,84.64
+conll2003,Flair,None,flair,Multilingual,Recall,84.82
+conll2003,Flair,None,flair,Multilingual,F1,84.7
+conll2003,Flair,None,flair,Multilingual,Precision,84.32
+conll2003,Flair,None,flair,Multilingual,Recall,84.87
+conll2003,Flair,None,flair,Multilingual,F1,84.54
+conll2003,Flair,Char,flair-char,Multilingual,Precision,84.93
+conll2003,Flair,Char,flair-char,Multilingual,Recall,85.27
+conll2003,Flair,Char,flair-char,Multilingual,F1,85.09
+conll2003,Flair,Char,flair-char,Multilingual,Precision,84.56
+conll2003,Flair,Char,flair-char,Multilingual,Recall,85.03
+conll2003,Flair,Char,flair-char,Multilingual,F1,84.75
+conll2003,Flair,Char,flair-char,Multilingual,Precision,85.05
+conll2003,Flair,Char,flair-char,Multilingual,Recall,85.49
+conll2003,Flair,Char,flair-char,Multilingual,F1,85.22999999999999
+conll2003,Flair,OHE,flair-ohe,Multilingual,Precision,85.8
+conll2003,Flair,OHE,flair-ohe,Multilingual,Recall,85.84
+conll2003,Flair,OHE,flair-ohe,Multilingual,F1,85.81
+conll2003,Flair,OHE,flair-ohe,Multilingual,Precision,85.77
+conll2003,Flair,OHE,flair-ohe,Multilingual,Recall,85.87
+conll2003,Flair,OHE,flair-ohe,Multilingual,F1,85.81
+conll2003,Flair,OHE,flair-ohe,Multilingual,Precision,85.81
+conll2003,Flair,OHE,flair-ohe,Multilingual,Recall,85.78
+conll2003,Flair,OHE,flair-ohe,Multilingual,F1,85.78
+conll2003,Flair,BPEmb,flair-bpe,Multilingual,Precision,87.61
+conll2003,Flair,BPEmb,flair-bpe,Multilingual,Recall,88.39
+conll2003,Flair,BPEmb,flair-bpe,Multilingual,F1,87.99
+conll2003,Flair,BPEmb,flair-bpe,Multilingual,Precision,87.56
+conll2003,Flair,BPEmb,flair-bpe,Multilingual,Recall,88.42999999999999
+conll2003,Flair,BPEmb,flair-bpe,Multilingual,F1,87.99
+conll2003,Flair,BPEmb,flair-bpe,Multilingual,Precision,87.67
+conll2003,Flair,BPEmb,flair-bpe,Multilingual,Recall,88.62
+conll2003,Flair,BPEmb,flair-bpe,Multilingual,F1,88.14
+conll2003,Flair,All,flair-bpe-char-ohe,Multilingual,Precision,87.9
+conll2003,Flair,All,flair-bpe-char-ohe,Multilingual,Recall,88.09
+conll2003,Flair,All,flair-bpe-char-ohe,Multilingual,F1,87.97
+conll2003,Flair,All,flair-bpe-char-ohe,Multilingual,Precision,87.57000000000001
+conll2003,Flair,All,flair-bpe-char-ohe,Multilingual,Recall,88.23
+conll2003,Flair,All,flair-bpe-char-ohe,Multilingual,F1,87.89
+conll2003,Flair,All,flair-bpe-char-ohe,Multilingual,Precision,87.68
+conll2003,Flair,All,flair-bpe-char-ohe,Multilingual,Recall,88.19
+conll2003,Flair,All,flair-bpe-char-ohe,Multilingual,F1,87.92
+conll2003,BERT + Flair,None,bert-flair,Multilingual,Precision,90.71000000000001
+conll2003,BERT + Flair,None,bert-flair,Multilingual,Recall,91.34
+conll2003,BERT + Flair,None,bert-flair,Multilingual,F1,91.03
+conll2003,BERT + Flair,None,bert-flair,Multilingual,Precision,90.53999999999999
+conll2003,BERT + Flair,None,bert-flair,Multilingual,Recall,91.25
+conll2003,BERT + Flair,None,bert-flair,Multilingual,F1,90.89
+conll2003,BERT + Flair,None,bert-flair,Multilingual,Precision,90.78
+conll2003,BERT + Flair,None,bert-flair,Multilingual,Recall,91.42
+conll2003,BERT + Flair,None,bert-flair,Multilingual,F1,91.10000000000001
+conll2003,BERT + Flair,Char,bert-flair-char,Multilingual,Precision,90.96
+conll2003,BERT + Flair,Char,bert-flair-char,Multilingual,Recall,91.34
+conll2003,BERT + Flair,Char,bert-flair-char,Multilingual,F1,91.14999999999999
+conll2003,BERT + Flair,Char,bert-flair-char,Multilingual,Precision,90.51
+conll2003,BERT + Flair,Char,bert-flair-char,Multilingual,Recall,91.24
+conll2003,BERT + Flair,Char,bert-flair-char,Multilingual,F1,90.86999999999999
+conll2003,BERT + Flair,Char,bert-flair-char,Multilingual,Precision,90.51
+conll2003,BERT + Flair,Char,bert-flair-char,Multilingual,Recall,91.32000000000001
+conll2003,BERT + Flair,Char,bert-flair-char,Multilingual,F1,90.91
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Multilingual,Precision,90.36
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Multilingual,Recall,91.11
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Multilingual,F1,90.73
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Multilingual,Precision,90.83
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Multilingual,Recall,91.4
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Multilingual,F1,91.11
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Multilingual,Precision,90.16
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Multilingual,Recall,90.83
+conll2003,BERT + Flair,OHE,bert-flair-ohe,Multilingual,F1,90.49000000000001
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,Precision,91.03
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,Recall,91.78
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,F1,91.4
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,Precision,91.02
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,Recall,91.97999999999999
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,F1,91.49000000000001
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,Precision,91.03999999999999
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,Recall,91.96
+conll2003,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,F1,91.5
+conll2003,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,Precision,90.93
+conll2003,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,Recall,91.79
+conll2003,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,F1,91.36
+conll2003,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,Precision,90.83
+conll2003,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,Recall,91.43
+conll2003,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,F1,91.13
+conll2003,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,Precision,90.74
+conll2003,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,Recall,91.66
+conll2003,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,F1,91.2

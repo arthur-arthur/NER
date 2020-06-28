@@ -1,0 +1,418 @@
+dataset,context,static,embedding,lang,metric,value
+wikiner,"No contextualized
+embeddings",Char,char,n.a.,Precision,55.58
+wikiner,"No contextualized
+embeddings",Char,char,n.a.,Recall,54.6
+wikiner,"No contextualized
+embeddings",Char,char,n.a.,F1,54.190000000000005
+wikiner,"No contextualized
+embeddings",Char,char,n.a.,Precision,60.96
+wikiner,"No contextualized
+embeddings",Char,char,n.a.,Recall,60.519999999999996
+wikiner,"No contextualized
+embeddings",Char,char,n.a.,F1,60.19
+wikiner,"No contextualized
+embeddings",OHE,ohe,n.a.,Precision,71.61999999999999
+wikiner,"No contextualized
+embeddings",OHE,ohe,n.a.,Recall,63.239999999999995
+wikiner,"No contextualized
+embeddings",OHE,ohe,n.a.,F1,66.94
+wikiner,"No contextualized
+embeddings",OHE,ohe,n.a.,Precision,70.49
+wikiner,"No contextualized
+embeddings",OHE,ohe,n.a.,Recall,65.24
+wikiner,"No contextualized
+embeddings",OHE,ohe,n.a.,F1,67.38
+wikiner,"No contextualized
+embeddings",OHE,ohe,n.a.,Precision,70.81
+wikiner,"No contextualized
+embeddings",OHE,ohe,n.a.,Recall,64.48
+wikiner,"No contextualized
+embeddings",OHE,ohe,n.a.,F1,67.25999999999999
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,Precision,76.92
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,Recall,75.19
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,F1,75.81
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,Precision,77.3
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,Recall,75.55
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,F1,76.14999999999999
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,Precision,76.23
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,Recall,74.37
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Monolingual,F1,75
+wikiner,"No contextualized
+embeddings",fastT,ft,Monolingual,Precision,80.56
+wikiner,"No contextualized
+embeddings",fastT,ft,Monolingual,Recall,75.63
+wikiner,"No contextualized
+embeddings",fastT,ft,Monolingual,F1,77.83
+wikiner,"No contextualized
+embeddings",fastT,ft,Monolingual,Precision,79.32000000000001
+wikiner,"No contextualized
+embeddings",fastT,ft,Monolingual,Recall,74.68
+wikiner,"No contextualized
+embeddings",fastT,ft,Monolingual,F1,76.61
+wikiner,"No contextualized
+embeddings",fastT,ft,Monolingual,Precision,80.72
+wikiner,"No contextualized
+embeddings",fastT,ft,Monolingual,Recall,76.25999999999999
+wikiner,"No contextualized
+embeddings",fastT,ft,Monolingual,F1,78.22
+wikiner,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,Precision,84.11999999999999
+wikiner,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,Recall,84.32
+wikiner,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,F1,84.17
+wikiner,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,Precision,84.00999999999999
+wikiner,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,Recall,83.91
+wikiner,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,F1,83.91999999999999
+wikiner,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,Precision,84.19
+wikiner,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,Recall,84.34
+wikiner,"No contextualized
+embeddings",All,ft-bpe-char-ohe,Monolingual,F1,84.24000000000001
+wikiner,BERT,None,bert,Monolingual,Precision,84.91
+wikiner,BERT,None,bert,Monolingual,Recall,84.95
+wikiner,BERT,None,bert,Monolingual,F1,84.87
+wikiner,BERT,None,bert,Monolingual,Precision,84.54
+wikiner,BERT,None,bert,Monolingual,Recall,84.8
+wikiner,BERT,None,bert,Monolingual,F1,84.61999999999999
+wikiner,BERT,None,bert,Monolingual,Precision,84.93
+wikiner,BERT,None,bert,Monolingual,Recall,84.92
+wikiner,BERT,None,bert,Monolingual,F1,84.89
+wikiner,BERT,Char,bert-char,Monolingual,Precision,85.68
+wikiner,BERT,Char,bert-char,Monolingual,Recall,85.79
+wikiner,BERT,Char,bert-char,Monolingual,F1,85.68
+wikiner,BERT,Char,bert-char,Monolingual,Precision,86.03
+wikiner,BERT,Char,bert-char,Monolingual,Recall,86.03
+wikiner,BERT,Char,bert-char,Monolingual,F1,86
+wikiner,BERT,Char,bert-char,Monolingual,Precision,85.24000000000001
+wikiner,BERT,Char,bert-char,Monolingual,Recall,85.35000000000001
+wikiner,BERT,Char,bert-char,Monolingual,F1,85.24000000000001
+wikiner,BERT,OHE,bert-ohe,Monolingual,Precision,85.84
+wikiner,BERT,OHE,bert-ohe,Monolingual,Recall,85.97
+wikiner,BERT,OHE,bert-ohe,Monolingual,F1,85.87
+wikiner,BERT,OHE,bert-ohe,Monolingual,Precision,86.36
+wikiner,BERT,OHE,bert-ohe,Monolingual,Recall,86.39
+wikiner,BERT,OHE,bert-ohe,Monolingual,F1,86.33
+wikiner,BERT,OHE,bert-ohe,Monolingual,Precision,85.44
+wikiner,BERT,OHE,bert-ohe,Monolingual,Recall,85.26
+wikiner,BERT,OHE,bert-ohe,Monolingual,F1,85.28999999999999
+wikiner,BERT,BPEmb,bert-bpe,Monolingual,Precision,86.61
+wikiner,BERT,BPEmb,bert-bpe,Monolingual,Recall,86.69
+wikiner,BERT,BPEmb,bert-bpe,Monolingual,F1,86.61999999999999
+wikiner,BERT,BPEmb,bert-bpe,Monolingual,Precision,85.42999999999999
+wikiner,BERT,BPEmb,bert-bpe,Monolingual,Recall,85.47
+wikiner,BERT,BPEmb,bert-bpe,Monolingual,F1,85.41
+wikiner,BERT,BPEmb,bert-bpe,Monolingual,Precision,85.79
+wikiner,BERT,BPEmb,bert-bpe,Monolingual,Recall,85.86
+wikiner,BERT,BPEmb,bert-bpe,Monolingual,F1,85.77
+wikiner,BERT,fastT,bert-ft,Monolingual,Precision,86.11
+wikiner,BERT,fastT,bert-ft,Monolingual,Recall,86.16
+wikiner,BERT,fastT,bert-ft,Monolingual,F1,86.1
+wikiner,BERT,fastT,bert-ft,Monolingual,Precision,86.65
+wikiner,BERT,fastT,bert-ft,Monolingual,Recall,86.57000000000001
+wikiner,BERT,fastT,bert-ft,Monolingual,F1,86.56
+wikiner,BERT,fastT,bert-ft,Monolingual,Precision,85.89
+wikiner,BERT,fastT,bert-ft,Monolingual,Recall,86.03
+wikiner,BERT,fastT,bert-ft,Monolingual,F1,85.89
+wikiner,BERT,All,bert-ft-bpe-char-ohe,Monolingual,Precision,86.92999999999999
+wikiner,BERT,All,bert-ft-bpe-char-ohe,Monolingual,Recall,87.03999999999999
+wikiner,BERT,All,bert-ft-bpe-char-ohe,Monolingual,F1,86.95
+wikiner,BERT,All,bert-ft-bpe-char-ohe,Monolingual,Precision,86.28
+wikiner,BERT,All,bert-ft-bpe-char-ohe,Monolingual,Recall,86.37
+wikiner,BERT,All,bert-ft-bpe-char-ohe,Monolingual,F1,86.3
+wikiner,BERT,All,bert-ft-bpe-char-ohe,Monolingual,Precision,86.11
+wikiner,BERT,All,bert-ft-bpe-char-ohe,Monolingual,Recall,86.29
+wikiner,BERT,All,bert-ft-bpe-char-ohe,Monolingual,F1,86.17
+wikiner,Flair,None,flair,Monolingual,Precision,79.75999999999999
+wikiner,Flair,None,flair,Monolingual,Recall,80.7
+wikiner,Flair,None,flair,Monolingual,F1,79.97999999999999
+wikiner,Flair,None,flair,Monolingual,Precision,79.14
+wikiner,Flair,None,flair,Monolingual,Recall,80.05
+wikiner,Flair,None,flair,Monolingual,F1,79.43
+wikiner,Flair,None,flair,Monolingual,Precision,77.86999999999999
+wikiner,Flair,None,flair,Monolingual,Recall,78.86999999999999
+wikiner,Flair,None,flair,Monolingual,F1,78.22
+wikiner,Flair,Char,flair-char,Monolingual,Precision,79.51
+wikiner,Flair,Char,flair-char,Monolingual,Recall,80.44
+wikiner,Flair,Char,flair-char,Monolingual,F1,79.82000000000001
+wikiner,Flair,Char,flair-char,Monolingual,Precision,80.80000000000001
+wikiner,Flair,Char,flair-char,Monolingual,Recall,81.56
+wikiner,Flair,Char,flair-char,Monolingual,F1,81.05
+wikiner,Flair,Char,flair-char,Monolingual,Precision,80.7
+wikiner,Flair,Char,flair-char,Monolingual,Recall,81.61
+wikiner,Flair,Char,flair-char,Monolingual,F1,81.04
+wikiner,Flair,OHE,flair-ohe,Monolingual,Precision,82
+wikiner,Flair,OHE,flair-ohe,Monolingual,Recall,82.57
+wikiner,Flair,OHE,flair-ohe,Monolingual,F1,82.14
+wikiner,Flair,OHE,flair-ohe,Monolingual,Precision,82.32000000000001
+wikiner,Flair,OHE,flair-ohe,Monolingual,Recall,82.72
+wikiner,Flair,OHE,flair-ohe,Monolingual,F1,82.46
+wikiner,Flair,OHE,flair-ohe,Monolingual,Precision,82.19
+wikiner,Flair,OHE,flair-ohe,Monolingual,Recall,82.72
+wikiner,Flair,OHE,flair-ohe,Monolingual,F1,82.38
+wikiner,Flair,BPEmb,flair-bpe,Monolingual,Precision,84.26
+wikiner,Flair,BPEmb,flair-bpe,Monolingual,Recall,84.23
+wikiner,Flair,BPEmb,flair-bpe,Monolingual,F1,84.17999999999999
+wikiner,Flair,BPEmb,flair-bpe,Monolingual,Precision,83.21
+wikiner,Flair,BPEmb,flair-bpe,Monolingual,Recall,83.45
+wikiner,Flair,BPEmb,flair-bpe,Monolingual,F1,83.25
+wikiner,Flair,BPEmb,flair-bpe,Monolingual,Precision,83.67
+wikiner,Flair,BPEmb,flair-bpe,Monolingual,Recall,83.83
+wikiner,Flair,BPEmb,flair-bpe,Monolingual,F1,83.71
+wikiner,Flair,fastT,flair-ft,Monolingual,Precision,84.71
+wikiner,Flair,fastT,flair-ft,Monolingual,Recall,84.82
+wikiner,Flair,fastT,flair-ft,Monolingual,F1,84.71
+wikiner,Flair,fastT,flair-ft,Monolingual,Precision,84.57000000000001
+wikiner,Flair,fastT,flair-ft,Monolingual,Recall,84.8
+wikiner,Flair,fastT,flair-ft,Monolingual,F1,84.64
+wikiner,Flair,fastT,flair-ft,Monolingual,Precision,84.41
+wikiner,Flair,fastT,flair-ft,Monolingual,Recall,84.63000000000001
+wikiner,Flair,fastT,flair-ft,Monolingual,F1,84.47
+wikiner,Flair,All,flair-ft-bpe-char-ohe,Monolingual,Precision,85.63
+wikiner,Flair,All,flair-ft-bpe-char-ohe,Monolingual,Recall,85.7
+wikiner,Flair,All,flair-ft-bpe-char-ohe,Monolingual,F1,85.63
+wikiner,Flair,All,flair-ft-bpe-char-ohe,Monolingual,Precision,85.22
+wikiner,Flair,All,flair-ft-bpe-char-ohe,Monolingual,Recall,85.28999999999999
+wikiner,Flair,All,flair-ft-bpe-char-ohe,Monolingual,F1,85.21
+wikiner,Flair,All,flair-ft-bpe-char-ohe,Monolingual,Precision,85.21
+wikiner,Flair,All,flair-ft-bpe-char-ohe,Monolingual,Recall,85.46000000000001
+wikiner,Flair,All,flair-ft-bpe-char-ohe,Monolingual,F1,85.28
+wikiner,BERT + Flair,None,bert-flair,Monolingual,Precision,86.98
+wikiner,BERT + Flair,None,bert-flair,Monolingual,Recall,86.88
+wikiner,BERT + Flair,None,bert-flair,Monolingual,F1,86.92
+wikiner,BERT + Flair,None,bert-flair,Monolingual,Precision,86.16
+wikiner,BERT + Flair,None,bert-flair,Monolingual,Recall,86.18
+wikiner,BERT + Flair,None,bert-flair,Monolingual,F1,86.13
+wikiner,BERT + Flair,None,bert-flair,Monolingual,Precision,86.68
+wikiner,BERT + Flair,None,bert-flair,Monolingual,Recall,86.5
+wikiner,BERT + Flair,None,bert-flair,Monolingual,F1,86.57000000000001
+wikiner,BERT + Flair,Char,bert-flair-char,Monolingual,Precision,86.66
+wikiner,BERT + Flair,Char,bert-flair-char,Monolingual,Recall,86.67
+wikiner,BERT + Flair,Char,bert-flair-char,Monolingual,F1,86.63
+wikiner,BERT + Flair,Char,bert-flair-char,Monolingual,Precision,86.72999999999999
+wikiner,BERT + Flair,Char,bert-flair-char,Monolingual,Recall,86.66
+wikiner,BERT + Flair,Char,bert-flair-char,Monolingual,F1,86.67
+wikiner,BERT + Flair,Char,bert-flair-char,Monolingual,Precision,86.55000000000001
+wikiner,BERT + Flair,Char,bert-flair-char,Monolingual,Recall,86.53
+wikiner,BERT + Flair,Char,bert-flair-char,Monolingual,F1,86.50999999999999
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Monolingual,Precision,86.29
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Monolingual,Recall,86.22
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Monolingual,F1,86.22
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Monolingual,Precision,86.17
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Monolingual,Recall,86.03
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Monolingual,F1,86.07000000000001
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Monolingual,Precision,86.78
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Monolingual,Recall,86.77
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Monolingual,F1,86.76
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,Precision,87.02
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,Recall,86.83
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,F1,86.92
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,Precision,87.09
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,Recall,86.81
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,F1,86.94
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,Precision,86.86
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,Recall,86.85000000000001
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Monolingual,F1,86.83
+wikiner,BERT + Flair,fastT,bert-flair-ft,Monolingual,Precision,86.86
+wikiner,BERT + Flair,fastT,bert-flair-ft,Monolingual,Recall,86.74
+wikiner,BERT + Flair,fastT,bert-flair-ft,Monolingual,F1,86.78
+wikiner,BERT + Flair,fastT,bert-flair-ft,Monolingual,Precision,87.64
+wikiner,BERT + Flair,fastT,bert-flair-ft,Monolingual,Recall,87.53
+wikiner,BERT + Flair,fastT,bert-flair-ft,Monolingual,F1,87.56
+wikiner,BERT + Flair,fastT,bert-flair-ft,Monolingual,Precision,87.21
+wikiner,BERT + Flair,fastT,bert-flair-ft,Monolingual,Recall,87.14
+wikiner,BERT + Flair,fastT,bert-flair-ft,Monolingual,F1,87.14
+wikiner,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,Precision,87.38
+wikiner,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,Recall,87.24
+wikiner,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,F1,87.28
+wikiner,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,Precision,87.4
+wikiner,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,Recall,87.4
+wikiner,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,F1,87.38
+wikiner,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,Precision,87.75
+wikiner,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,Recall,87.68
+wikiner,BERT + Flair,All,bert-flair-ft-bpe-char-ohe,Monolingual,F1,87.71
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,Precision,76.46
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,Recall,71.77
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,F1,73.75
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,Precision,77.56
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,Recall,74.09
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,F1,75.64
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,Precision,77.31
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,Recall,73.67
+wikiner,"No contextualized
+embeddings",BPEmb,bpe,Multilingual,F1,75.17
+wikiner,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,Precision,79.84
+wikiner,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,Recall,80.43
+wikiner,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,F1,80.04
+wikiner,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,Precision,80.15
+wikiner,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,Recall,80.80000000000001
+wikiner,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,F1,80.36999999999999
+wikiner,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,Precision,79.94
+wikiner,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,Recall,80.52
+wikiner,"No contextualized
+embeddings",All,bpe-char-ohe,Multilingual,F1,80.11
+wikiner,BERT,None,bert,Multilingual,Precision,85.68
+wikiner,BERT,None,bert,Multilingual,Recall,85.49
+wikiner,BERT,None,bert,Multilingual,F1,85.55
+wikiner,BERT,None,bert,Multilingual,Precision,85.53
+wikiner,BERT,None,bert,Multilingual,Recall,85.36
+wikiner,BERT,None,bert,Multilingual,F1,85.42
+wikiner,BERT,None,bert,Multilingual,Precision,85.07000000000001
+wikiner,BERT,None,bert,Multilingual,Recall,85.02
+wikiner,BERT,None,bert,Multilingual,F1,84.99
+wikiner,BERT,Char,bert-char,Multilingual,Precision,85.25
+wikiner,BERT,Char,bert-char,Multilingual,Recall,85.31
+wikiner,BERT,Char,bert-char,Multilingual,F1,85.24000000000001
+wikiner,BERT,Char,bert-char,Multilingual,Precision,84.78999999999999
+wikiner,BERT,Char,bert-char,Multilingual,Recall,84.8
+wikiner,BERT,Char,bert-char,Multilingual,F1,84.76
+wikiner,BERT,Char,bert-char,Multilingual,Precision,84.99
+wikiner,BERT,Char,bert-char,Multilingual,Recall,84.99
+wikiner,BERT,Char,bert-char,Multilingual,F1,84.95
+wikiner,BERT,OHE,bert-ohe,Multilingual,Precision,85.3
+wikiner,BERT,OHE,bert-ohe,Multilingual,Recall,85.39999999999999
+wikiner,BERT,OHE,bert-ohe,Multilingual,F1,85.32
+wikiner,BERT,OHE,bert-ohe,Multilingual,Precision,85.28
+wikiner,BERT,OHE,bert-ohe,Multilingual,Recall,85.28999999999999
+wikiner,BERT,OHE,bert-ohe,Multilingual,F1,85.25
+wikiner,BERT,OHE,bert-ohe,Multilingual,Precision,85.75
+wikiner,BERT,OHE,bert-ohe,Multilingual,Recall,85.99
+wikiner,BERT,OHE,bert-ohe,Multilingual,F1,85.84
+wikiner,BERT,BPEmb,bert-bpe,Multilingual,Precision,86.86
+wikiner,BERT,BPEmb,bert-bpe,Multilingual,Recall,86.79
+wikiner,BERT,BPEmb,bert-bpe,Multilingual,F1,86.8
+wikiner,BERT,BPEmb,bert-bpe,Multilingual,Precision,86.44
+wikiner,BERT,BPEmb,bert-bpe,Multilingual,Recall,86.63
+wikiner,BERT,BPEmb,bert-bpe,Multilingual,F1,86.48
+wikiner,BERT,BPEmb,bert-bpe,Multilingual,Precision,85.45
+wikiner,BERT,BPEmb,bert-bpe,Multilingual,Recall,85.28999999999999
+wikiner,BERT,BPEmb,bert-bpe,Multilingual,F1,85.31
+wikiner,BERT,All,bert-bpe-char-ohe,Multilingual,Precision,86.74
+wikiner,BERT,All,bert-bpe-char-ohe,Multilingual,Recall,86.79
+wikiner,BERT,All,bert-bpe-char-ohe,Multilingual,F1,86.74
+wikiner,BERT,All,bert-bpe-char-ohe,Multilingual,Precision,85.27
+wikiner,BERT,All,bert-bpe-char-ohe,Multilingual,Recall,84.97
+wikiner,BERT,All,bert-bpe-char-ohe,Multilingual,F1,85.09
+wikiner,BERT,All,bert-bpe-char-ohe,Multilingual,Precision,86.39
+wikiner,BERT,All,bert-bpe-char-ohe,Multilingual,Recall,86.26
+wikiner,BERT,All,bert-bpe-char-ohe,Multilingual,F1,86.3
+wikiner,Flair,None,flair,Multilingual,Precision,74.7
+wikiner,Flair,None,flair,Multilingual,Recall,75.94
+wikiner,Flair,None,flair,Multilingual,F1,75.07000000000001
+wikiner,Flair,None,flair,Multilingual,Precision,74.35000000000001
+wikiner,Flair,None,flair,Multilingual,Recall,75.67
+wikiner,Flair,None,flair,Multilingual,F1,74.69
+wikiner,Flair,None,flair,Multilingual,Precision,74.6
+wikiner,Flair,None,flair,Multilingual,Recall,75.91
+wikiner,Flair,None,flair,Multilingual,F1,74.91
+wikiner,Flair,Char,flair-char,Multilingual,Precision,75.21
+wikiner,Flair,Char,flair-char,Multilingual,Recall,76.07000000000001
+wikiner,Flair,Char,flair-char,Multilingual,F1,75.4
+wikiner,Flair,Char,flair-char,Multilingual,Precision,76.82
+wikiner,Flair,Char,flair-char,Multilingual,Recall,77.83
+wikiner,Flair,Char,flair-char,Multilingual,F1,77.10000000000001
+wikiner,Flair,Char,flair-char,Multilingual,Precision,75.42999999999999
+wikiner,Flair,Char,flair-char,Multilingual,Recall,76.7
+wikiner,Flair,Char,flair-char,Multilingual,F1,75.83
+wikiner,Flair,OHE,flair-ohe,Multilingual,Precision,79.22
+wikiner,Flair,OHE,flair-ohe,Multilingual,Recall,79.89
+wikiner,Flair,OHE,flair-ohe,Multilingual,F1,79.43
+wikiner,Flair,OHE,flair-ohe,Multilingual,Precision,79.51
+wikiner,Flair,OHE,flair-ohe,Multilingual,Recall,80.14
+wikiner,Flair,OHE,flair-ohe,Multilingual,F1,79.75999999999999
+wikiner,Flair,OHE,flair-ohe,Multilingual,Precision,78.2
+wikiner,Flair,OHE,flair-ohe,Multilingual,Recall,78.99000000000001
+wikiner,Flair,OHE,flair-ohe,Multilingual,F1,78.45
+wikiner,Flair,BPEmb,flair-bpe,Multilingual,Precision,80.9
+wikiner,Flair,BPEmb,flair-bpe,Multilingual,Recall,81.67
+wikiner,Flair,BPEmb,flair-bpe,Multilingual,F1,81.2
+wikiner,Flair,BPEmb,flair-bpe,Multilingual,Precision,81.17999999999999
+wikiner,Flair,BPEmb,flair-bpe,Multilingual,Recall,81.87
+wikiner,Flair,BPEmb,flair-bpe,Multilingual,F1,81.47
+wikiner,Flair,BPEmb,flair-bpe,Multilingual,Precision,81.08999999999999
+wikiner,Flair,BPEmb,flair-bpe,Multilingual,Recall,81.86
+wikiner,Flair,BPEmb,flair-bpe,Multilingual,F1,81.42
+wikiner,Flair,All,flair-bpe-char-ohe,Multilingual,Precision,80.81
+wikiner,Flair,All,flair-bpe-char-ohe,Multilingual,Recall,81.62
+wikiner,Flair,All,flair-bpe-char-ohe,Multilingual,F1,81.08999999999999
+wikiner,Flair,All,flair-bpe-char-ohe,Multilingual,Precision,81.02000000000001
+wikiner,Flair,All,flair-bpe-char-ohe,Multilingual,Recall,81.58
+wikiner,Flair,All,flair-bpe-char-ohe,Multilingual,F1,81.22
+wikiner,Flair,All,flair-bpe-char-ohe,Multilingual,Precision,80.76
+wikiner,Flair,All,flair-bpe-char-ohe,Multilingual,Recall,81.44
+wikiner,Flair,All,flair-bpe-char-ohe,Multilingual,F1,81.02000000000001
+wikiner,BERT + Flair,None,bert-flair,Multilingual,Precision,85.5
+wikiner,BERT + Flair,None,bert-flair,Multilingual,Recall,85.57000000000001
+wikiner,BERT + Flair,None,bert-flair,Multilingual,F1,85.50999999999999
+wikiner,BERT + Flair,None,bert-flair,Multilingual,Precision,84.78
+wikiner,BERT + Flair,None,bert-flair,Multilingual,Recall,84.88
+wikiner,BERT + Flair,None,bert-flair,Multilingual,F1,84.78
+wikiner,BERT + Flair,None,bert-flair,Multilingual,Precision,84.6
+wikiner,BERT + Flair,None,bert-flair,Multilingual,Recall,84.7
+wikiner,BERT + Flair,None,bert-flair,Multilingual,F1,84.61999999999999
+wikiner,BERT + Flair,Char,bert-flair-char,Multilingual,Precision,84.91
+wikiner,BERT + Flair,Char,bert-flair-char,Multilingual,Recall,84.96000000000001
+wikiner,BERT + Flair,Char,bert-flair-char,Multilingual,F1,84.88
+wikiner,BERT + Flair,Char,bert-flair-char,Multilingual,Precision,85.34
+wikiner,BERT + Flair,Char,bert-flair-char,Multilingual,Recall,85.55
+wikiner,BERT + Flair,Char,bert-flair-char,Multilingual,F1,85.39999999999999
+wikiner,BERT + Flair,Char,bert-flair-char,Multilingual,Precision,85.27
+wikiner,BERT + Flair,Char,bert-flair-char,Multilingual,Recall,85.41
+wikiner,BERT + Flair,Char,bert-flair-char,Multilingual,F1,85.32
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Multilingual,Precision,85.45
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Multilingual,Recall,85.39
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Multilingual,F1,85.39999999999999
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Multilingual,Precision,85
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Multilingual,Recall,85
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Multilingual,F1,84.97
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Multilingual,Precision,85.22999999999999
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Multilingual,Recall,85.41
+wikiner,BERT + Flair,OHE,bert-flair-ohe,Multilingual,F1,85.3
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,Precision,86.18
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,Recall,86.14
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,F1,86.14
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,Precision,85.63
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,Recall,85.7
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,F1,85.64
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,Precision,86.15
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,Recall,85.9
+wikiner,BERT + Flair,BPEmb,bert-flair-bpe,Multilingual,F1,86.00999999999999
+wikiner,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,Precision,86.53
+wikiner,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,Recall,86.65
+wikiner,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,F1,86.57000000000001
+wikiner,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,Precision,86.22999999999999
+wikiner,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,Recall,86.28
+wikiner,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,F1,86.22999999999999
+wikiner,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,Precision,86.27
+wikiner,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,Recall,86.35000000000001
+wikiner,BERT + Flair,All,bert-flair-bpe-char-ohe,Multilingual,F1,86.27
